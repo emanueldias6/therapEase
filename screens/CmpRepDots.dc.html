@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Repetições e qualidade</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div role="img" aria-label="{{aria}}" style="width: 440px; height: 80px; box-sizing: border-box; background: #11363c; padding: 20px 16px 0; display: flex; justify-content: space-between; align-items: flex-start">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="15"><span style="width: 18px; height: 18px; border-radius: 9px; background: {{d.c}}; box-shadow: {{d.ring}}"></span></sc-for>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"states":{"editor":"text","default":"gggggryyyyyyyyy"},"$preview":{"width":440,"height":80}}'>
+class Component extends DCLogic {
+renderVals() {
+const s = (this.props.states ?? 'gggggryyyyyyyyy').split('');
+const col = { g: '#00e156', r: '#ff3b30', y: 'rgba(255,226,4,0.9)', o: 'rgba(255,255,255,0.18)' };
+const cnt = (k) => s.filter(x => x === k).length;
+return {
+dots: s.map(x => ({ c: col[x] || col.o, ring: x === 'r' ? 'inset 0 0 0 3px #ffffff' : 'none' })),
+aria: 'Repetições: ' + cnt('g') + ' com boa execução, ' + cnt('y') + ' com execução razoável, ' + cnt('r') + ' com execução fraca, ' + cnt('o') + ' por fazer'
+};
+}
+}
+</script>
+</body>
+</html>

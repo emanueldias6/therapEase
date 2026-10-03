@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Número de séries</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif}a{color:#ffffff;text-decoration:none}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: #11363c; font-family: 'Nunito', sans-serif; color: #ffffff">
+<img src="/_blob/d4e0d6a9c5438353a8c7453e43064964" alt="" data-fullbleed style="position: absolute; left: 0; top: 190px; width: 100%; height: calc(100% - 190px); object-fit: cover; border-radius: 0">
+<div data-fullbleed style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(17,54,60,0.8)"></div>
+<div style="position: absolute; left: 0; top: 0"><dc-import name="CmpStatusBar" tone="dark" hint-size="440px,53px"></dc-import></div>
+<h1 style="position: absolute; left: 32px; top: 135px; width: 376px; margin: 0; text-align: center; font-size: 60px; line-height: 55px; font-weight: 400">Este exercício tem.</h1>
+<div style="position: absolute; left: 53px; top: 354px"><dc-import name="CmpSeriesWheel" states="aaaa" countdown="0" big="4" small="Séries" hint-size="334px,334px"></dc-import></div>
+<a href="E03-Contagem.dc.html" aria-label="Continuar (avança automaticamente)" style="position: absolute; left: 0; top: 53px; width: 440px; height: 860px"></a>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #ffffff"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

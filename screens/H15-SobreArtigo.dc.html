@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>H15 · Sobre o artigo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 1045px; overflow: hidden; background: #f5fcfb; font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Artigo" back="H01-Artigos.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 161px; width: 376px; display: flex; flex-direction: column">
+<div aria-hidden="true" style="position: relative; height: 180px; border-radius: 16px; background: #f3f0f8; display: flex; align-items: center; justify-content: center; overflow: hidden">
+<svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#6b5a88" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l-2 0l9 -9l9 9l-2 0"></path><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path></svg>
+<span style="position: absolute; right: 12px; top: 12px; height: 30px; padding: 0 12px; box-sizing: border-box; border-radius: 10px; background: #f3f0f8; box-shadow: inset 0 0 0 1px #e1dbec; color: #6b5a88; display: flex; align-items: center; font-size: 16px; font-weight: 600">Prescrito</span>
+</div>
+<p style="margin: 16px 0 0; font-size: 14px; line-height: 20px; color: #6b5a88">Exercício em casa · prescrito pela sua equipa clínica</p>
+<h1 style="margin: 4px 0 0; font-size: 28px; line-height: 34px; font-weight: 600; color: #1f5953">{{t}}</h1>
+<div style="margin-top: 10px; display: flex; align-items: center; gap: 16px; font-size: 14px; line-height: 20px">
+<span aria-label="Classificação 4,8 em 5" style="display: flex; align-items: center; gap: 3px"><sc-for list="{{stars}}" as="s" hint-placeholder-count="5"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" fill="#e38b4a" stroke="#e38b4a" stroke-width="1.6" stroke-linejoin="round"></path></svg></sc-for><span style="margin-left: 4px">4,8</span></span>
+<span style="display: flex; align-items: center; gap: 6px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18"></path><path d="M12 7v5l3 3"></path></svg>4 min de leitura</span>
+</div>
+<p style="margin: 14px 0 0; font-size: 16px; line-height: 22px">Como escolher e arrumar o sítio onde vai fazer os exercícios em segurança, para que a aplicação o consiga ver bem durante a sessão.</p>
+<section aria-labelledby="aprender" style="margin-top: 20px; padding: 18px 20px; border-radius: 16px; background: #f5fcfb; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 12px">
+<h2 id="aprender" style="margin: 0; font-size: 18px; line-height: 25px; font-weight: 500; color: #1f5953">O que vai aprender</h2>
+<sc-for list="{{learn}}" as="l" hint-placeholder-count="3"><div style="display: flex; gap: 10px; font-size: 16px; line-height: 22px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px"><path d="M5 12l5 5l10 -10"></path></svg><span>{{l}}</span></div></sc-for>
+</section>
+<p style="margin: 16px 0 0; font-size: 14px; line-height: 20px; color: #6b5a88">A sua equipa clínica indicou este artigo para preparar as sessões em casa.</p>
+<a href="H02-Artigo.dc.html" style="margin-top: 28px; display: flex; align-items: center; justify-content: center; height: 50px; border-radius: 12px; background: #1e5c66; color: #ffffff; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">Começar a ler</a>
+<button type="button" onClick="{{toggleSave}}" aria-pressed="{{savedP}}" style="margin-top: 12px; height: 50px; border: 0; border-radius: 12px; background: #f5fcfb; color: #1e5c66; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">{{saveLabel}}</button>
+</main>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":1045}}'>
+// H15 · Sobre o artigo — destino de "Ver mais" no cartão de artigo: resumo antes de começar a ler.
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { saved: false }; }
+renderVals() {
+return {
+t: 'Preparar o espaço em casa',
+stars: [0, 1, 2, 3, 4],
+learn: ['Escolher uma divisão com espaço livre e boa luz', 'Apoiar o telemóvel para a câmara o ver da cabeça aos pés', 'Ter o material da sessão à mão antes de começar'],
+saveLabel: this.state.saved ? 'Guardado' : 'Guardar para depois', savedP: this.state.saved ? 'true' : 'false',
+toggleSave: () => this.setState({ saved: !this.state.saved })
+};
+}
+}
+</script>
+</body>
+</html>

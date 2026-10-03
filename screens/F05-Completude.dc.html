@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Completou a sessão?</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1e5c66">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<a href="F04-Dificuldade.dc.html" aria-label="Voltar" style="position: absolute; left: 28px; top: 76px; height: 44px; padding: 0 12px 0 4px; display: flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 14px; line-height: 19px; font-weight: 600; color: #11363c; text-decoration: none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M15 6l-6 6l6 6"></path></svg><span>Voltar</span></a>
+<div role="progressbar" aria-label="Pergunta 4 de 5" aria-valuenow="4" aria-valuemin="1" aria-valuemax="5" style="position: absolute; left: 32px; top: 124px; width: 376px; display: flex; gap: 6px"><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #1e5c66"></span><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #1e5c66"></span><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #1e5c66"></span><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #1e5c66"></span><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #c8dfdc"></span></div>
+<p style="position: absolute; left: 32px; top: 138px; width: 376px; margin: 0; text-align: center; font-size: 14px; font-weight: 600">Pergunta 4 de 5</p>
+<h1 style="position: absolute; left: 32px; top: 176px; width: 376px; margin: 0; text-align: center; font-size: 36px; line-height: 49px; font-weight: 600">Conseguiu fazer a sessão toda?</h1>
+<p style="position: absolute; left: 32px; top: 280px; width: 376px; margin: 0; text-align: center; font-size: 16px; line-height: 22px; font-weight: 500">{{detected}}</p>
+<div role="radiogroup" aria-label="Como correu a sessão" style="position: absolute; left: 32px; top: 340px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="3">
+<button type="button" role="radio" aria-checked="{{o.checked}}" onClick="{{o.pick}}" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; width: 376px; min-height: 76px; box-sizing: border-box; padding: 10px 20px; border: 0; border-radius: 12px; background: {{o.bg}}; color: {{o.fg}}; box-shadow: {{o.shadow}}; text-align: left">
+<span style="font-size: 22px; line-height: 28px; font-weight: 600">{{o.label}}</span>
+<span style="font-size: 15px; line-height: 20px; font-weight: 500">{{o.hint}}</span>
+</button>
+</sc-for>
+</div>
+<a href="F06-Comentario.dc.html" style="position: absolute; left: 32px; top: 604px; width: 376px; height: 52px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 18px; font-weight: 600"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>Adicionar comentário (opcional)</a>
+<a href="{{next}}" style="position: absolute; left: 32px; top: 800px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #1e5c66; color: #ffffff; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">Enviar respostas</a>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { picked: 0 }; }
+renderVals() {
+const opts = [
+{ label: 'Fiz tudo', hint: 'Todos os exercícios e séries', next: 'F07-ResultadoConcluida.dc.html' },
+{ label: 'Fiz só uma parte', hint: 'Saltei ou não acabei algum exercício', next: 'F08-ResultadoParcial.dc.html' },
+{ label: 'Interrompi a sessão', hint: 'Parei antes do fim', next: 'F09-ResultadoInterrompida.dc.html' }
+];
+const p = this.state.picked;
+return {
+detected: 'A aplicação registou 3 de 3 exercícios. Confirme ou corrija.',
+options: opts.map((o, i) => {
+const on = i === p;
+return { label: o.label, hint: o.hint, checked: on ? 'true' : 'false', bg: on ? '#1e5c66' : '#f5fcfb', fg: on ? '#ffffff' : '#1e5c66', shadow: on ? '0 4px 10px rgba(17,54,60,0.25)' : 'none', pick: () => this.setState({ picked: i }) };
+}),
+next: opts[p].next
+};
+}
+}
+</script>
+</body>
+</html>

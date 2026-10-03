@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Detalhe da sessão</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 1316px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Sessão" back="G06-Progresso.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 157px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<section style="border-radius: 16px; background: #f5fcfb; padding: 19px 22px 20px 21px; box-shadow: 0 4px 8px rgba(0,0,0,0.06)">
+<div style="display: flex; align-items: center; gap: 12px"><h2 style="margin: 0; flex-grow: 1; max-width: 110px; font-size: 22px; line-height: 29px; font-weight: 700">Reforço muscular</h2><span style="flex-grow: 1"></span><dc-import name="CmpBadge" state="parcial" hint-size="100px,22px"></dc-import></div>
+<p style="margin: 5px 0 0; font-size: 15px; line-height: 21px">Quarta-feira, 23 de setembro · 19:05 · 22 min</p>
+</section>
+<section aria-labelledby="nesta" style="border-radius: 16px; background: #f5fcfb; padding: 18px 20px 31px; box-shadow: 0 4px 8px rgba(0,0,0,0.06)"><h3 id="nesta" style="margin: 0; font-size: 18px; line-height: 25px; font-weight: 700">Nesta sessão</h3><div style="margin-top: 19px; display: flex; align-items: center; gap: 34px"><svg width="76" height="76" viewBox="0 0 76 76" aria-hidden="true" style="flex: none"><circle cx="38" cy="38" r="32" fill="none" stroke="#fbe0d3" stroke-width="12"></circle><circle cx="38" cy="38" r="32" fill="none" stroke="#e38b4a" stroke-width="12" stroke-linecap="round" stroke-dasharray="134.7 201.1" transform="rotate(-90 38 38)"></circle><circle cx="38" cy="38" r="18" fill="none" stroke="#c8dfdc" stroke-width="12"></circle><circle cx="38" cy="38" r="18" fill="none" stroke="#1e5c66" stroke-width="12" stroke-linecap="round" stroke-dasharray="88.2 113.1" transform="rotate(-90 38 38)"></circle></svg><dl style="margin: 0; display: flex; flex-direction: column; gap: 9px"><div><dt style="font-size: 15px; line-height: 20px; color: #a8543a">Feito face ao previsto</dt><dd style="margin: 0; font-size: 20px; line-height: 27px; font-weight: 800; color: #a8543a; white-space: nowrap">2 de 3 exercícios (67 %)</dd></div><div><dt style="font-size: 15px; line-height: 20px; color: #1f5953">Qualidade média</dt><dd style="margin: 0; font-size: 20px; line-height: 27px; font-weight: 800; color: #1f5953">78 %</dd></div></dl></div></section>
+<section style="border-radius: 16px; background: #f5fcfb; padding: 18px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06)">
+<h3 style="margin: 0 0 6px; display: flex; align-items: center; gap: 8px; font-size: 18px; line-height: 27px; font-weight: 700">Exercícios</h3>
+<ul style="margin: 0; padding: 0; list-style: none">
+<sc-for list="{{ex}}" as="e" hint-placeholder-count="3">
+<li style="min-height: 58px; display: flex; align-items: center; gap: 12px; border-top: 1px solid #dfedf0">
+<span style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 16px; background: {{e.bg}}; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="{{e.fg}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{e.icon}}"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 16px; line-height: 22px; font-weight: 700">{{e.n}}</span><span style="font-size: 13px; line-height: 18px">{{e.d}}</span></span>
+<span style="font-size: 14px; font-weight: 700">{{e.r}}</span>
+</li>
+</sc-for>
+</ul>
+</section>
+<section style="border-radius: 16px; background: #f5fcfb; padding: 18px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06)">
+<h3 style="margin: 0 0 6px; display: flex; align-items: center; gap: 8px; font-size: 18px; line-height: 27px; font-weight: 700">As suas respostas</h3>
+<dl style="margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 10px; font-size: 15px; line-height: 21px">
+<dt>Dor</dt><dd style="margin: 0; font-weight: 700; text-align: right">Não</dd>
+<dt>Desconforto</dt><dd style="margin: 0; font-weight: 700; text-align: right">Sim</dd>
+<dt>Dificuldade</dt><dd style="margin: 0; font-weight: 700; text-align: right">Difícil</dd>
+<dt>Como correu</dt><dd style="margin: 0; font-weight: 700; text-align: right">Fiz só uma parte</dd>
+</dl>
+<p style="margin: 12px 0 0; padding: 12px 14px; border-radius: 12px; background: #f5fcfb; font-size: 15px; line-height: 21px">“Não tinha cadeira em casa.”</p>
+</section>
+<p style="margin: 4px; font-size: 14px; line-height: 20px">Estas informações também ficam disponíveis para a sua equipa clínica.</p>
+</main>
+<div style="position: absolute; left: 0; top: 1211px"><dc-import name="CmpBottomBar" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":1316}}'>
+class Component extends DCLogic {
+renderVals() {
+const ok = { icon: 'M5 12l5 5l10 -10', bg: '#e3f5e6', fg: '#0e5841' };
+const no = { icon: 'M18 6l-12 12M6 6l12 12', bg: '#ffebeb', fg: '#a3263a' };
+return {
+ex: [
+{ ...no, n: 'Agachamento', d: 'Não feito · falta de material', r: '0/3' },
+{ ...ok, n: 'Elevação de braços', d: '3 séries · 12 reps', r: '3/3' },
+{ ...ok, n: 'Ponte de glúteos', d: '3 séries · 15 reps', r: '3/3' }
+]
+};
+}
+}
+</script>
+</body>
+</html>

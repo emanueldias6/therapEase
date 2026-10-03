@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>C13 · Preparação: exercícios</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 1034px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Preparação" back="C12-Condicoes.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 163px; width: 376px; display: flex; flex-direction: column">
+<section aria-labelledby="hoje" style="padding: 12px 20px; margin-bottom: 19px">
+<h2 id="hoje" style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 700; color: #1e5c66">Sessão de hoje</h2>
+<p style="margin: 3px 0 0; font-size: 15px; line-height: 21px">Reforço muscular · 30 min · 3 exercícios</p>
+<p style="margin: 12px 0 0; font-size: 15px; line-height: 21px; font-weight: 600">Ordenámos os exercícios para só mudar de posição uma vez.</p>
+</section>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{blocks}}" as="b" hint-placeholder-count="3">
+<li style="height: 155px; box-sizing: border-box; padding: 8px 12px; border-radius: 16px; background: {{b.bg}}; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; align-items: stretch; gap: 16px; color: #11363c">
+<span style="flex: none; width: 107px; height: 139px; border-radius: 54px; overflow: hidden; background: rgba(255,255,255,0.2); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center"><img src="assets/exercicio-demo.png" alt="" style="width: 107px; height: 139px; object-fit: cover"></span>
+<span style="flex: none; width: 193px; display: flex; flex-direction: column; justify-content: space-between"><span style="display: flex; flex-direction: column"><span style="font-size: 13px; line-height: 18px; font-weight: 700">{{b.k}}</span><span style="margin-top: 4px; font-size: 16px; line-height: 22px; font-weight: 700">{{b.t}}</span><span style="margin-top: 12px; font-size: 14px; line-height: 20px">{{b.m}}</span></span><span style="font-size: 14px; line-height: 20px">{{b.s}}</span></span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#11363c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; align-self: center"><path d="M9 6l6 6l-6 6"></path></svg>
+</li>
+</sc-for>
+</ol>
+<a href="C23-LeituraCorpo.dc.html" style="margin-top: 19px; display: flex; align-items: center; justify-content: center; height: 50px; border-radius: 12px; background: #1e5c66; color: #ffffff; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">Continuar</a>
+</main>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":1034}}'>
+// C13 · exercícios na calibração (Figma C13).
+class Component extends DCLogic {
+renderVals() {
+return { blocks: [
+{ k: '1 · DE PÉ', t: 'Elevação de braços', m: 'Precisa da banda elástica (nº 6)', s: '3 séries · 12 reps' },
+{ k: '2 · DE PÉ', t: 'Agachamento', m: 'Precisa de uma cadeira estável', s: '3 séries · 10 reps' },
+{ k: '3 · DEITADO', t: 'Ponte de glúteos', m: 'Precisa de espaço livre no chão', s: '3 séries · 15 reps' }
+].map((b, i) => ({ ...b, bg: ['#dfedf0', '#c8dfdc', '#accbc6'][i] })) };
+}
+}
+</script>
+</body>
+</html>

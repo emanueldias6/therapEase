@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Não consigo prosseguir</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1e5c66">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Preparação" back="C02-PreparacaoLista.dc.html" hint-size="440px,72px"></dc-import></div>
+<p style="position: absolute; left: 32px; top: 160px; width: 376px; margin: 0; text-align: center; font-size: 28px; line-height: 36px; font-weight: 600">O que o impede de começar?</p>
+<div role="radiogroup" aria-label="Motivo" style="position: absolute; left: 32px; top: 232px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="4">
+<button type="button" role="radio" aria-checked="{{o.checked}}" onClick="{{o.pick}}" style="display: flex; align-items: center; width: 376px; min-height: 58px; box-sizing: border-box; padding: 0 20px; border: 0; border-radius: 12px; background: {{o.bg}}; color: {{o.fg}}; font-size: 20px; font-weight: 500; text-align: left">{{o.label}}</button>
+</sc-for>
+</div>
+<p style="position: absolute; left: 32px; top: 530px; width: 376px; margin: 0; font-size: 16px; line-height: 23px; color: #1f5953">{{tip}}</p>
+<a href="{{primaryHref}}" style="position: absolute; left: 32px; top: 690px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #1e5c66; color: #ffffff; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">{{primary}}</a>
+<a href="B01-Dashboard.dc.html" style="position: absolute; left: 32px; top: 756px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #f5fcfb; color: #1e5c66; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">Fazer mais tarde</a>
+<p style="position: absolute; left: 32px; top: 826px; width: 376px; margin: 0; text-align: center; font-size: 14px; line-height: 20px; color: #1f5953">Se sentir dor forte ou mal-estar súbito, ligue 112.</p>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { picked: 0 }; }
+renderVals() {
+const opts = [
+{ label: 'Não me sinto bem hoje', tip: 'Não faz mal. Descanse e, se precisar, fale com a sua equipa clínica.', primary: 'Avisar a equipa clínica', href: 'H06-Conversa.dc.html' },
+{ label: 'Não tenho espaço suficiente', tip: 'Veja como preparar o espaço para que a câmara o veja por inteiro.', primary: 'Ver como preparar o espaço', href: 'H11-AjudaTopico.dc.html' },
+{ label: 'A câmara não funciona', tip: 'Confirme que a aplicação tem permissão para usar a câmara.', primary: 'Resolver problema da câmara', href: 'H11-AjudaTopico.dc.html' },
+{ label: 'Outro motivo', tip: 'Pode explicar o que se passa à sua equipa clínica.', primary: 'Avisar a equipa clínica', href: 'H06-Conversa.dc.html' }
+];
+const p = this.state.picked;
+return {
+options: opts.map((o, i) => ({ label: o.label, checked: i === p ? 'true' : 'false', bg: i === p ? '#1e5c66' : '#f5fcfb', fg: i === p ? '#ffffff' : '#1e5c66', pick: () => this.setState({ picked: i }) })),
+tip: opts[p].tip, primary: opts[p].primary, primaryHref: opts[p].href
+};
+}
+}
+</script>
+</body>
+</html>

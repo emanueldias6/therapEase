@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Banda elástica</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div role="img" aria-label="{{aria}}" style="position: relative; width: 376px; height: 100px; border-radius: {{radius}}; background: {{bg}}; font-family: 'Nunito', sans-serif; color: {{fg}}">
+<sc-if value="{{showInd}}" hint-placeholder-val="{{ true }}"><div style="position: absolute; left: 8px; top: 2px; width: 360px; text-align: center; font-size: 12px; line-height: 16px; font-weight: 600">Agarre no nº {{n}} de cada lado</div></sc-if>
+<div style="position: absolute; left: 8px; top: 26px; width: 360px; height: 30px; border-radius: 15px; background: #6b5a88; overflow: hidden">
+<div style="position: absolute; left: 156px; top: 0; width: 48px; height: 30px; background: #4a3c63"></div>
+</div>
+<sc-for list="{{marks}}" as="m" hint-placeholder-count="18">
+<span aria-hidden="true" style="position: absolute; left: {{m.x}}px; top: 33px; width: 16px; text-align: center; font-size: 10px; line-height: 14px; font-weight: 700; color: #ffffff">{{m.label}}</span>
+</sc-for>
+<sc-for list="{{grips}}" as="g" hint-placeholder-count="2">
+<span aria-hidden="true" style="position: absolute; left: {{g.x}}px; top: 25px; width: 32px; height: 32px; box-sizing: border-box; border-radius: 16px; background: {{dotBg}}; border: 2px solid {{dotRing}}; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: {{dotFg}}">{{n}}</span>
+<span aria-hidden="true" style="position: absolute; left: {{g.lx}}px; top: 62px; width: 60px; text-align: center; font-size: 12px; line-height: 16px; font-weight: 600">Mão</span>
+</sc-for>
+<span aria-hidden="true" style="position: absolute; left: 158px; top: {{centroTop}}px; width: 60px; text-align: center; font-size: 12px; line-height: 16px; font-weight: 600">{{centro}}</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"agarrar":{"editor":"number","default":6},"tema":{"editor":"enum","options":["claro","escuro"],"default":"claro"},"centro":{"editor":"text","default":"Pés"},"indicacao":{"editor":"boolean","default":true},"$preview":{"width":376,"height":100}}'>
+// Banda elástica numerada 1–10 | 10–1 (dois 10 no centro, dois 1 nas pontas).
+// "agarrar" = número onde se agarra de cada lado: mais perto do centro = banda mais curta = mais resistência.
+// O centro (entre os dois 10) é a zona dos pés ou o sítio onde se prende a banda.
+class Component extends DCLogic {
+renderVals() {
+const n = Math.min(10, Math.max(1, Math.round(Number(this.props.agarrar ?? 6))));
+const dark = (this.props.tema ?? 'claro') === 'escuro';
+const W = 376;
+const px = (i) => 8 + 7.8 + (i - 1) * 15.6;
+const marks = [];
+for (let i = 1; i <= 10; i++) if (Math.abs(i - n) > 1) { marks.push({ x: Math.round(px(i) - 8), label: String(i) }); marks.push({ x: Math.round(W - px(i) - 8), label: String(i) }); }
+const grips = [px(n), W - px(n)].map(x => ({ x: Math.round(x - 16), lx: Math.round(x - 30) }));
+const centro = this.props.centro ?? 'Pés';
+return {
+n, marks, grips, centro,
+showInd: !(this.props.indicacao === false || this.props.indicacao === 'false'),
+centroTop: n >= 8 ? 80 : 62,
+bg: dark ? '#11363c' : 'transparent', radius: dark ? '12px' : '0',
+fg: dark ? '#ffffff' : '#11363c',
+dotBg: dark ? '#ffffff' : '#11363c', dotFg: dark ? '#11363c' : '#ffffff', dotRing: dark ? '#a999c2' : '#ffffff',
+aria: `Banda elástica: agarre no número ${n} de cada lado; ${centro.toLowerCase()} no centro, entre os dois 10.`
+};
+}
+}
+</script>
+</body>
+</html>

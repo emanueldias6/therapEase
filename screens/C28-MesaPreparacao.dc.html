@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Mesa: preparação</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Preparação" back="C27-MesaCondicoes.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 145px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<fieldset style="margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 12px">
+<legend style="margin: 0 4px 6px; padding: 0; font-size: 15px; font-weight: 700">Para o exercício à mesa vamos precisar de</legend>
+<sc-for list="{{items}}" as="i" hint-placeholder-count="4">
+<label style="min-height: 64px; box-sizing: border-box; border-radius: 16px; background: #f5fcfb; padding: 10px 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 12px; cursor: pointer">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="{{i.icon}}"></path></svg>
+<span style="flex-grow: 1; font-size: 16px; line-height: 22px; font-weight: 600">{{i.t}}</span>
+<input type="checkbox" checked="{{i.on}}" onChange="{{i.toggle}}" style="flex-shrink: 0; width: 26px; height: 26px; margin: 0; accent-color: #1e5c66">
+</label>
+</sc-for>
+</fieldset>
+
+<section aria-labelledby="opc" style="margin-top: 0; border-radius: 16px; background: #f5fcfb; box-shadow: 0 4px 8px rgba(0,0,0,0.06); overflow: hidden">
+<h2 id="opc" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Opções da sessão</h2>
+<sc-for list="{{options}}" as="o" hint-placeholder-count="2">
+<div style="padding: 14px 16px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #dfedf0">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="{{o.icon}}"></path></svg>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 16px; line-height: 22px; font-weight: 700">{{o.t}}</span><span style="font-size: 13px; line-height: 18px">{{o.d}}</span></span>
+<button type="button" role="switch" aria-checked="{{o.checked}}" aria-label="{{o.t}}" onClick="{{o.toggle}}" style="flex-shrink: 0; width: 56px; height: 32px; border: 0; border-radius: 16px; background: {{o.track}}; padding: 3px; display: flex; justify-content: {{o.side}}"><span style="width: 26px; height: 26px; border-radius: 13px; background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.25)"></span></button>
+</div>
+</sc-for>
+<a href="#" role="button" data-action="testar-som" style="height: 48px; padding: 0 16px; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: #1e5c66"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 8a5 5 0 0 1 0 8"></path><path d="M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5"></path></svg>Testar o som</a>
+</section>
+<sc-if value="{{showCalib}}" hint-placeholder-val="{{ false }}"><div style="min-height: 56px; box-sizing: border-box; border-radius: 16px; background: #e3f5e6; box-shadow: inset 0 0 0 1px #0e5841; padding: 0 16px; display: flex; align-items: center; gap: 12px; color: #0e5841">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0e5841" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5l10 -10"></path></svg>
+<span style="font-size: 15px; font-weight: 600">Avaliação inicial feita. Os exercícios estão ajustados a si.</span>
+</div></sc-if>
+<a href="{{ctaHref}}" aria-disabled="{{notReady}}" style="margin-top: 1px; pointer-events: {{ctaPe}}; display: flex; align-items: center; justify-content: center; height: 50px; border-radius: 12px; background: {{ctaBg}}; color: {{ctaFg}}; box-shadow: 0 0 12px rgba(0,0,0,0.1); font-size: 24px; font-weight: 500">Continuar</a>
+<div style="margin-top: -3px; display: flex; justify-content: space-between">
+<a href="C03-MaterialEmFalta.dc.html" style="height: 44px; display: flex; align-items: center; font-size: 16px; font-weight: 600; color: #1e5c66">Falta-me material</a>
+<a href="C06-NaoConsigoProsseguir.dc.html" style="height: 44px; display: flex; align-items: center; font-size: 16px; font-weight: 600; color: #1e5c66">Não consigo começar</a>
+</div>
+</main>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+// C28 · exercício à mesa: material e opções de voz (Figma C28, igual ao C02). Continuar só com tudo confirmado.
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { on: [false, false, false, false], voice: true, helper: false }; }
+renderVals() {
+const base = [
+{ t: 'Mesa estável e cadeira sem rodas', icon: 'M5 11a2 2 0 0 1 2 2v2h10v-2a2 2 0 1 1 4 0v4a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-4a2 2 0 0 1 2 -2zM5 11v-5a3 3 0 0 1 3 -3h8a3 3 0 0 1 3 3v5M6 19v2M18 19v2' },
+{ t: 'Três copos de plástico', icon: 'M6 4h12l-1.5 16a1 1 0 0 1 -1 1h-7a1 1 0 0 1 -1 -1zM6.5 9h11' },
+{ t: 'Suporte do telemóvel (kit)', icon: 'M8 3h8a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-12a1 1 0 0 1 1 -1zM12 17v3M8 21h8' },
+{ t: 'Telemóvel apoiado, com a câmara virada para as mãos', icon: 'M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14zM11 4h2M12 17v.01' }
+];
+const on = this.state.on;
+const ready = on.every(Boolean);
+const sw = (v) => ({ checked: v ? 'true' : 'false', track: v ? '#1e5c66' : '#accbc6', side: v ? 'flex-end' : 'flex-start' });
+return {
+items: base.map((b, i) => ({ ...b, on: on[i], toggle: () => { const n = on.slice(); n[i] = !n[i]; this.setState({ on: n }); } })),
+options: [
+{ t: 'Orientação por voz', d: 'Ouve as instruções sem ter de olhar para o ecrã', icon: 'M15 8a5 5 0 0 1 0 8M17.7 5a9 9 0 0 1 0 14M6 15h-2a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h2l3.5 -4.5a.8 .8 0 0 1 1.5 .5v14a.8 .8 0 0 1 -1.5 .5l-3.5 -4.5', ...sw(this.state.voice), toggle: () => this.setState({ voice: !this.state.voice }) },
+{ t: 'Vou ter ajuda de outra pessoa', d: 'A voz passa a dar também indicações para quem ajuda', icon: 'M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2M16 3.13a4 4 0 0 1 0 7.75M21 21v-2a4 4 0 0 0 -3 -3.85', ...sw(this.state.helper), toggle: () => this.setState({ helper: !this.state.helper }) }
+],
+notReady: ready ? 'false' : 'true', ctaHref: ready ? 'C29-MesaPosicione.dc.html' : '#', ctaPe: ready ? 'auto' : 'none', showCalib: true,
+ctaBg: ready ? '#1e5c66' : '#f5fcfb', ctaFg: ready ? '#ffffff' : '#cfe8ed'
+};
+}
+}
+</script>
+</body>
+</html>

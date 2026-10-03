@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Caminhada: acima da zona</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=REM:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif}a{color:#ffffff;text-decoration:none}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: #11363c; font-family: 'Nunito', sans-serif; color: #ffffff">
+<div style="position: absolute; left: 0; top: 0"><dc-import name="CmpStatusBar" tone="dark" hint-size="440px,53px"></dc-import></div>
+<p style="position: absolute; left: 32px; top: 60px; margin: 0; font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: 0.56px; opacity: 0.85">CAMINHADA</p>
+<p style="position: absolute; left: 32px; top: 129px; width: 133px; margin: 0; text-align: center; display: flex; flex-direction: column; gap: 5px"><span style="font-size: 15px; line-height: 20px; font-weight: 700; color: #4fd1e0">Tempo de exercício</span><span style="font-size: 13px; line-height: 18px; opacity: 0.8">20 min</span></p>
+<p style="position: absolute; left: 287px; top: 129px; width: 130px; margin: 0; text-align: center; display: flex; flex-direction: column; gap: 5px"><span style="font-size: 15px; line-height: 20px; font-weight: 700; color: #ff8a1f">Acima da zona</span><span style="font-size: 13px; line-height: 18px; opacity: 0.8">Zona alvo 100–120</span></p>
+<div style="position: absolute; left: 53px; top: 190px"><dc-import name="CmpAutonomousWheel" estado="acima" fc="128" tempo="08:30" hint-size="334px,334px"></dc-import></div>
+<a href="E25-CaminhadaConcluida.dc.html" aria-label="Continuar (avança automaticamente no fim do tempo)" style="position: absolute; left: 53px; top: 190px; width: 334px; height: 334px"></a>
+<div role="alert" style="position: absolute; left: 32px; top: 536px; width: 376px; height: 48px; box-sizing: border-box; border-radius: 14px; background: #24464c; box-shadow: inset 0 0 0 2px #ff8a1f; padding: 0 14px; display: flex; align-items: center; gap: 10px"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff8a1f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0zM12 16h.01"></path></svg><span style="font-size: 18px; line-height: 24px; font-weight: 700">Abrande o passo até voltar à zona.</span></div>
+<dl style="position: absolute; left: 32px; top: 601px; width: 376px; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: center">
+<div style="height: 80px; box-sizing: border-box; border-radius: 16px; background: #24464c; padding-top: 12px"><dt style="font-size: 14px; line-height: 19px; opacity: 0.85">Distância</dt><dd style="margin: 2px 0 0; font-size: 26px; line-height: 35px; font-weight: 800">0,7 km</dd></div>
+<div style="height: 80px; box-sizing: border-box; border-radius: 16px; background: #24464c; padding-top: 12px"><dt style="font-size: 14px; line-height: 19px; opacity: 0.85">Passos</dt><dd style="margin: 2px 0 0; font-size: 26px; line-height: 35px; font-weight: 800">1 040</dd></div>
+</dl>
+<a href="E10-Pausa.dc.html" style="position: absolute; left: 32px; top: 738px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #ffffff; color: #11363c; font-size: 24px; font-weight: 500">Pausa</a>
+<a href="E31-CaminhadaInterrompida.dc.html" style="position: absolute; left: 32px; top: 800px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #2e4e53; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25); color: #ffffff; font-size: 24px; font-weight: 500">Terminar caminhada</a>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #ffffff"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+// E24 · frequência cardíaca acima da zona alvo: aviso visual, sonoro e por voz (Figma E24).
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

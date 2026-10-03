@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Cena da mesa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div role="img" aria-label="{{aria}}" style="position: relative; width: 376px; height: 440px; font-family: 'Nunito', sans-serif">
+<svg width="376" height="440" viewBox="0 0 376 440" fill="none" aria-hidden="true" style="position: absolute; left: 0; top: 0">
+<path d="M28 150H348L376 440H0Z" fill="#d9c2a3"></path>
+<path d="M28 150H348" stroke="#b89c78" stroke-width="3"></path>
+<sc-if value="{{showGuide}}" hint-placeholder-val="{{ false }}"><rect x="38" y="228" width="300" height="200" rx="18" stroke="{{guideColor}}" stroke-width="4" stroke-dasharray="14 10"></rect></sc-if>
+<sc-for list="{{cups}}" as="c" hint-placeholder-count="3"><path d="{{c.d}}" fill="#ffffff" stroke="#8aa7ab" stroke-width="2"></path><ellipse cx="{{c.cx}}" cy="{{c.cy}}" rx="{{c.rx}}" ry="5" fill="#eef5f5" stroke="#8aa7ab" stroke-width="2"></ellipse></sc-for>
+<sc-if value="{{showDet}}" hint-placeholder-val="{{ true }}"><sc-for list="{{boxes}}" as="b" hint-placeholder-count="3"><rect x="{{b.x}}" y="{{b.y}}" width="{{b.w}}" height="{{b.h}}" rx="8" stroke="{{b.col}}" stroke-width="{{b.sw}}" stroke-dasharray="{{b.dash}}"></rect></sc-for></sc-if>
+<sc-for list="{{bones}}" as="l" hint-placeholder-count="20"><path d="{{l.d}}" stroke="{{l.c}}" stroke-width="4" stroke-linecap="round"></path></sc-for>
+<sc-for list="{{joints}}" as="j" hint-placeholder-count="42"><circle cx="{{j.x}}" cy="{{j.y}}" r="{{j.r}}" fill="{{j.c}}" stroke="#11363c" stroke-width="1.5"></circle></sc-for>
+</svg>
+<sc-if value="{{showDet}}" hint-placeholder-val="{{ true }}"><sc-for list="{{boxes}}" as="b" hint-placeholder-count="3"><span style="position: absolute; left: {{b.x}}px; top: {{b.ly}}px; border-radius: 6px; background: {{b.col}}; padding: 1px 6px; font-size: 11px; line-height: 16px; font-weight: 800; color: #11363c">{{b.label}}</span></sc-for></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"modo":{"editor":"enum","options":["posicionar","posicionado","executar","corrigir"],"default":"executar"},"$preview":{"width":376,"height":440}}'>
+// Vista da câmara do telemóvel à frente da mesa: tampo, copos (objetos detetados) e as duas mãos (21 pontos cada).
+// posicionar: retângulo-guia âmbar (mãos fora); posicionado: guia verde; executar: mãos a verde e copo-alvo em destaque;
+// corrigir: polegar e indicador a laranja (fechar a pinça), como a correção localizada dos outros exercícios.
+class Component extends DCLogic {
+renderVals() {
+const modo = this.props.modo ?? 'executar';
+const G = '#00e156', O = '#ff8a1f', W = '#ffffff', AMB = '#ffcf33', CY = '#4fd1e0';
+const cup = (x, y, w, h) => ({ d: `M${x} ${y}L${x + w} ${y}L${x + w - 7} ${y + h}L${x + 7} ${y + h}Z`, cx: x + w / 2, cy: y, rx: w / 2 });
+const cups = [cup(52, 196, 40, 52), cup(150, 262, 44, 56), cup(286, 190, 40, 52)];
+const R = [[262, 390], [240, 372], [222, 352], [208, 336], [198, 324], [246, 344], [232, 318], [222, 302], [214, 290], [262, 340], [252, 312], [246, 294], [241, 280], [276, 344], [270, 318], [266, 302], [263, 290], [288, 352], [286, 332], [284, 318], [283, 308]];
+const Lh = [[112, 410], [132, 396], [146, 382], [156, 370], [164, 360], [118, 366], [120, 340], [121, 324], [122, 312], [104, 364], [102, 336], [101, 318], [100, 304], [90, 368], [86, 344], [84, 328], [83, 316], [78, 378], [72, 360], [69, 348], [67, 338]];
+let hands = [Lh, R];
+if (modo === 'posicionar') hands = [Lh.map(([x, y]) => [x - 10, y + 36]), R.map(([x, y]) => [x + 40, y + 36])];
+const chains = [[0, 1, 2, 3, 4], [0, 5, 6, 7, 8], [5, 9, 10, 11, 12], [9, 13, 14, 15, 16], [13, 17, 18, 19, 20], [0, 17]];
+const bones = [], joints = [];
+hands.forEach((P, hi) => {
+const col = i => { if (modo === 'posicionar') return AMB; if (modo === 'corrigir' && hi === 1 && ((i >= 1 && i <= 4) || (i >= 5 && i <= 8))) return O; return modo === 'posicionado' ? G : (hi === 1 ? G : W); };
+for (const ch of chains) for (let k = 1; k < ch.length; k++) { const a = P[ch[k - 1]], b = P[ch[k]]; bones.push({ d: `M${a[0]} ${a[1]}L${b[0]} ${b[1]}`, c: col(ch[k]) }); }
+P.forEach(([x, y], i) => joints.push({ x, y, r: i === 0 ? 6 : 4.5, c: col(i) }));
+});
+const exec = modo === 'executar' || modo === 'corrigir';
+const box = (x, y, w, h, label, target) => ({ x: x - 6, y: y - 10, w: w + 12, h: h + 16, ly: y - 30, label, col: target ? CY : '#f5fcfb', sw: target ? 3 : 2, dash: target ? '0' : '6 5' });
+const boxes = [box(52, 196, 40, 52, 'copo', false), box(150, 262, 44, 56, 'copo · alvo', true), box(286, 190, 40, 52, 'copo', false)];
+const aria = { posicionar: 'Mesa com três copos. As mãos ainda estão fora do retângulo-guia.', posicionado: 'Mesa com três copos. As duas mãos estão dentro do retângulo-guia.', executar: 'A mão direita pega no copo do meio; os três copos estão detetados.', corrigir: 'A mão direita pega no copo; o polegar e o indicador estão a laranja: feche mais a pinça.' }[modo];
+return { cups, bones, joints, boxes, showDet: exec, showGuide: !exec, guideColor: modo === 'posicionar' ? AMB : G, aria };
+}
+}
+</script>
+</body>
+</html>

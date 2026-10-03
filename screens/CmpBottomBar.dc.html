@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Barra de navegação</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#1e5c66}</style>
+</helmet>
+<nav aria-label="Navegação principal" style="position: relative; width: 440px; height: 75px; font-family: 'Nunito', sans-serif; color: #1e5c66">
+<div style="position: absolute; left: 68px; top: 4px; width: 305px; height: 67px; border-radius: 73px; background: rgba(255,255,255,0.35); box-shadow: 0 4px 8px rgba(0,0,0,0.12), inset 0 0 0 1px rgba(255,255,255,0.5); backdrop-filter: blur(14px); display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-sizing: border-box">
+<a href="B09-Perfil.dc.html" aria-label="Perfil" style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 24px">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path></svg>
+</a>
+<a href="B01-Dashboard.dc.html" aria-label="Início" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 52px; border-radius: 26px">
+<svg width="33" height="40" viewBox="0 0 33 40" aria-hidden="true"><g transform="matrix(1 0 0 1 8.07 13.32)"><path d="M8.55 18.46C8.09 18.46 7.73 18.33 7.48 18.07C7.23 17.81 7.11 17.45 7.11 16.99L7.11 2.41L1.25 2.41C0.86 2.41 0.55 2.3 0.33 2.09C0.11 1.88 0 1.58 0 1.19C0 0.8 0.11 0.51 0.33 0.3C0.55 0.1 0.86 0 1.25 0L15.82 0C16.23 0 16.54 0.1 16.76 0.3C16.98 0.51 17.1 0.8 17.1 1.19C17.1 1.58 16.98 1.88 16.76 2.09C16.54 2.3 16.23 2.41 15.82 2.41L9.96 2.41L9.96 16.99C9.96 17.45 9.84 17.81 9.61 18.07C9.38 18.33 9.03 18.46 8.55 18.46Z" fill="#1e5c66"></path></g><g transform="matrix(0.0985 -0.9951 0.9951 0.0985 13.8 12.16)"><path d="M2.58 5.15C4 5.15 5.15 4 5.15 2.58C5.15 1.15 4 0 2.58 0C1.15 0 0 1.15 0 2.58C0 4 1.15 5.15 2.58 5.15Z" fill="#1e5c66"></path></g><path d="M32.22 11.24C31.88 11.24 31.54 11.06 31.35 10.74C28.07 5.29 22.31 2.03 15.95 2.03C10.6 2.03 5.56 4.39 2.13 8.51C1.98 8.69 2.03 8.87 2.07 8.96C2.12 9.05 2.22 9.21 2.46 9.21C2.58 9.21 2.7 9.15 2.78 9.06C3.68 7.97 5.14 6.38 7.37 5.1C9.98 3.6 13.1 2.83 16.62 2.83C17.18 2.83 17.63 3.29 17.63 3.85C17.63 4.41 17.18 4.86 16.62 4.86C9.71 4.86 6.3 8 4.34 10.36C3.87 10.92 3.19 11.24 2.46 11.24C1.49 11.24 0.64 10.69 0.24 9.82C-0.17 8.95 -0.04 7.95 0.57 7.21C4.39 2.63 9.99 0 15.95 0C19.46 0 22.91 0.92 25.94 2.67C28.87 4.36 31.34 6.79 33.09 9.7C33.38 10.18 33.23 10.8 32.75 11.09C32.58 11.19 32.4 11.24 32.22 11.24Z" fill="#1e5c66"></path><g transform="matrix(1 0 0 1 0 28.76)"><path d="M17.29 11.24C13.78 11.24 10.32 10.31 7.3 8.56C4.37 6.87 1.89 4.44 0.15 1.54C-0.14 1.06 0.01 0.43 0.49 0.15C0.97 -0.14 1.59 0.01 1.88 0.49C5.17 5.95 10.93 9.2 17.29 9.2C22.64 9.2 27.68 6.84 31.1 2.73C31.26 2.54 31.21 2.36 31.16 2.27C31.12 2.18 31.01 2.03 30.78 2.03C30.65 2.03 30.54 2.08 30.46 2.18C29.56 3.26 28.1 4.85 25.87 6.14C23.25 7.64 20.14 8.4 16.62 8.4C16.06 8.4 15.6 7.95 15.6 7.39C15.6 6.83 16.06 6.37 16.62 6.37C23.53 6.37 26.94 3.24 28.9 0.88C29.36 0.32 30.05 0 30.78 0C31.74 0 32.59 0.54 33 1.41C33.41 2.28 33.28 3.29 32.66 4.03C28.85 8.61 23.24 11.24 17.29 11.24Z" fill="#1e5c66"></path></g></svg>
+</a>
+<a href="B08-Menu.dc.html" aria-label="{{menuLabel}}" style="position: relative; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 24px">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"></path><path d="M7 12h13"></path><path d="M10 18h10"></path></svg>
+<sc-if value="{{dot}}" hint-placeholder-val="{{ true }}">
+<span style="position: absolute; right: 6px; top: 6px; width: 12px; height: 12px; border-radius: 6px; background: #ff3b30; box-shadow: 0 0 0 2px #ffffff"></span>
+</sc-if>
+</a>
+</div>
+</nav>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dot":{"editor":"boolean","default":true},"$preview":{"width":440,"height":75}}'>
+class Component extends DCLogic {
+renderVals() {
+const dot = this.props.dot ?? true;
+return { dot, menuLabel: dot ? 'Menu, 2 mensagens novas' : 'Menu' };
+}
+}
+</script>
+</body>
+</html>

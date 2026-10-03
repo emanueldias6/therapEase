@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Menu</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Menu" back="B01-Dashboard.dc.html" hint-size="440px,72px"></dc-import></div>
+<nav aria-label="Menu" style="position: absolute; left: 32px; top: 165px; width: 376px">
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{items}}" as="i" hint-placeholder-count="6">
+<li><a href="{{i.href}}" style="min-height: 84px; box-sizing: border-box; border-radius: 16px; background: #f5fcfb; padding: 16px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 16px; color: #1f5953">
+<span style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: #f5fcfb; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{i.icon}}"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 18px; line-height: 25px; font-weight: 700">{{i.t}}</span><span style="font-size: 14px; line-height: 20px">{{i.d}}</span></span>
+<sc-if value="{{i.hasBadge}}" hint-placeholder-val="{{ false }}"><span style="flex-shrink: 0; white-space: nowrap; height: 26px; padding: 0 10px; border-radius: 13px; background: #d92d20; color: #ffffff; font-size: 13px; font-weight: 700; display: flex; align-items: center">{{i.badge}}</span></sc-if>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"></path></svg>
+</a></li>
+</sc-for>
+</ul>
+</nav>
+<div style="position: absolute; left: 0; top: 847px"><dc-import name="CmpBottomBar" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+renderVals() {
+const it = (t, d, href, icon, badge) => ({ t, d, href, icon, badge: badge || '', hasBadge: !!badge });
+return {
+items: [
+it('Planos', 'Planos, sessões e exercícios', 'G01-Plano.dc.html', 'M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2zM9 12h6M9 16h6'),
+it('Calendário', 'O que tem de fazer e quando', 'G03-Calendario.dc.html', 'M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2zM16 3v4M8 3v4M4 11h16'),
+it('Progresso', 'Evolução e sessões feitas', 'G06-Progresso.dc.html', 'M3 12h4l3 8l4 -16l3 8h4'),
+it('Artigos', 'Prescritos e biblioteca de artigos', 'H01-Artigos.dc.html', 'M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13M12 6v13M21 6v13', '1 novo'),
+it('Mensagens', 'Conversa com a sua equipa clínica', 'H05-Mensagens.dc.html', 'M8 9h8M8 13h6M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3z', '2 novas'),
+it('Ajuda', 'Dúvidas e problemas técnicos', 'H10-Ajuda.dc.html', 'M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0M12 16v.01M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483')
+]
+};
+}
+}
+</script>
+</body>
+</html>

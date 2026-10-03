@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Desconforto</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1e5c66">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<a href="F01-Dor.dc.html" aria-label="Voltar" style="position: absolute; left: 28px; top: 76px; height: 44px; padding: 0 12px 0 4px; display: flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 14px; line-height: 19px; font-weight: 600; color: #11363c; text-decoration: none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M15 6l-6 6l6 6"></path></svg><span>Voltar</span></a>
+<div role="progressbar" aria-label="Pergunta 2 de 5" aria-valuenow="2" aria-valuemin="1" aria-valuemax="5" style="position: absolute; left: 32px; top: 124px; width: 376px; display: flex; gap: 6px"><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #1e5c66"></span><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #1e5c66"></span><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #c8dfdc"></span><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #c8dfdc"></span><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #c8dfdc"></span></div>
+<p style="position: absolute; left: 32px; top: 138px; width: 376px; margin: 0; text-align: center; font-size: 14px; font-weight: 600">Pergunta 2 de 5</p>
+<h1 style="position: absolute; left: 32px; top: 220px; width: 376px; margin: 0; text-align: center; font-size: 36px; line-height: 49px; font-weight: 600">Sentiu algum desconforto?</h1>
+<p style="position: absolute; left: 32px; top: 330px; width: 376px; margin: 0; text-align: center; font-size: 18px; line-height: 25px; font-weight: 500">Por exemplo, tensão, cansaço nos músculos ou tonturas.</p>
+<div style="position: absolute; left: 32px; top: 440px; width: 376px; display: flex; gap: 16px">
+<a href="F04-Dificuldade.dc.html" style="flex-grow: 1; height: 140px; border-radius: 16px; background: #f5fcfb; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; font-size: 26px; font-weight: 600"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5l10 -10"></path></svg>Sim</a>
+<a href="F04-Dificuldade.dc.html" style="flex-grow: 1; height: 140px; border-radius: 16px; background: #f5fcfb; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; font-size: 26px; font-weight: 600"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg>Não</a>
+</div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

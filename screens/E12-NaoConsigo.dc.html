@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Não consigo fazer este exercício</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif}a{color:#ffffff;text-decoration:none}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: #11363c; font-family: 'Nunito', sans-serif; color: #ffffff">
+<div style="position: absolute; left: 0; top: 0"><dc-import name="CmpStatusBar" tone="dark" hint-size="440px,53px"></dc-import></div>
+<a href="E10-Pausa.dc.html" aria-label="Voltar" style="position: absolute; left: 28px; top: 70px; height: 44px; padding: 0 12px 0 4px; display: flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 14px; line-height: 19px; font-weight: 600; color: #ffffff; text-decoration: none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M15 6l-6 6l6 6"></path></svg><span>Voltar</span></a>
+<h1 style="position: absolute; left: 32px; top: 124px; width: 376px; margin: 0; font-size: 36px; line-height: 44px; font-weight: 400">O que o impede de fazer este exercício?</h1>
+<p style="position: absolute; left: 32px; top: 222px; width: 376px; margin: 0; font-size: 18px; line-height: 25px; opacity: 0.85">Exercício 1 · A sua resposta fica registada para a equipa clínica.</p>
+<div role="radiogroup" aria-label="Motivo" style="position: absolute; left: 32px; top: 290px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{options}}" as="o" hint-placeholder-count="5">
+<button type="button" role="radio" aria-checked="{{o.checked}}" onClick="{{o.pick}}" style="display: flex; align-items: center; justify-content: space-between; width: 376px; min-height: 58px; box-sizing: border-box; padding: 0 20px; border: 0; border-radius: 12px; background: {{o.bg}}; color: {{o.fg}}; box-shadow: {{o.ring}}; font-size: 20px; font-weight: 500; text-align: left">{{o.label}}<span aria-hidden="true" style="width: 22px; height: 22px; box-sizing: border-box; border-radius: 11px; border: 2px solid {{o.fg}}; background: {{o.dot}}"></span></button>
+</sc-for>
+</div>
+<a href="E09-ProximoExercicio.dc.html" style="position: absolute; left: 32px; top: 690px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #ffffff; color: #11363c; font-size: 24px; font-weight: 500">Passar ao exercício seguinte</a>
+<a href="E11-TerminarConfirmar.dc.html" style="position: absolute; left: 32px; top: 762px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #2e4e53; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25); color: #ffffff; font-size: 24px; font-weight: 500">Parar por hoje</a>
+<p style="position: absolute; left: 32px; top: 840px; width: 376px; margin: 0; text-align: center; font-size: 14px; line-height: 20px; opacity: 0.85">Se sentir dor forte ou mal-estar súbito, pare e ligue 112.</p>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #ffffff"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { picked: 0 }; }
+renderVals() {
+const labels = ['Sinto dor', 'Estou muito cansado', 'Não percebi o movimento', 'Falta-me material', 'Outro motivo'];
+const p = this.state.picked;
+return {
+options: labels.map((label, i) => {
+const on = i === p;
+return { label, checked: on ? 'true' : 'false', bg: on ? '#ffffff' : '#24464c', fg: on ? '#11363c' : '#ffffff', ring: on ? 'none' : 'inset 0 0 0 1px rgba(255,255,255,0.25)', dot: on ? '#11363c' : 'transparent', pick: () => this.setState({ picked: i }) };
+})
+};
+}
+}
+</script>
+</body>
+</html>

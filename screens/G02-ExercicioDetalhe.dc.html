@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Detalhe do exercício</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 1350px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Agachamento" back="G10-PlanoDetalhe.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 157px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<div style="position: relative; height: 434px; border-radius: 204px; background: rgba(255,255,255,0.2); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: #1e5c66">
+<span style="width: 72px; height: 72px; border-radius: 36px; background: #f5fcfb; display: flex; align-items: center; justify-content: center"><svg width="34" height="34" viewBox="0 0 24 24" fill="#1e5c66" aria-hidden="true"><path d="M7 4v16l13 -8z"></path></svg></span>
+<span style="font-size: 15px; font-weight: 600">[Vídeo de demonstração do exercício]</span>
+</div>
+<dl style="margin: 0; box-sizing: border-box; border-radius: 16px; background: #f5fcfb; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px"><div style="display: flex; flex-direction: column-reverse"><dt style="font-size: 13px; line-height: 18px">Séries</dt><dd style="margin: 0; font-size: 24px; line-height: 29px; font-weight: 600">3</dd></div><div style="display: flex; flex-direction: column-reverse"><dt style="font-size: 13px; line-height: 18px">Repetições</dt><dd style="margin: 0; font-size: 24px; line-height: 29px; font-weight: 600">10</dd></div><div style="display: flex; flex-direction: column-reverse"><dt style="font-size: 13px; line-height: 18px">Material</dt><dd style="margin: 0; font-size: 24px; line-height: 29px; font-weight: 600">Cadeira</dd></div></dl>
+<section style="border-radius: 16px; background: #f5fcfb; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06)">
+<h2 style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 18px; line-height: 27px; font-weight: 700">Como fazer</h2>
+<ol style="margin: 12px 0 0; padding: 0 0 0 22px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 23px">
+<li>Fique de pé em frente à cadeira, com os pés afastados à largura dos ombros.</li>
+<li>Baixe devagar, como se fosse sentar-se, sem chegar a apoiar.</li>
+<li>Volte a subir devagar. Pode apoiar as mãos na cadeira se precisar.</li>
+</ol>
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 20px; color: #587274">Indicações de exemplo — o texto final vem da prescrição da equipa clínica.</p>
+</section>
+<section style="border-radius: 16px; background: #f5fcfb; padding: 16px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 12px">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h16"></path></svg>
+<span style="font-size: 16px; line-height: 22px">Faz parte das sessões de <strong>Reforço muscular</strong>, 4 vezes por semana.</span>
+</section>
+</main>
+<div style="position: absolute; left: 0; top: 1245px"><dc-import name="CmpBottomBar" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":1350}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

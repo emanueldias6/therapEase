@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Calendário</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 1383px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Calendário" back="B08-Menu.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 157px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<section aria-label="Semana de 21 a 27 de setembro" style="position: relative; width: 376px; height: 291px; border-radius: 16px; background: #f5fcfb; box-shadow: 0 4px 8px rgba(0,0,0,0.06)">
+<button type="button" aria-label="Semana anterior" style="position: absolute; left: 18px; top: 10px; width: 44px; height: 44px; border: 0; background: none; padding: 0; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6l6 6"></path></svg></button>
+<h2 style="position: absolute; left: 60px; right: 60px; top: 22px; margin: 0; text-align: center; font-size: 18px; line-height: 27px; font-weight: 700">21 – 27 setembro</h2>
+<button type="button" aria-label="Semana seguinte" style="position: absolute; right: 18px; top: 10px; width: 44px; height: 44px; border: 0; background: none; padding: 0; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"></path></svg></button>
+<ol style="position: absolute; left: 21px; top: 69px; margin: 0; padding: 0; list-style: none; display: flex; gap: 11px">
+<sc-for list="{{week}}" as="d" hint-placeholder-count="7">
+<li style="width: 38px"><button type="button" aria-label="{{d.aria}}" aria-pressed="{{d.pressed}}" onClick="{{d.pick}}" style="width: 38px; border: 0; background: none; padding: 0; display: flex; flex-direction: column; align-items: center; color: #1f5953">
+<span style="font-size: 12px; line-height: 18px; font-weight: 600">{{d.l}}</span>
+<span style="margin-top: 5px; width: 38px; height: 38px; box-sizing: border-box; border-radius: 19px; background: {{d.bg}}; box-shadow: {{d.ring}}; color: {{d.fg}}; display: flex; align-items: center; justify-content: center; font-size: 15px; line-height: 20px; font-weight: 700">{{d.n}}</span>
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{d.ic}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-top: 6px"><path d="{{d.icon}}"></path></svg>
+</button></li>
+</sc-for>
+</ol>
+<div style="position: absolute; left: 20px; right: 20px; top: 168px; height: 1px; background: #c8dfdc"></div>
+<div style="position: absolute; left: 20px; right: 20px; top: 180px"><h2 style="margin: 0 0 8px; display: flex; align-items: center; gap: 8px; font-size: 15px; line-height: 20px; font-weight: 700">Legenda<a href="#" data-help="calendario" aria-label="Ajuda: o que significam os símbolos" style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 14px; background: #dfedf0; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path><path d="M12 19l0 .01"></path></svg></a></h2>
+<ul style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 171px 1fr; row-gap: 6px; font-size: 14px; line-height: 19px">
+<sc-for list="{{legend}}" as="g" hint-placeholder-count="5"><li style="display: flex; align-items: center; gap: 8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="{{g.c}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{g.icon}}"></path></svg>{{g.t}}</li></sc-for>
+</ul></div>
+</section>
+<section aria-labelledby="dia" style="border-radius: 16px; background: #f5fcfb; padding: 16px 20px 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.06)">
+<h2 id="dia" style="margin: 0 0 6px; font-size: 18px; line-height: 27px; font-weight: 700">{{dayTitle}}</h2>
+<sc-if value="{{noEvents}}" hint-placeholder-val="{{ false }}"><p style="margin: 0 0 10px; font-size: 15px; line-height: 22px">Sem sessões, consultas ou artigos neste dia.</p></sc-if>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column">
+<sc-for list="{{events}}" as="e" hint-placeholder-count="2">
+<li style="border-top: 1px solid #dfedf0"><a href="{{e.href}}" style="padding: 10px 0; box-sizing: border-box; display: flex; align-items: flex-start; gap: 12px; color: #1f5953">
+<span aria-hidden="true" style="flex: none; margin-top: 3px; width: 48px; height: 64px; border-radius: 24px; background: {{e.bg}}; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#11363c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="{{e.icon}}"></path></svg></span>
+<span style="flex-grow: 1; min-height: 70px; display: flex; flex-direction: column; gap: 12px">
+<span style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px"><span style="display: flex; flex-direction: column"><span style="font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.02em">{{e.kind}}</span><span style="font-size: 16px; line-height: 22px; font-weight: 700">{{e.t}}</span></span><sc-if value="{{e.hasBadge}}" hint-placeholder-val="{{ true }}"><dc-import name="CmpBadge" state="{{e.state}}" hint-size="100px,22px"></dc-import></sc-if></span>
+<span style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; line-height: 18px">{{e.s}}</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M9 6l6 6l-6 6"></path></svg></span>
+</span>
+</a></li>
+</sc-for>
+</ul>
+</section>
+<section aria-labelledby="semana" style="border-radius: 16px; background: #f5fcfb; padding: 16px 20px 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.06)">
+<h2 id="semana" style="margin: 0 0 6px; font-size: 18px; line-height: 27px; font-weight: 700">Resumo semanal</h2>
+<ul style="margin: 0; padding: 0; list-style: none">
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="7">
+<li style="border-top: 1px solid #dfedf0"><a href="{{r.href}}" aria-disabled="{{r.off}}" style="min-height: 64px; padding: 6px 0; box-sizing: border-box; display: flex; align-items: center; gap: 8px; color: #1f5953; pointer-events: {{r.pe}}">
+<span style="width: 61px; flex: none; display: flex; flex-direction: column"><span style="font-size: 13px; line-height: 18px; font-weight: 600">{{r.wd}}</span><span style="font-size: 20px; line-height: 24px; font-weight: 700">{{r.n}}</span></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 16px; line-height: 22px; font-weight: 700">{{r.t}}</span><span style="font-size: 13px; line-height: 18px">{{r.s}}</span></span>
+<sc-if value="{{r.hasBadge}}" hint-placeholder-val="{{ true }}"><dc-import name="CmpBadge" state="{{r.state}}" hint-size="100px,30px"></dc-import></sc-if>
+</a></li>
+</sc-for>
+</ul>
+</section>
+</main>
+<div style="position: absolute; left: 0; top: 1278px"><dc-import name="CmpBottomBar" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":1383}}'>
+// G03 · Calendário semanal. Tocar num dia mostra, no cartão do dia, as sessões, consultas e artigos desse dia.
+// Qualquer sessão (no dia ou no resumo semanal) abre o detalhe da sessão (G05).
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { sel: 4 }; }
+renderVals() {
+const I = {
+concluida: { icon: 'M5 12l5 5l10 -10', c: '#0e5841', t: 'Concluída' },
+parcial: { icon: 'M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18M12 3v18', c: '#8c4530', t: 'Parcial' },
+interrompida: { icon: 'M10 4v16M14 4v16', c: '#a8543a', t: 'Interrompida' },
+perdida: { icon: 'M18 6l-12 12M6 6l12 12', c: '#b83300', t: 'Perdida' },
+agendada: { icon: 'M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18M12 7v5l3 3', c: '#1e5c66', t: 'Agendada' },
+none: { icon: '', c: 'transparent', t: '' }
+};
+const K = {
+sessao: { kind: 'SESSÃO', bg: '#e8f8f5', icon: 'M15 5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0M5 20l5 -.5l1 -2M18 20v-5h-5.5l2.5 -6.5l-5.5 1l1.5 2' },
+consulta: { kind: 'CONSULTA', bg: '#f3f0f8', icon: 'M6 4h-1a2 2 0 0 0 -2 2v3.5a5.5 5.5 0 0 0 11 0v-3.5a2 2 0 0 0 -2 -2h-1M8 15a6 6 0 1 0 12 0v-3M11 3v2M6 3v2M20 10m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0' },
+artigo: { kind: 'ARTIGO PRESCRITO', bg: '#fbe0d3', icon: 'M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13M12 6v13M21 6v13' }
+};
+const G05 = 'G05-SessaoDetalhe.dc.html';
+const ev = (k, t, s, href, state) => ({ ...K[k], t, s, href, state: state || '', hasBadge: !!state });
+const days = [
+{ l: 'S', wd: 'Segunda', n: 21, st: 'concluida', ev: [ev('sessao', 'Reforço muscular', '09:30 · 30 min · 3 de 3 exercícios', G05, 'concluida'), ev('artigo', 'Preparar o espaço em casa', '4 min de leitura', 'H03-ArtigoLido.dc.html', 'lido')] },
+{ l: 'T', wd: 'Terça', n: 22, st: 'none', ev: [ev('consulta', 'Consulta de fisioterapia', '10:30 · [local da consulta]', 'H05-Mensagens.dc.html')] },
+{ l: 'Q', wd: 'Quarta', n: 23, st: 'parcial', ev: [ev('sessao', 'Reforço muscular', '22 min · 2 de 3 exercícios', G05, 'parcial')] },
+{ l: 'Q', wd: 'Quinta', n: 24, st: 'perdida', ev: [ev('sessao', 'Reforço muscular', 'Não realizada', G05, 'perdida')] },
+{ l: 'S', wd: 'Hoje, sexta', n: 25, st: 'agendada', today: true, ev: [ev('sessao', 'Reforço muscular', '20:00 · 30 min · precisa de cadeira', G05, 'hoje'), ev('artigo', 'Respiração e exercício', '3 min de leitura', 'H15-SobreArtigo.dc.html', 'naoLido')] },
+{ l: 'S', wd: 'Sábado', n: 26, st: 'none', ev: [] },
+{ l: 'D', wd: 'Domingo', n: 27, st: 'agendada', ev: [ev('sessao', 'Reforço muscular', '10:00 · 30 min', G05, 'agendada')] }
+];
+const sel = this.state.sel, d = days[sel];
+const R = (wd, n, t, s, state) => ({ wd, n, t, s, state, hasBadge: !!state, href: state ? G05 : '#', pe: state ? 'auto' : 'none', off: state ? 'false' : 'true' });
+return {
+week: days.map((x, i) => { const on = i === sel; return { l: x.l, n: x.n, icon: I[x.st].icon, ic: I[x.st].c, bg: on ? '#1e5c66' : '#e8f8f5', fg: on ? '#ffffff' : '#1f5953', ring: x.today && !on ? 'inset 0 0 0 2px #1e5c66' : 'none', pressed: on ? 'true' : 'false', pick: () => this.setState({ sel: i }), aria: x.wd + ' ' + x.n + (I[x.st].t ? ', ' + I[x.st].t : '') + ', ' + (x.ev.length ? x.ev.length + ' evento' + (x.ev.length > 1 ? 's' : '') : 'sem eventos') }; }),
+dayTitle: d.wd + ', ' + d.n + ' de setembro', events: d.ev, noEvents: d.ev.length === 0,
+rows: [
+R('Seg', 21, 'Reforço muscular', '30 min · 3 de 3 exercícios', 'concluida'),
+R('Ter', 22, 'Dia de descanso', 'Sem sessão prevista', ''),
+R('Qua', 23, 'Reforço muscular', '22 min · 2 de 3 exercícios', 'parcial'),
+R('Qui', 24, 'Reforço muscular', 'Não realizada', 'perdida'),
+R('Hoje', 25, 'Reforço muscular', '20:00 · 30 min · precisa de cadeira', 'hoje'),
+R('Sáb', 26, 'Dia de descanso', 'Sem sessão prevista', ''),
+R('Dom', 27, 'Reforço muscular', '10:00 · 30 min', 'agendada')
+],
+legend: ['concluida', 'parcial', 'interrompida', 'perdida', 'agendada'].map(k => I[k])
+};
+}
+}
+</script>
+</body>
+</html>

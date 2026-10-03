@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Confirmar consentimento</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: #f5fcfb; font-family: 'Nunito', sans-serif; color: #1e5c66">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Consentimento" back="A12-PinDefinido.dc.html" hint-size="440px,72px"></dc-import></div>
+<div style="position: absolute; left: 32px; top: 157px"><dc-import name="CmpStepper" step="{{two}}" hint-size="376px,40px"></dc-import></div>
+<p style="position: absolute; left: 32px; top: 249px; width: 376px; margin: 0; font-family: 'Nunito', sans-serif; font-size: 15px; line-height: 20px; font-weight: 500">Reconheço que fui informado(a) e compreendi completamente a forma como meus dados pessoais serão coletados, processados e utilizados pela aplicação de saúde TherapEase…</p>
+<div style="position: absolute; inset: 0; background: rgba(17,54,60,0.55)"></div>
+<div role="dialog" aria-modal="true" aria-labelledby="conf-titulo" style="position: absolute; left: 31px; top: 249px; width: 377px; box-sizing: border-box; padding: 20px 28px; border-radius: 12px; background: #f5fcfb; color: #1e5c66; box-shadow: 0 12px 32px rgba(0,0,0,0.18); display: flex; flex-direction: column; align-items: center; gap: 29px"><h1 id="conf-titulo" style="margin: 0; align-self: stretch; text-align: center; font-size: 28px; line-height: 34px; font-weight: 600">Tem a certeza que quer assinar?</h1><svg width="132" height="132" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path><path d="M9 15l2 2l4 -4"></path></svg><p style="margin: 0; align-self: stretch; font-size: 24px; line-height: 29px; font-weight: 600">Ao clicar em assinar está a aceitar os termos de utilização do Therapease e dos seus dados por parte de terceiros.</p><div style="align-self: stretch; display: flex; flex-direction: column; gap: 12px"><a href="A15-Dados.dc.html" style="align-self: stretch; display: flex; align-items: center; justify-content: center; height: 50px; border-radius: 12px; background: #1e5c66; color: #ffffff; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">Aceitar</a></div></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #ffffff"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+renderVals() { return { two: 2 }; }
+}
+</script>
+</body>
+</html>

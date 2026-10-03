@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Dor: local e intensidade</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1e5c66">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<a href="F01-Dor.dc.html" aria-label="Voltar" style="position: absolute; left: 28px; top: 76px; height: 44px; padding: 0 12px 0 4px; display: flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 14px; line-height: 19px; font-weight: 600; color: #11363c; text-decoration: none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M15 6l-6 6l6 6"></path></svg><span>Voltar</span></a>
+<p style="position: absolute; left: 32px; top: 90px; width: 376px; margin: 0; text-align: center; font-size: 14px; font-weight: 600">Pergunta 1 de 5 · Dor</p>
+<h1 style="position: absolute; left: 32px; top: 140px; width: 376px; margin: 0; text-align: center; font-size: 28px; line-height: 36px; font-weight: 600">Onde sentiu dor?</h1>
+<p style="position: absolute; left: 32px; top: 180px; width: 376px; margin: 0; text-align: center; font-size: 15px; font-weight: 500">Pode escolher mais do que um local.</p>
+<div role="group" aria-label="Local da dor" style="position: absolute; left: 32px; top: 218px; width: 376px; display: flex; flex-wrap: wrap; gap: 10px 14px; justify-content: center">
+<sc-for list="{{places}}" as="p" hint-placeholder-count="8">
+<button type="button" aria-pressed="{{p.pressed}}" onClick="{{p.toggle}}" style="height: 44px; padding: 0 14px; border: 0; border-radius: 22px; background: {{p.bg}}; color: {{p.fg}}; box-shadow: {{p.ring}}; font-size: 17px; font-weight: 600; display: flex; align-items: center; gap: 6px">{{p.label}}</button>
+</sc-for>
+</div>
+<div role="radiogroup" aria-label="Lado" style="position: absolute; left: 32px; top: 386px; width: 376px; display: flex; border-radius: 12px; background: #f5fcfb; padding: 4px; box-sizing: border-box">
+<sc-for list="{{sides}}" as="s" hint-placeholder-count="2">
+<button type="button" role="radio" aria-checked="{{s.checked}}" onClick="{{s.pick}}" style="flex-grow: 1; height: 40px; border: 0; border-radius: 9px; background: {{s.bg}}; color: {{s.fg}}; font-size: 17px; font-weight: 700">{{s.label}}</button>
+</sc-for>
+</div>
+<h2 style="position: absolute; left: 32px; top: 450px; width: 376px; margin: 0; text-align: center; font-size: 28px; line-height: 36px; font-weight: 600">Qual foi a intensidade?</h2>
+<div data-slider style="position: absolute; left: 32px; top: 496px; width: 376px; display: flex; flex-direction: column; align-items: center; gap: 6px">
+<p aria-hidden="true" style="margin: 0; display: flex; align-items: baseline; gap: 6px"><span data-v style="font-size: 56px; line-height: 76px; font-weight: 700; color: #11363c">{{lvl}}</span><span style="font-size: 20px; line-height: 27px; font-weight: 500; color: #1e5c66">de 10</span></p>
+<p data-w aria-hidden="true" style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600; color: #1e5c66">{{word}}</p>
+<div style="position: relative; width: 376px; height: 44px">
+<div style="position: absolute; left: 10px; right: 10px; top: 18px; height: 8px; border-radius: 4px; background: #c8dfdc"></div>
+<div data-fill style="position: absolute; left: 10px; top: 18px; height: 8px; border-radius: 4px; background: #1e5c66; width: {{fillW}}px"></div>
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="11"><span data-dot style="position: absolute; top: 20px; left: {{d.x}}px; width: 4px; height: 4px; border-radius: 2px; background: {{d.c}}"></span></sc-for>
+<div data-thumb style="position: absolute; top: 4px; left: {{thumbL}}px; width: 36px; height: 36px; box-sizing: border-box; border-radius: 18px; background: #ffffff; border: 4px solid #1e5c66; box-shadow: 0 2px 6px rgba(17,54,60,0.2); pointer-events: none"></div>
+<input type="range" min="0" max="10" step="1" value="{{lvl}}" aria-label="Intensidade da dor, de 0 a 10" aria-valuetext="{{aria}}" onInput="{{slide}}" onChange="{{commit}}" style="position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; touch-action: none">
+</div>
+<div aria-hidden="true" style="position: relative; width: 376px; height: 20px"><sc-for list="{{nums}}" as="n" hint-placeholder-count="11"><span data-num style="position: absolute; top: 0; left: {{n.x}}px; width: 20px; text-align: center; font-size: 14px; line-height: 20px; font-weight: {{n.fw}}; color: {{n.c}}">{{n.v}}</span></sc-for></div>
+<div aria-hidden="true" style="width: 376px; display: flex; justify-content: space-between; font-size: 14px; line-height: 19px; color: #1e5c66"><span>Sem dor</span><span>Pior dor possível</span></div>
+</div>
+<div role="status" style="position: absolute; left: 32px; top: 716px; width: 376px; min-height: 52px; box-sizing: border-box; border-radius: 12px; background: #f5fcfb; padding: 12px 16px; font-size: 16px; line-height: 22px; font-weight: 600; text-align: center">{{summary}}</div>
+<a href="F03-Desconforto.dc.html" style="position: absolute; left: 32px; top: 800px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #1e5c66; color: #ffffff; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">Continuar</a>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { places: ['Joelho'], side: 0, level: 3 }; }
+renderVals() {
+const all = ['Pescoço', 'Ombro', 'Costas', 'Anca', 'Joelho', 'Tornozelo', 'Pé', 'Outro'];
+const sel = this.state.places;
+const sides = ['Esquerdo', 'Direito'];
+const lvl = this.state.level;
+const word = (v) => v === 0 ? 'Sem dor' : v <= 3 ? 'Dor ligeira' : v <= 6 ? 'Dor moderada' : v <= 9 ? 'Dor forte' : 'Pior dor possível';
+const pos = (k) => 18 + 34 * k;
+const paint = (root, v) => {
+root.querySelector('[data-v]').textContent = v; root.querySelector('[data-w]').textContent = word(v);
+root.querySelector('[data-fill]').style.width = (v ? pos(v) - 10 : 0) + 'px'; root.querySelector('[data-thumb]').style.left = (pos(v) - 18) + 'px';
+root.querySelectorAll('[data-dot]').forEach((d, k) => { d.style.background = v && k <= v ? '#ffffff' : '#98b7b1'; });
+root.querySelectorAll('[data-num]').forEach((n, k) => { n.style.fontWeight = k === v ? '700' : '500'; n.style.color = k === v ? '#11363c' : '#1e5c66'; });
+};
+return {
+places: all.map(label => {
+const on = sel.indexOf(label) >= 0;
+return { label, pressed: on ? 'true' : 'false', bg: on ? '#1e5c66' : '#f5fcfb', fg: on ? '#ffffff' : '#1e5c66', ring: on ? 'none' : 'inset 0 0 0 1px #c8dfdc', toggle: () => this.setState({ places: on ? sel.filter(x => x !== label) : sel.concat([label]) }) };
+}),
+sides: sides.map((label, i) => ({ label, checked: i === this.state.side ? 'true' : 'false', bg: i === this.state.side ? '#1e5c66' : 'transparent', fg: i === this.state.side ? '#ffffff' : '#1e5c66', pick: () => this.setState({ side: i }) })),
+lvl, word: word(lvl), fillW: lvl ? pos(lvl) - 10 : 0, thumbL: pos(lvl) - 18, aria: lvl + ' de 10, ' + word(lvl).toLowerCase(),
+dots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(k => ({ x: pos(k) - 2, c: lvl && k <= lvl ? '#ffffff' : '#98b7b1' })),
+nums: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(k => ({ v: k, x: pos(k) - 10, fw: k === lvl ? 700 : 500, c: k === lvl ? '#11363c' : '#1e5c66' })),
+slide: (e) => paint(e.target.closest('[data-slider]'), +e.target.value),
+commit: (e) => this.setState({ level: +e.target.value }),
+summary: (sel.length ? sel.join(', ') + ' (' + sides[this.state.side].toLowerCase() + ')' : 'Sem local indicado') + ' · Intensidade ' + lvl + ' de 10'
+};
+}
+}
+</script>
+</body>
+</html>

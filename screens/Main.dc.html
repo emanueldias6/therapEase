@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Splash</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}.te-wheel{animation:te-spin 1.2s steps(12) infinite}@keyframes te-spin{to{transform:rotate(360deg)}}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1e5c66">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<img src="/_blob/4fea790a2b6f45f7ea30e37bf09b04f7" alt="TherapEase" style="position: absolute; left: 95px; top: 173px; width: 250px; height: 75px">
+<div role="progressbar" aria-label="A carregar" style="position: absolute; left: 176px; top: 546px; width: 88px; height: 88px">
+<svg class="te-wheel" width="88" height="88" viewBox="-0.2 16.4 88 88" aria-hidden="true"><path d="M78.2653 41.8537C77.5072 41.8618 76.7616 41.4858 76.3372 40.8015C68.9617 28.9516 56.1997 21.9675 42.1886 22.1252C30.4007 22.2531 19.3659 27.5443 11.918 36.6294C11.588 37.0276 11.7054 37.4235 11.799 37.6211C11.8927 37.8188 12.1308 38.1502 12.6516 38.143C12.9274 38.1375 13.1861 38.0221 13.3519 37.8132C15.3158 35.4178 18.489 31.9024 23.3712 29.0398C29.0943 25.6879 35.9325 23.9477 43.688 23.8578C44.9243 23.8436 45.9331 24.8263 45.9474 26.0535C45.9616 27.2808 44.9718 28.2823 43.7355 28.2964C28.5036 28.4665 21.0799 35.4078 16.8196 40.6087C15.8144 41.84 14.3118 42.5579 12.6982 42.574C10.5792 42.5954 8.68871 41.4345 7.76957 39.5408C6.85472 37.6506 7.11081 35.4601 8.44942 33.8263C16.7401 23.7145 29.0196 17.8285 42.1411 17.6866C49.8736 17.5994 57.505 19.5337 64.2081 23.2777C70.7071 26.9104 76.2201 32.1626 80.1382 38.4682C80.788 39.5085 80.4609 40.8764 79.413 41.5215C79.0577 41.7411 78.6581 41.85 78.2653 41.8537Z" fill="#1E5C66"></path><path d="M9.63513 78.6021C10.3861 78.6009 11.1176 78.9838 11.5371 79.6696C18.7135 91.5179 31.2952 98.5995 45.2015 98.6126C56.9006 98.6253 67.9137 93.5095 75.4196 84.5809C75.7504 84.1885 75.6422 83.7965 75.5474 83.5984C75.4527 83.4002 75.2227 83.0687 74.7066 83.0683C74.4294 83.0698 74.1776 83.1837 74.007 83.3862C72.0297 85.74 68.8406 89.1872 63.9591 91.973C58.2416 95.2301 51.4326 96.878 43.7323 96.8723C42.5075 96.8732 41.5141 95.8862 41.5167 94.6662C41.5192 93.4462 42.5099 92.4641 43.7389 92.4667C58.8546 92.4803 66.3122 85.6819 70.6005 80.57C71.6173 79.3639 73.1152 78.6697 74.7138 78.6703C76.8132 78.6726 78.6747 79.8469 79.5682 81.7412C80.4577 83.632 80.1745 85.806 78.8275 87.4122C70.4795 97.3481 58.2202 103.044 45.1997 103.029C37.5224 103.021 29.9701 101.011 23.3637 97.2146C16.9565 93.5349 11.5537 88.2525 7.73908 81.9506C7.11048 80.9086 7.44753 79.5521 8.49719 78.928C8.85543 78.7129 9.25093 78.613 9.63997 78.6132L9.63513 78.6021Z" fill="#1E5C66"></path></svg>
+</div>
+<a href="A02-Login.dc.html" aria-label="Continuar para o login (avança automaticamente)" style="position: absolute; left: 0; top: 53px; width: 440px; height: 860px"></a>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

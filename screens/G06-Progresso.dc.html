@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Progresso</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 1224px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Progresso" back="B08-Menu.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 157px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 4px 4px -2px; font-size: 15px; font-weight: 600">Como está a evoluir</p>
+<dc-import name="CmpConsistencia" hint-size="376px,190px"></dc-import>
+<dc-import name="CmpCalendarioSemana" ver="calendario" hint-size="376px,160px"></dc-import>
+<section aria-labelledby="tend" style="border-radius: 16px; background: #f5fcfb; padding: 16px 20px 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<h2 id="tend" style="margin: 0; font-size: 18px; line-height: 27px; font-weight: 700">Tendências</h2>
+<a href="G11-Tendencias.dc.html" style="height: 36px; margin: -4.5px 0; display: flex; align-items: center; gap: 2px; font-size: 15px; font-weight: 700; color: #1e5c66">Ver mais<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"></path></svg></a>
+</div>
+<div style="display: grid; grid-template-columns: 162px 162px; gap: 8px 12px">
+<dc-import name="CmpTendenciaResumo" metrica="sessoes" hint-size="162px,76px"></dc-import>
+<dc-import name="CmpTendenciaResumo" metrica="dor" hint-size="162px,76px"></dc-import>
+<dc-import name="CmpTendenciaResumo" metrica="qualidade" hint-size="162px,76px"></dc-import>
+<dc-import name="CmpTendenciaResumo" metrica="amplitude" hint-size="162px,76px"></dc-import>
+</div>
+<p style="margin: -4px 0 0; font-size: 13px; line-height: 18px">Média das últimas 4 semanas face às 8 anteriores. Dados de exemplo.</p>
+</section>
+<section style="border-radius: 16px; background: #f5fcfb; padding: 18px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<div><p style="margin: 0; font-size: 14px; line-height: 20px">Sessões feitas desde o início</p><p style="margin: 2px 0 0; font-size: 28px; line-height: 34px; font-weight: 700">11</p></div>
+<div><p style="margin: 0; font-size: 14px; line-height: 20px">Tempo de exercício</p><p style="margin: 2px 0 0; font-size: 28px; line-height: 34px; font-weight: 700">4 h 52 min</p></div>
+</section>
+<a href="C22-AvaliacaoInicial.dc.html" style="border-radius: 16px; background: #f5fcfb; padding: 14px 18px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 12px; color: #1f5953">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path><path d="M6 8l6 1l6 -1"></path><path d="M12 9v4"></path><path d="M9 21l3 -8l3 8"></path></svg>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 16px; line-height: 22px; font-weight: 700">Avaliação inicial</span><span style="font-size: 13px; line-height: 19px">Ponto de partida desde 21 set · compare a sua evolução</span></span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"></path></svg>
+</a>
+
+</main>
+<div style="position: absolute; left: 0; top: 1119px"><dc-import name="CmpBottomBar" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":1224}}'>
+// G06 · Progresso: consistência, progresso semanal (dias → G05) e tendências (Figma G06).
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Planos</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Planos" back="B08-Menu.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 157px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0 4px 4px; font-size: 15px; line-height: 22px; font-weight: 600">Escolha um plano para ver as sessões e os exercícios.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{plans}}" as="p" hint-placeholder-count="3">
+<li><a href="G10-PlanoDetalhe.dc.html" style="box-sizing: border-box; border-radius: 16px; background: #f5fcfb; padding: 18px 16px 18px 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 12px; color: #1f5953">
+<span style="flex-grow: 1; display: flex; flex-direction: column; gap: 4px">
+<span style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><span style="font-size: 20px; line-height: 26px; font-weight: 700; color: #1e5c66">{{p.t}}</span><span style="flex: none; border-radius: 12px; background: {{p.sbg}}; padding: 2px 10px; font-size: 12px; line-height: 18px; font-weight: 700; color: {{p.sfg}}">{{p.s}}</span></span>
+<span style="font-size: 14px; line-height: 20px">{{p.d}}</span>
+<span style="font-size: 13px; line-height: 18px; opacity: 0.85">{{p.per}}</span>
+<span aria-label="{{p.aria}}" style="margin-top: 8px; display: flex; align-items: center; gap: 10px"><span style="flex-grow: 1; height: 6px; border-radius: 3px; background: #d8eee9; overflow: hidden"><span style="display: block; width: {{p.pct}}%; height: 6px; border-radius: 3px; background: #1e5c66"></span></span><span style="flex: none; font-size: 13px; font-weight: 600">{{p.prog}}</span></span>
+</span>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M9 6l6 6l-6 6"></path></svg>
+</a></li>
+</sc-for>
+</ul>
+</main>
+<div style="position: absolute; left: 0; top: 847px"><dc-import name="CmpBottomBar" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+// G01 · lista de planos prescritos (Figma G01). Cada plano abre o detalhe (G10).
+class Component extends DCLogic {
+renderVals() {
+const P = (t, s, d, per, done, total) => ({ t, s, d, per, pct: Math.round(done / total * 100), prog: done + ' de ' + total, aria: done + ' de ' + total + ' sessões feitas',
+sbg: s === 'Ativo' ? '#1e5c66' : '#e8f8f5', sfg: s === 'Ativo' ? '#ffffff' : '#1e5c66' });
+return { plans: [
+P('Reabilitação — AVC', 'Ativo', '8 sessões de terapia ocupacional · 12 de fisioterapia', '[início] – [fim]', 5, 20),
+P('Mobilidade do ombro', 'Ativo', '6 sessões de fisioterapia', '[início] – [fim]', 2, 6),
+P('Reforço do joelho', 'Terminado', '10 sessões de fisioterapia', '[início] – [fim]', 10, 10)
+] };
+}
+}
+</script>
+</body>
+</html>

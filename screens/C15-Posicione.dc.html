@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Posicione-se</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif}a{color:#ffffff;text-decoration:none}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: #11363c; font-family: 'Nunito', sans-serif; color: #ffffff">
+<img src="/_blob/59af2a552397c7d7627e6cb3caa54dd6" alt="Imagem da câmara" style="position: absolute; left: 0; top: 190px; width: 440px; height: 783px; object-fit: cover">
+<div aria-hidden="true" style="position: absolute; left: 125px; top: 363px; width: 190px; height: 500px; border-radius: 95px; box-shadow: 0 0 0 1400px rgba(17,54,60,0.8)"></div>
+<div style="position: absolute; left: 0; top: -3px; width: 441px; height: 272px; background: #11363c"></div>
+<div style="position: absolute; left: 0; top: 0"><dc-import name="CmpStatusBar" tone="dark" hint-size="440px,53px"></dc-import></div>
+<h1 style="position: absolute; left: 31px; top: 89px; width: 376px; margin: 0; font-size: 40px; line-height: 52px; font-weight: 400">Posicione-se dentro do retângulo abaixo!</h1>
+<a href="C16-ForaRetangulo.dc.html" aria-label="Continuar (avança quando a câmara o deteta)" style="position: absolute; left: 0; top: 272px; width: 440px; height: 640px"></a>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #ffffff"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Dashboard sem plano</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<main style="position: absolute; left: 32px; top: 73px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<section aria-labelledby="semplano" style="border-radius: 16px; background: #f5fcfb; padding: 28px 24px 24px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px">
+<img src="/_blob/b626aed8978b838a2df9629b529f0ae7" alt="Profissional de saúde que acompanha o seu plano" style="width: 120px; height: 120px; border-radius: 60px; object-fit: cover; box-shadow: 0 0 0 1px #c8dfdc">
+<h2 id="semplano" style="margin: 8px 0 0; font-size: 26px; line-height: 31px; font-weight: 700">Ainda não tem um plano</h2>
+<p style="margin: 0; font-size: 16px; line-height: 23px">A sua equipa clínica está a preparar o seu plano de reabilitação. Quando estiver pronto, aparece aqui e recebe uma notificação.</p>
+<p style="margin: 0; font-size: 16px; line-height: 23px">Não precisa de fazer nada por agora.</p>
+</section>
+<section style="border-radius: 16px; background: #f5fcfb; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 18px; line-height: 27px; font-weight: 700">Enquanto espera</h3>
+<a href="H10-Ajuda.dc.html" style="height: 60px; box-sizing: border-box; border-radius: 12px; background: #f5fcfb; padding: 0 14px; display: flex; align-items: center; gap: 12px; color: #1f5953">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 16v.01"></path><path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483"></path></svg>
+<span style="flex-grow: 1; font-size: 16px; font-weight: 600">Como funciona a aplicação</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"></path></svg>
+</a>
+<a href="H05-Mensagens.dc.html" style="height: 60px; box-sizing: border-box; border-radius: 12px; background: #f5fcfb; padding: 0 14px; display: flex; align-items: center; gap: 12px; color: #1f5953">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 9h8"></path><path d="M8 13h6"></path><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"></path></svg>
+<span style="flex-grow: 1; font-size: 16px; font-weight: 600">Mensagens da equipa clínica</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"></path></svg>
+</a>
+</section>
+</main>
+<div style="position: absolute; left: 0; top: 847px"><dc-import name="CmpBottomBar" dot="{{no}}" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+renderVals() { return { no: false }; }
+}
+</script>
+</body>
+</html>

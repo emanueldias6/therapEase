@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Estado</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div style="display: inline-flex; height: 22px; align-items: center; font-family: 'Nunito', sans-serif">
+<span style="display: inline-flex; align-items: center; gap: 4px; height: 22px; box-sizing: border-box; padding: 0 6px; border-radius: 14px; background: {{bg}}; color: {{fg}}; font-size: 10px; line-height: 14px; font-weight: 500; white-space: nowrap">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="{{fg}}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{icon}}"></path></svg>
+{{label}}
+</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"state":{"editor":"enum","options":["concluida","parcial","interrompida","perdida","agendada","hoje","naoLido","emLeitura","lido"],"default":"concluida"},"$preview":{"width":100,"height":22}}'>
+class Component extends DCLogic {
+renderVals() {
+const s = this.props.state ?? 'concluida';
+const map = {
+concluida: { label: 'Concluída', bg: '#e3f5e6', fg: '#0e5841', icon: 'M5 12l5 5l10 -10' },
+parcial: { label: 'Parcial', bg: '#fef3ec', fg: '#8c5228', icon: 'M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18M12 3v18' },
+interrompida: { label: 'Interrompida', bg: '#fbe0d3', fg: '#8a3b00', icon: 'M10 4v16M14 4v16' },
+perdida: { label: 'Perdida', bg: '#ffebeb', fg: '#a3263a', icon: 'M18 6l-12 12M6 6l12 12' },
+agendada: { label: 'Agendada', bg: '#dfedf0', fg: '#1e5c66', icon: 'M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18M12 7v5l3 3' },
+hoje: { label: 'Hoje', bg: '#1e5c66', fg: '#ffffff', icon: 'M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18M12 7v5l3 3' },
+naoLido: { label: 'Novo', bg: '#f3f0f8', fg: '#6b5a88', icon: 'M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0' },
+emLeitura: { label: 'Em leitura', bg: '#fef3ec', fg: '#8c5228', icon: 'M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13M12 6v13M21 6v13' },
+lido: { label: 'Lido', bg: '#e3f5e6', fg: '#0e5841', icon: 'M5 12l5 5l10 -10' }
+};
+return map[s];
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Série concluída</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif}a{color:#ffffff;text-decoration:none}@keyframes repSpiral{from{transform:rotate(var(--a0)) translateY(var(--r0)) scale(0.75)}to{transform:rotate(var(--a1)) translateY(-128px) scale(1)}}@media (prefers-reduced-motion: reduce){.rep-anim{animation:none !important}}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: #11363c; font-family: 'Nunito', sans-serif; color: #ffffff">
+<img src="/_blob/d4e0d6a9c5438353a8c7453e43064964" alt="" data-fullbleed style="position: absolute; left: 0; top: 190px; width: 100%; height: calc(100% - 190px); object-fit: cover; border-radius: 0">
+<div data-fullbleed style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(17,54,60,0.95)"></div>
+<div style="position: absolute; left: 0; top: 0"><dc-import name="CmpStatusBar" tone="dark" hint-size="440px,53px"></dc-import></div>
+<h1 style="position: absolute; left: 32px; top: 135px; width: 376px; margin: 0; text-align: center; font-size: 60px; line-height: 55px; font-weight: 400">Primeira série concluída!</h1>
+<div role="img" aria-label="{{aria}}" style="position: absolute; left: 53px; top: 354px; width: 334px; height: 334px; border-radius: 167px">
+<div aria-hidden="true" style="position: absolute; left: 0; top: 0"><dc-import name="CmpSeriesWheel" states="xppp" countdown="0" hint-size="334px,334px"></dc-import></div>
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="15"><span class="rep-anim" style="position: absolute; left: 155px; top: 155px; width: 24px; height: 24px; border-radius: 12px; background: {{d.c}}; box-shadow: {{d.ring}}; --a0: {{d.a0}}deg; --r0: {{d.r0}}px; --a1: {{d.a1}}deg; transform: rotate({{d.a1}}deg) translateY(-128px); animation: repSpiral 1.5s cubic-bezier(0.45, 0.05, 0.3, 1) {{d.delay}}s both"></span></sc-for>
+</div>
+<p style="position: absolute; left: 43px; top: 789px; width: 354px; margin: 0; text-align: center; font-size: 26px; line-height: 34px; font-weight: 400">Excelente esforço! Fez tudo como pedido.</p>
+<a href="E07-Serie2.dc.html" aria-label="Continuar para a série seguinte (avança automaticamente)" style="position: absolute; left: 0; top: 53px; width: 440px; height: 860px"></a>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #ffffff"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+class Component extends DCLogic {
+renderVals() {
+// As mesmas 15 repetições da série (E05) saem da barra inferior em espiral e ficam à volta da roda (continua em E07).
+const states = 'gggggyryyyyyyyy'.split('');
+const col = { g: '#00e156', r: '#ff3b30', y: 'rgba(255,226,4,0.9)' };
+const cx = 53 + 167, cy = 354 + 167;
+const dots = states.map((s, i) => {
+const x = 16 + 9 + i * (440 - 32 - 18) / 14, y = 876 + 20 + 9;
+const a0 = Math.atan2(x - cx, -(y - cy)) * 180 / Math.PI;
+const r0 = Math.hypot(x - cx, y - cy);
+return { c: col[s], ring: s === 'r' ? 'inset 0 0 0 4px #ffffff' : 'none', a0: a0.toFixed(1), r0: (-r0).toFixed(1), a1: (-5 + i * 24 + 360).toFixed(1), delay: (i * 0.04).toFixed(2) };
+});
+const n = (k) => states.filter(s => s === k).length;
+return { dots, aria: 'Repetições da série: ' + n('g') + ' com boa execução, ' + n('y') + ' com execução razoável, ' + n('r') + ' com execução fraca' };
+}
+}
+</script>
+</body>
+</html>

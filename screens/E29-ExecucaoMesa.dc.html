@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Execução à mesa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=REM:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif}a{color:#ffffff;text-decoration:none}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: #11363c; font-family: 'Nunito', sans-serif; color: #ffffff">
+<div style="position: absolute; left: 32px; top: 262px; border-radius: 24px; overflow: hidden"><dc-import name="CmpMesaCena" modo="executar" hint-size="376px,440px"></dc-import></div>
+<a href="E30-CorrecaoMesa.dc.html" aria-label="Continuar (avança automaticamente)" style="position: absolute; left: 0; top: 260px; width: 440px; height: 600px"></a>
+<div style="position: absolute; left: 0; top: 0"><dc-import name="CmpExerciseHud" states="wppp" ex="4/4" ref="maos" enter="true" hint-size="440px,241px"></dc-import></div>
+<div style="position: absolute; left: 0; bottom: 0"><dc-import name="CmpRepDots" states="gggoooooooooooo" hint-size="440px,80px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #ffffff"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+// E29 · execução à mesa: deteção dos copos e das mãos (21 pontos por mão); mãos a verde quando o movimento está certo (Figma E29).
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

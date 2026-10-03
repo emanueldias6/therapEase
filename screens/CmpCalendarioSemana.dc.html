@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Progresso semanal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#1e5c66;text-decoration:none}</style>
+</helmet>
+<section style="width: 376px; box-sizing: border-box; border-radius: 16px; background: #f5fcfb; padding: 10px 20px 14px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 12px; font-family: 'Nunito', sans-serif; color: #1f5953">
+<sc-if value="{{summary}}" hint-placeholder-val="{{ true }}"><div style="display: flex; align-items: center; justify-content: space-between">
+<h3 style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 18px; line-height: 27px; font-weight: 700">Progresso semanal<a href="#" data-help="progresso" aria-label="Ajuda: como ler o progresso semanal" style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 14px; background: #dfedf0; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path><path d="M12 19l0 .01"></path></svg></a></h3>
+<a href="{{moreHref}}" style="height: 36px; display: flex; align-items: center; gap: 2px; font-size: 14px; font-weight: 600; color: #1e5c66">{{moreLabel}}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"></path></svg></a>
+</div>
+</sc-if>
+<sc-if value="{{nav}}" hint-placeholder-val="{{ false }}"><div style="display: flex; align-items: center; justify-content: space-between">
+<button type="button" aria-label="Semana anterior" style="width: 44px; height: 44px; border: 0; border-radius: 22px; background: transparent; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6l6 6"></path></svg></button>
+<h2 style="margin: 0; font-size: 18px; line-height: 27px; font-weight: 700">21 – 27 setembro</h2>
+<button type="button" aria-label="Semana seguinte" style="width: 44px; height: 44px; border: 0; border-radius: 22px; background: transparent; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"></path></svg></button>
+</div></sc-if>
+<ol aria-label="Progresso semanal" style="margin: 0; padding: 0; list-style: none; display: flex; justify-content: space-between">
+<sc-for list="{{week}}" as="d" hint-placeholder-count="7">
+<li style="width: 40px"><a href="{{d.href}}" aria-label="{{d.aria}}" aria-disabled="{{d.off}}" style="width: 40px; min-height: 44px; display: flex; flex-direction: column; align-items: center; gap: 6px; pointer-events: {{d.pe}}; color: inherit">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+<sc-for list="{{d.outer}}" as="s" hint-placeholder-count="1"><path d="{{s.d}}" stroke="#e38b4a" stroke-opacity="{{s.op}}" stroke-width="5" stroke-linecap="{{s.cap}}"></path></sc-for>
+<sc-for list="{{d.inner}}" as="s" hint-placeholder-count="1"><path d="{{s.d}}" stroke="#1e5c66" stroke-opacity="{{s.op}}" stroke-width="5" stroke-linecap="{{s.cap}}"></path></sc-for>
+</svg>
+<span style="font-size: 12px; line-height: 18px; font-weight: {{d.fw}}; color: {{d.fg}}">{{d.l}}</span><sc-if value="{{nav}}" hint-placeholder-val="{{ false }}"><span style="margin-top: -6px; font-size: 15px; line-height: 20px; font-weight: {{d.fw}}; color: {{d.fg}}">{{d.num}}</span></sc-if>
+</a></li>
+</sc-for>
+</ol>
+<div aria-hidden="true" style="display: flex; gap: 16px; font-size: 12px; line-height: 16px; font-weight: 500">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; box-sizing: border-box; border-radius: 5px; border: 3px solid #e38b4a"></span>Feito face ao previsto</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; box-sizing: border-box; border-radius: 5px; border: 3px solid #1e5c66"></span>Qualidade média</span>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"agenda":{"editor":"enum","options":["normal","vazia"],"default":"normal"},"modo":{"editor":"enum","options":["resumo","pagina"],"default":"resumo"},"ver":{"editor":"enum","options":["progresso","calendario"],"default":"progresso"},"$preview":{"width":376,"height":160}}'>
+// Progresso semanal. Tocar num dia com sessão feita abre o detalhe da sessão (G05).
+// Dois rings concêntricos por dia, independentes:
+//   exterior (laranja) = sessões feitas face ao previsto nesse dia; com mais de uma sessão prevista, o ring divide-se num segmento por sessão;
+//   interior (teal) = qualidade média da execução nesse dia.
+// Base: 20% nos dias com sessão prevista, 8% nos dias sem sessão. Dias futuros e dias sem atividade não mostram progresso.
+class Component extends DCLogic {
+renderVals() {
+// done = fração feita de cada sessão prevista; q = qualidade média (0–1) ou null se não houve execução
+const days = [
+{ l: 'S', n: 'Segunda', plan: [], q: null },
+{ l: 'T', n: 'Terça', plan: [0], q: null },
+{ l: 'Q', n: 'Quarta', plan: [1], q: 0.45 },
+{ l: 'Q', n: 'Quinta', plan: [0.6], q: 0.9 },
+{ l: 'S', n: 'Sexta (hoje)', plan: [1, 0], q: 0.8, today: true },
+{ l: 'S', n: 'Sábado', plan: [0], q: null, future: true },
+{ l: 'D', n: 'Domingo', plan: [], q: null, future: true }
+];
+if ((this.props.agenda ?? 'normal') === 'vazia') { days[4] = { l: 'S', n: 'Sexta (hoje)', plan: [1], q: 0.8, today: true }; days[5] = { l: 'S', n: 'Sábado', plan: [], q: null, future: true }; }
+const arc = (r, frac, startFrac) => {
+if (frac >= 0.999) return 'M20 ' + (20 - r) + 'A' + r + ' ' + r + ' 0 1 1 20 ' + (20 + r) + 'A' + r + ' ' + r + ' 0 1 1 20 ' + (20 - r);
+const p = f => { const a = f * 2 * Math.PI; return (20 + r * Math.sin(a)).toFixed(2) + ' ' + (20 - r * Math.cos(a)).toFixed(2); };
+return 'M' + p(startFrac) + 'A' + r + ' ' + r + ' 0 ' + (frac > 0.5 ? 1 : 0) + ' 1 ' + p(startFrac + frac);
+};
+const ring = (R, frac, startFrac, op, cap) => ({ d: arc(R, frac, startFrac), op, cap });
+const C1 = 17, C2 = 10.5;
+const nav = (this.props.modo ?? 'resumo') === 'pagina';
+return {
+nav, summary: !nav,
+moreHref: (this.props.ver ?? 'progresso') === 'calendario' ? 'G03-Calendario.dc.html' : 'G06-Progresso.dc.html',
+moreLabel: (this.props.ver ?? 'progresso') === 'calendario' ? 'Calendário' : 'Ver progresso',
+week: days.map(d => {
+const has = d.plan.length > 0, base = has ? 0.2 : 0.08;
+const outer = [], inner = [];
+if (d.plan.length <= 1) outer.push(ring(C1, 1, 0, base, 'butt'));
+const n = d.plan.length, gap = n > 1 ? 0.03 : 0;
+d.plan.forEach((f, i) => {
+const seg = 1 / n - gap, start = i / n + gap / 2;
+if (n > 1) outer.push(ring(C1, seg, start, base, 'butt'));
+if (!d.future && f > 0) outer.push(ring(C1, seg * f, start, 1, n > 1 ? 'butt' : 'round'));
+});
+inner.push(ring(C2, 1, 0, base, 'butt'));
+if (!d.future && d.q != null) inner.push(ring(C2, d.q, 0, 1, 'round'));
+const doneN = d.plan.filter(f => f >= 1).length;
+const pct = n ? Math.round(d.plan.reduce((a, b) => a + b, 0) / n * 100) : 0;
+const aria = d.n + ': ' + (!has ? 'sem sessão prevista' : d.future ? n + ' sessão prevista' : doneN + ' de ' + n + (n > 1 ? ' sessões' : ' sessão') + ' feitas, ' + pct + '% do previsto' + (d.q != null ? ', qualidade média ' + Math.round(d.q * 100) + '%' : ', sem execução'));
+const open = has && !d.future && d.plan.some(f => f > 0);
+return { l: d.l, num: 21 + days.indexOf(d), outer, inner, aria: aria + (open ? '. Abrir detalhes da sessão' : ''), href: open ? 'G05-SessaoDetalhe.dc.html' : '#', pe: open ? 'auto' : 'none', off: open ? 'false' : 'true', fw: d.today ? 800 : 500, fg: d.today ? '#1e5c66' : (d.future || !has ? '#587274' : '#1f5953') };
+})
+};
+}
+}
+</script>
+</body>
+</html>

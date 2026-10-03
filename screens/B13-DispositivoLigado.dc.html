@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Dispositivo ligado</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Dispositivos" back="B11-Dispositivos.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 157px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<section style="border-radius: 16px; background: #f5fcfb; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); padding: 28px 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px">
+<span aria-hidden="true" style="width: 88px; height: 88px; border-radius: 44px; background: #e3f5e6; display: flex; align-items: center; justify-content: center"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0e5841" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5l10 -10"></path></svg></span>
+<h2 style="margin: 6px 0 0; font-size: 26px; line-height: 32px; font-weight: 700">Relógio ligado</h2>
+<p style="margin: 0; font-size: 15px; line-height: 22px">Garmin Connect · última sincronização agora</p>
+</section>
+<section style="border-radius: 16px; background: #f5fcfb; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 14px">
+<span aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 24px; background: #fbe0d3; display: flex; align-items: center; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d05a3a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 14px; line-height: 20px">Frequência cardíaca agora</span><span style="font-size: 26px; line-height: 32px; font-weight: 800; color: #11363c">72 <span style="font-size: 15px; font-weight: 700">bpm</span></span></span>
+</section>
+<p style="margin: -4px 4px 0; font-size: 14px; line-height: 20px">Nas caminhadas, a app mostra a sua frequência cardíaca e avisa se sair da zona alvo.</p>
+<a href="B11-Dispositivos.dc.html" style="position: absolute; left: 0; top: 703px; display: flex; align-items: center; justify-content: center; width: 376px; height: 50px; border-radius: 12px; background: #1e5c66; color: #ffffff; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">Concluir</a>
+</main>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+// B13 · relógio ligado com sucesso (Figma B13).
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Execução horizontal com guia</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif}a{color:#ffffff;text-decoration:none}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 956px; height: 440px; overflow: hidden; background: #11363c; font-family: 'Nunito', sans-serif; color: #ffffff">
+<img src="/_blob/ea9a09c2b00f711868d2fff9d3ca1c4c" alt="Imagem da câmara: exercício em quatro apoios, braço e perna opostos estendidos" data-fullbleed style="position: absolute; left: 0; top: 0; width: 100%; height: 440px; object-fit: cover">
+<div aria-hidden="true">
+<div style="position: absolute; left: 0; top: 0; pointer-events: none"><dc-import name="CmpSkeletonH" zones="wwwwwwwwwwww" hint-size="956px,440px"></dc-import></div>
+</div>
+<a href="E16H-AjusteGuiado.dc.html" aria-label="Continuar (avança com o exercício)" style="position: absolute; left: 250px; top: 0; width: 620px; height: 350px"></a>
+<div style="position: absolute; left: 0; top: 0"><dc-import name="CmpExerciseHudH" states="wppp" ex="3/3" enter="true" hint-size="250px,440px"></dc-import></div>
+<div style="position: absolute; right: 0; top: 0"><dc-import name="CmpRepDotsV" states="gggoooooooooooo" hint-size="80px,440px"></dc-import></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":956,"height":440}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

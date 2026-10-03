@@ -1,0 +1,3037 @@
+{
+ "v": 3,
+ "attachments": {},
+ "boards": {
+  "A02-Login.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A02 · Login",
+   "w": 440,
+   "x": 520,
+   "y": 0
+  },
+  "A03-LoginErro.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A03 · Login erro",
+   "w": 440,
+   "x": 1040,
+   "y": 0
+  },
+  "A04-Registo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A04 · Registo",
+   "w": 440,
+   "x": 1560,
+   "y": 0
+  },
+  "A05-RegistoErro.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A05 · Erro de registo",
+   "w": 440,
+   "x": 2080,
+   "y": 0
+  },
+  "A06-VerifiqueMail.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A06 · Verifique mail",
+   "w": 440,
+   "x": 2600,
+   "y": 0
+  },
+  "A07-AVerificar.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A07 · A verificar",
+   "w": 440,
+   "x": 3120,
+   "y": 0
+  },
+  "A08-CodigoValidado.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A08 · Código validado",
+   "w": 440,
+   "x": 3640,
+   "y": 0
+  },
+  "A09-Pin.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A09 · Defina PIN",
+   "w": 440,
+   "x": 0,
+   "y": 1356
+  },
+  "A10-PinPreenchido.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A10 · PIN preenchido",
+   "w": 440,
+   "x": 520,
+   "y": 1356
+  },
+  "A11-PinRepetir.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A11 · Repita PIN",
+   "w": 440,
+   "x": 1040,
+   "y": 1356
+  },
+  "A12-PinDefinido.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A12 · PIN definido",
+   "w": 440,
+   "x": 1560,
+   "y": 1356
+  },
+  "A13-Consentimento.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1360,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A13 · Consentimento",
+   "w": 440,
+   "x": 2080,
+   "y": 1356
+  },
+  "A14-ConsentimentoConfirmar.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A14 · Confirmar consentimento",
+   "w": 440,
+   "x": 2600,
+   "y": 1356
+  },
+  "A15-Dados.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A15 · Dados",
+   "w": 440,
+   "x": 3120,
+   "y": 1356
+  },
+  "A16-Ola.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A16 · Login efetuado",
+   "w": 440,
+   "x": 0,
+   "y": 2712
+  },
+  "A17-PrimeiroAcesso.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A17 · Primeiro acesso",
+   "w": 440,
+   "x": 520,
+   "y": 2712
+  },
+  "A18-ComoSeSente.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A18 · Como se sente hoje",
+   "w": 440,
+   "x": 1040,
+   "y": 2712
+  },
+  "A19-BemEstar.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A19 · Resposta bem-estar",
+   "w": 440,
+   "x": 1560,
+   "y": 2712
+  },
+  "B01-Dashboard.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "hidden": true,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1379,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B01 · Dashboard normal + extensão",
+   "w": 440,
+   "x": 0,
+   "y": 0
+  },
+  "B02-DashCalibracao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1555,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B02 · Ação: calibração por fazer + extensão",
+   "w": 440,
+   "x": 520,
+   "y": 0
+  },
+  "B03-DashSessaoPerdida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1660,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B03 · Ação: sessão perdida",
+   "w": 440,
+   "x": 1040,
+   "y": 0
+  },
+  "B04-DashRepetirCalibracao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1599,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B04 · Ação: repetir calibração",
+   "w": 440,
+   "x": 1560,
+   "y": 0
+  },
+  "B05-DashSemSessao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1256,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B05 · Sem próxima sessão",
+   "w": 440,
+   "x": 2080,
+   "y": 0
+  },
+  "B06-DashSemPlano.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B06 · Sem plano",
+   "w": 440,
+   "x": 2600,
+   "y": 0
+  },
+  "B07-DashCarregar.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B07 · A carregar",
+   "w": 440,
+   "x": 3120,
+   "y": 0
+  },
+  "B08-Menu.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B08 · Menu",
+   "w": 440,
+   "x": 0,
+   "y": 2160
+  },
+  "B09-Perfil.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B09 · Perfil",
+   "w": 440,
+   "x": 520,
+   "y": 2160
+  },
+  "B10-ErroLigacao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B10 · Erro de ligação",
+   "w": 440,
+   "x": 1040,
+   "y": 2160
+  },
+  "C01-Preparacao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C01 · Condições necessárias",
+   "w": 440,
+   "x": 0,
+   "y": 0
+  },
+  "C03-MaterialEmFalta.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C03 · Material em falta",
+   "w": 440,
+   "x": 1040,
+   "y": 0
+  },
+  "C06-NaoConsigoProsseguir.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C06 · Não consigo prosseguir",
+   "w": 440,
+   "x": 3120,
+   "y": 0
+  },
+  "C04B-PreparacaoOrdemClinica.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 922,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C04B · Preparação: ordem clínica",
+   "w": 440,
+   "x": 2600,
+   "y": 0
+  },
+  "C10-CalibrarIntro.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C10 · Vamos calibrar",
+   "w": 440,
+   "x": 0,
+   "y": 1720
+  },
+  "C11-CalibrarMaisTarde.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C11 · Calibrar mais tarde",
+   "w": 440,
+   "x": 520,
+   "y": 1720
+  },
+  "C12-Condicoes.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C12 · Condições necessárias",
+   "w": 440,
+   "x": 1040,
+   "y": 1720
+  },
+  "C13-CalibracaoExercicios.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1034,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C13 · Preparação: preview exercicios",
+   "w": 440,
+   "x": 1560,
+   "y": 1720
+  },
+  "C14-PreviewExercicio.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C14 · Preview do exercício",
+   "w": 440,
+   "x": 2080,
+   "y": 1720
+  },
+  "C15-Posicione.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C15 · Posicione-se",
+   "w": 440,
+   "x": 2600,
+   "y": 1720
+  },
+  "C16-ForaRetangulo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C16 · Fora do retângulo",
+   "w": 440,
+   "x": 3120,
+   "y": 1720
+  },
+  "C17-DentroRetangulo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C17 · Dentro do retângulo",
+   "w": 440,
+   "x": 3640,
+   "y": 1720
+  },
+  "C18-PosicaoCorreta.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C18 · Posição correta",
+   "w": 440,
+   "x": 4160,
+   "y": 1720
+  },
+  "C19-CalibracaoEmCurso.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C19 · Calibração em curso",
+   "w": 440,
+   "x": 0,
+   "y": 3076
+  },
+  "C20-CalibracaoConcluida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C20 · Calibração concluída",
+   "w": 440,
+   "x": 520,
+   "y": 3076
+  },
+  "C21-CalibracaoFalhada.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C21 · Calibração falhada",
+   "w": 440,
+   "x": 1040,
+   "y": 3076
+  },
+  "C22-AvaliacaoInicial.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C22 · Avaliação inicial registada",
+   "w": 440,
+   "x": 1560,
+   "y": 3076
+  },
+  "C23-LeituraCorpo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C23 · Leitura do corpo",
+   "w": 440,
+   "x": 2080,
+   "y": 3076
+  },
+  "CmpBadge.dc.html": {
+   "h": 40,
+   "page": "componentes",
+   "title": "CmpBadge.dc.html · Estado",
+   "w": 150,
+   "x": 2440,
+   "y": 0
+  },
+  "CmpBottomBar.dc.html": {
+   "h": 75,
+   "page": "componentes",
+   "title": "CmpBottomBar.dc.html · Barra de navegação",
+   "w": 440,
+   "x": 520,
+   "y": 0
+  },
+  "CmpExerciseHud.dc.html": {
+   "h": 241,
+   "page": "componentes",
+   "w": 440,
+   "x": 3540,
+   "y": 0
+  },
+  "CmpExerciseHudH.dc.html": {
+   "h": 440,
+   "page": "componentes",
+   "title": "CmpExerciseHudH.dc.html · Painel de execução horizontal",
+   "w": 250,
+   "x": 4580,
+   "y": 0
+  },
+  "CmpPageHeader.dc.html": {
+   "h": 72,
+   "page": "componentes",
+   "title": "CmpPageHeader.dc.html · Cabeçalho de página",
+   "w": 440,
+   "x": 1520,
+   "y": 0
+  },
+  "CmpRepDots.dc.html": {
+   "h": 120,
+   "page": "componentes",
+   "w": 440,
+   "x": 4060,
+   "y": 0
+  },
+  "CmpRepDotsV.dc.html": {
+   "h": 440,
+   "page": "componentes",
+   "title": "CmpRepDotsV.dc.html · Repetições (vertical)",
+   "w": 80,
+   "x": 4910,
+   "y": 0
+  },
+  "CmpSeriesWheel.dc.html": {
+   "h": 334,
+   "page": "componentes",
+   "title": "CmpSeriesWheel.dc.html · Círculo de séries e countdown (asset)",
+   "w": 334,
+   "x": 3126,
+   "y": 0
+  },
+  "CmpSkeleton.dc.html": {
+   "h": 400,
+   "page": "componentes",
+   "title": "CmpSkeleton.dc.html · Skeleton frontal (asset)",
+   "w": 440,
+   "x": 5070,
+   "y": 0
+  },
+  "CmpSkeletonH.dc.html": {
+   "h": 440,
+   "page": "componentes",
+   "title": "CmpSkeletonH.dc.html · Skeleton horizontal (mesmo asset)",
+   "w": 956,
+   "x": 5590,
+   "y": 0
+  },
+  "CmpStatusBar.dc.html": {
+   "h": 53,
+   "page": "componentes",
+   "title": "CmpStatusBar.dc.html · Status bar",
+   "w": 440,
+   "x": 0,
+   "y": 0
+  },
+  "CmpStepper.dc.html": {
+   "h": 40,
+   "page": "componentes",
+   "title": "CmpStepper.dc.html · Passos do registo",
+   "w": 400,
+   "x": 1040,
+   "y": 0
+  },
+  "CmpToast.dc.html": {
+   "h": 46,
+   "page": "componentes",
+   "title": "CmpToast.dc.html · Toast",
+   "w": 320,
+   "x": 2040,
+   "y": 0
+  },
+  "E01-Exercicio.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E01 · Demonstração",
+   "w": 440,
+   "x": 0,
+   "y": 0
+  },
+  "E01H-Exercicio.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E01H · Demonstração horizontal",
+   "w": 956,
+   "x": 2072,
+   "y": 4068
+  },
+  "E02-Series.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E02 · Número de séries",
+   "w": 440,
+   "x": 520,
+   "y": 0
+  },
+  "E02H-Series.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E02H · Número de séries horizontal",
+   "w": 956,
+   "x": 3108,
+   "y": 4068
+  },
+  "E03-Contagem.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E03 · Contagem",
+   "w": 440,
+   "x": 1040,
+   "y": 0
+  },
+  "E03H-Contagem.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E03H · Contagem horizontal",
+   "w": 956,
+   "x": 4144,
+   "y": 4068
+  },
+  "E04-Execucao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E04 · Execução: guia",
+   "w": 440,
+   "x": 1560,
+   "y": 0
+  },
+  "E04H-Execucao.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E04H · Execução horizontal: guia",
+   "w": 956,
+   "x": 0,
+   "y": 4908
+  },
+  "E05-ExecucaoFeedback.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E05 · Execução: feedback",
+   "w": 440,
+   "x": 2080,
+   "y": 0
+  },
+  "E05H-ExecucaoFeedback.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E05H · Execução horizontal: feedback",
+   "w": 956,
+   "x": 2072,
+   "y": 4908
+  },
+  "E06-SerieConcluida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E06 · Série concluída",
+   "w": 440,
+   "x": 2600,
+   "y": 0
+  },
+  "E06H-SerieConcluida.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E06H · Série concluída horizontal",
+   "w": 956,
+   "x": 3108,
+   "y": 4908
+  },
+  "E07-Serie2.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E07 · 2.ª série",
+   "w": 440,
+   "x": 3120,
+   "y": 0
+  },
+  "E07H-Serie2.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E07H · 2.ª série horizontal",
+   "w": 956,
+   "x": 4144,
+   "y": 4908
+  },
+  "E08-ExecucaoSerie2.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E08 · Execução 2.ª série",
+   "w": 440,
+   "x": 3640,
+   "y": 0
+  },
+  "E08H-ExecucaoSerie2.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E08H · Execução horizontal 2.ª série",
+   "w": 956,
+   "x": 5180,
+   "y": 4908
+  },
+  "E09-ProximoExercicio.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E09 · Próximo exercício",
+   "w": 440,
+   "x": 4160,
+   "y": 0
+  },
+  "E10-Pausa.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E10 · Pausa",
+   "w": 440,
+   "x": 0,
+   "y": 1356
+  },
+  "E11-TerminarConfirmar.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E11 · Sair do exercício?",
+   "w": 440,
+   "x": 520,
+   "y": 1356
+  },
+  "E12-NaoConsigo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E12 · Não consigo fazer",
+   "w": 440,
+   "x": 1040,
+   "y": 1356
+  },
+  "E13-ErroDetecao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E13 · Erro técnico",
+   "w": 440,
+   "x": 1560,
+   "y": 1356
+  },
+  "E14-SessaoConcluida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E14 · Sessão concluída",
+   "w": 440,
+   "x": 0,
+   "y": 2712
+  },
+  "E15-SessaoInterrompida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E15 · Sessão interrompida",
+   "w": 440,
+   "x": 520,
+   "y": 2712
+  },
+  "E16-AjusteGuiado.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E16 · Ajuste guiado",
+   "w": 440,
+   "x": 2080,
+   "y": 1356
+  },
+  "E16H-AjusteGuiado.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E16H · Ajuste guiado horizontal",
+   "w": 956,
+   "x": 1036,
+   "y": 4908
+  },
+  "E18H-Posicionamento.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E18H · Posicionamento horizontal: ajustar",
+   "w": 956,
+   "x": 0,
+   "y": 4068
+  },
+  "E19H-Posicionado.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E19H · Posicionamento horizontal: bem posicionado",
+   "w": 956,
+   "x": 1036,
+   "y": 4068
+  },
+  "F01-Dor.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F01 · Teve dor?",
+   "w": 440,
+   "x": 0,
+   "y": 0
+  },
+  "F02-DorDetalhe.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F02 · Dor: local e intensidade",
+   "w": 440,
+   "x": 520,
+   "y": 0
+  },
+  "F03-Desconforto.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F03 · Desconforto",
+   "w": 440,
+   "x": 1040,
+   "y": 0
+  },
+  "F04-Dificuldade.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F04 · Dificuldade",
+   "w": 440,
+   "x": 1560,
+   "y": 0
+  },
+  "F05-Completude.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F05 · Completou?",
+   "w": 440,
+   "x": 2080,
+   "y": 0
+  },
+  "F06-Comentario.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F06 · Comentário",
+   "w": 440,
+   "x": 2600,
+   "y": 0
+  },
+  "F07-ResultadoConcluida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F07 · Concluída",
+   "w": 440,
+   "x": 0,
+   "y": 1356
+  },
+  "F08-ResultadoParcial.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F08 · Parcialmente concluída",
+   "w": 440,
+   "x": 520,
+   "y": 1356
+  },
+  "F09-ResultadoInterrompida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F09 · Interrompida",
+   "w": 440,
+   "x": 1040,
+   "y": 1356
+  },
+  "F10-ResultadoFalhou.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "avaliacao",
+   "title": "F10 · Não registada",
+   "w": 440,
+   "x": 1560,
+   "y": 1356
+  },
+  "G01-Plano.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G01 · Planos",
+   "w": 440,
+   "x": 0,
+   "y": 0
+  },
+  "G02-ExercicioDetalhe.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1350,
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G02 · Detalhe do exercício",
+   "w": 440,
+   "x": 1040,
+   "y": 0
+  },
+  "G03-Calendario.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1383,
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G03 · Calendário",
+   "w": 440,
+   "x": 1560,
+   "y": 0
+  },
+  "G05-SessaoDetalhe.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1316,
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G05 · Detalhe da sessão",
+   "w": 440,
+   "x": 0,
+   "y": 2240
+  },
+  "G06-Progresso.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1224,
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G06 · Progresso",
+   "w": 440,
+   "x": 520,
+   "y": 2240
+  },
+  "H01-Artigos.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1574,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H01 · Artigos prescritos",
+   "w": 440,
+   "x": 0,
+   "y": 0
+  },
+  "H02-Artigo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1100,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H02 · Leitura",
+   "w": 440,
+   "x": 520,
+   "y": 0
+  },
+  "H03-ArtigoLido.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H03 · Artigo concluído",
+   "w": 440,
+   "x": 1040,
+   "y": 0
+  },
+  "H04-ArtigosVazio.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H04 · Sem artigos",
+   "w": 440,
+   "x": 1560,
+   "y": 0
+  },
+  "H05-Mensagens.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H05 · Mensagens",
+   "w": 440,
+   "x": 0,
+   "y": 2959
+  },
+  "H06-Conversa.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H06 · Conversa: a escrever",
+   "w": 440,
+   "x": 520,
+   "y": 2959
+  },
+  "H07-ConversaEnviada.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H07 · Conversa: enviada",
+   "w": 440,
+   "x": 1040,
+   "y": 2959
+  },
+  "H08-ConversaErro.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H08 · Conversa: erro",
+   "w": 440,
+   "x": 1560,
+   "y": 2959
+  },
+  "H09-MensagensVazio.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H09 · Sem mensagens",
+   "w": 440,
+   "x": 2080,
+   "y": 2959
+  },
+  "H10-Ajuda.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H10 · Ajuda",
+   "w": 440,
+   "x": 0,
+   "y": 4315
+  },
+  "H11-AjudaTopico.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H11 · Tópico de ajuda",
+   "w": 440,
+   "x": 520,
+   "y": 4315
+  },
+  "H12-Biblioteca.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 2499,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H12 · Biblioteca de artigos",
+   "w": 440,
+   "x": 2080,
+   "y": 0
+  },
+  "H13-BibliotecaPesquisa.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1344,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H13 · Biblioteca: pesquisa",
+   "w": 440,
+   "x": 2600,
+   "y": 0
+  },
+  "H14-BibliotecaSemResultados.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1100,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H14 · Biblioteca: sem resultados",
+   "w": 440,
+   "x": 3120,
+   "y": 0
+  },
+  "Main.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A01 · Splash",
+   "w": 440,
+   "x": 0,
+   "y": 0
+  },
+  "CmpConsistencia.dc.html": {
+   "h": 190,
+   "w": 376,
+   "x": 6626,
+   "y": 0,
+   "page": "componentes",
+   "title": "CmpConsistencia.dc.html · Consistência (badges)"
+  },
+  "CmpCalendarioSemana.dc.html": {
+   "h": 160,
+   "w": 376,
+   "x": 7082,
+   "y": 0,
+   "page": "componentes",
+   "title": "CmpCalendarioSemana · Progresso semanal"
+  },
+  "C02-PreparacaoLista.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C02 · Preparação: espaço",
+   "w": 440,
+   "x": 520,
+   "y": 0
+  },
+  "C04-PreparacaoExercicios.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1034,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C04 · Preparação: exercícios reordenados",
+   "w": 440,
+   "x": 1560,
+   "y": 0
+  },
+  "H15-SobreArtigo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1045,
+   "is_interactive": true,
+   "page": "conteudo",
+   "title": "H15 · Sobre o artigo",
+   "w": 440,
+   "x": 3640,
+   "y": 0
+  },
+  "C05-PreviewExercicio.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C05 · Preview do exercício",
+   "w": 440,
+   "x": 2080,
+   "y": 0
+  },
+  "CmpArtigoCard.dc.html": {
+   "h": 370,
+   "page": "componentes",
+   "title": "CmpArtigoCard · Cartão de artigo",
+   "w": 376,
+   "x": 7538,
+   "y": 0
+  },
+  "G08-OMeuKit.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G08 · O meu kit",
+   "x": 2080,
+   "y": 0,
+   "w": 440,
+   "h": 956
+  },
+  "G09-BandaElastica.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G09 · Banda elástica",
+   "x": 2600,
+   "y": 0,
+   "w": 440,
+   "h": 1098
+  },
+  "CmpBandaElastica.dc.html": {
+   "page": "componentes",
+   "title": "CmpBandaElastica · Banda elástica",
+   "x": 7994,
+   "y": 0,
+   "w": 376,
+   "h": 100
+  },
+  "G07-ProgressoVazio.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 956,
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G07 · Progresso sem dados",
+   "w": 440,
+   "x": 1040,
+   "y": 2240
+  },
+  "G10-PlanoDetalhe.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G10 · Detalhe do plano",
+   "x": 520,
+   "y": 0,
+   "w": 440,
+   "h": 1816
+  },
+  "CmpTendencia.dc.html": {
+   "page": "componentes",
+   "title": "CmpTendencia · Tendência",
+   "x": 8450,
+   "y": 0,
+   "w": 376,
+   "h": 260
+  },
+  "G11-Tendencias.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "plano",
+   "title": "G11 · Tendências",
+   "x": 1560,
+   "y": 2240,
+   "w": 440,
+   "h": 1542
+  },
+  "CmpTendenciaResumo.dc.html": {
+   "page": "componentes",
+   "title": "CmpTendenciaResumo · Tendência (resumo)",
+   "x": 8906,
+   "y": 0,
+   "w": 162,
+   "h": 76
+  },
+  "B11-Dispositivos.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B11 · Dispositivos e aplicações",
+   "x": 1560,
+   "y": 2160,
+   "w": 440,
+   "h": 956
+  },
+  "B12-LigarDispositivo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B12 · Ligar relógio",
+   "x": 2080,
+   "y": 2160,
+   "w": 440,
+   "h": 956
+  },
+  "B13-DispositivoLigado.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B13 · Relógio ligado",
+   "x": 2600,
+   "y": 2160,
+   "w": 440,
+   "h": 956
+  },
+  "E23-CaminhadaEmCurso.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E23 · Caminhada em curso",
+   "x": 0,
+   "y": 7344,
+   "w": 440,
+   "h": 956
+  },
+  "E24-CaminhadaAcimaZona.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E24 · Caminhada: acima da zona",
+   "x": 520,
+   "y": 7344,
+   "w": 440,
+   "h": 956
+  },
+  "E25-CaminhadaConcluida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E25 · Caminhada concluída",
+   "x": 1040,
+   "y": 7344,
+   "w": 440,
+   "h": 956
+  },
+  "E28-DemonstracaoMesa.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E28 · Demonstração à mesa",
+   "x": 0,
+   "y": 8820,
+   "w": 440,
+   "h": 956
+  },
+  "E29-ExecucaoMesa.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E29 · Execução à mesa",
+   "x": 520,
+   "y": 8820,
+   "w": 440,
+   "h": 956
+  },
+  "E30-CorrecaoMesa.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E30 · Execução à mesa: correção fina",
+   "x": 1040,
+   "y": 8820,
+   "w": 440,
+   "h": 956
+  },
+  "CmpZonaFC.dc.html": {
+   "page": "componentes",
+   "title": "CmpZonaFC · Zona de frequência cardíaca",
+   "x": 9170,
+   "y": 0,
+   "w": 280,
+   "h": 280
+  },
+  "CmpMesaCena.dc.html": {
+   "page": "componentes",
+   "title": "CmpMesaCena · Cena da mesa",
+   "x": 9530,
+   "y": 0,
+   "w": 376,
+   "h": 440
+  },
+  "C24-CaminhadaCondicoes.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C24 · Caminhada: condições",
+   "x": 0,
+   "y": 4552,
+   "w": 440,
+   "h": 956
+  },
+  "C25-CaminhadaPreparacao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C25 · Caminhada: preparação",
+   "x": 520,
+   "y": 4552,
+   "w": 440,
+   "h": 956
+  },
+  "C26-RelogioSemSinal.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C26 · Relógio sem sinal",
+   "x": 1040,
+   "y": 4552,
+   "w": 440,
+   "h": 956
+  },
+  "C27-MesaCondicoes.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C27 · Mesa: condições",
+   "x": 0,
+   "y": 5768,
+   "w": 440,
+   "h": 956
+  },
+  "C28-MesaPreparacao.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C28 · Mesa: preparação",
+   "x": 520,
+   "y": 5768,
+   "w": 440,
+   "h": 956
+  },
+  "C29-MesaPosicione.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C29 · Mesa: posicione as mãos",
+   "x": 1040,
+   "y": 5768,
+   "w": 440,
+   "h": 956
+  },
+  "C30-MesaForaRetangulo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C30 · Mesa: fora do retângulo",
+   "x": 1560,
+   "y": 5768,
+   "w": 440,
+   "h": 956
+  },
+  "C31-MesaDentroRetangulo.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C31 · Mesa: dentro do retângulo",
+   "x": 2080,
+   "y": 5768,
+   "w": 440,
+   "h": 956
+  },
+  "C32-MesaPosicaoCorreta.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "preparacao",
+   "title": "C32 · Mesa: posição correta",
+   "x": 2600,
+   "y": 5768,
+   "w": 440,
+   "h": 956
+  },
+  "E31-CaminhadaInterrompida.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E31 · Caminhada interrompida",
+   "x": 1560,
+   "y": 7344,
+   "w": 440,
+   "h": 956
+  },
+  "CmpAutonomousWheel.dc.html": {
+   "page": "componentes",
+   "title": "CmpAutonomousWheel · Roda da sessão autónoma",
+   "x": 9986,
+   "y": 0,
+   "w": 334,
+   "h": 334
+  },
+  "B14-SairConta.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "dashboard",
+   "title": "B14 · Confirmar sair da conta",
+   "x": 3120,
+   "y": 2160,
+   "w": 440,
+   "h": 956
+  },
+  "E20A-BandaPes.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E20A · Banda: pés",
+   "x": 0,
+   "y": 6868,
+   "w": 440,
+   "h": 956
+  },
+  "E20A-BandaPesH.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E20AH · Banda: pés (horizontal)",
+   "w": 956,
+   "x": 520,
+   "y": 6368
+  },
+  "E20B-BandaAgarrar.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E20B · Banda: agarrar",
+   "x": 520,
+   "y": 6868,
+   "w": 440,
+   "h": 956
+  },
+  "E20B-BandaAgarrarH.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E20BH · Banda: agarrar (horizontal)",
+   "w": 956,
+   "x": 1520,
+   "y": 6368
+  },
+  "E20C-BandaConfirmar.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E20C · Banda: confirmar",
+   "x": 1040,
+   "y": 6868,
+   "w": 440,
+   "h": 956
+  },
+  "E20C-BandaConfirmarH.dc.html": {
+   "h": 440,
+   "is_interactive": true,
+   "page": "exercicio",
+   "title": "E20CH · Banda: confirmar (horizontal)",
+   "w": 956,
+   "x": 2520,
+   "y": 6368
+  },
+  "A04T-Termos.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1089,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A04T · Termos e condições",
+   "w": 440,
+   "x": 2080,
+   "y": 4068
+  },
+  "A04P-Privacidade.dc.html": {
+   "guides": [
+    {
+     "count": 4,
+     "gutter": 16,
+     "kind": "columns",
+     "margin": 32
+    }
+   ],
+   "h": 1251,
+   "is_interactive": true,
+   "page": "acesso",
+   "title": "A04P · Política de privacidade",
+   "w": 440,
+   "x": 2600,
+   "y": 4068
+  }
+ },
+ "createdOnFiles": {
+  "at": "2026-09-25T14:00:00Z",
+  "v": 1
+ },
+ "designSystems": [],
+ "launch": {
+  "page": "acesso",
+  "view": "canvas"
+ },
+ "notes": {
+  "componentes_r0": {
+   "kind": "title1",
+   "maxW": 7460,
+   "page": "componentes",
+   "text": "Componentes partilhados",
+   "w": 240,
+   "x": 0,
+   "y": -260
+  },
+  "acesso_t0": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "acesso",
+   "text": "Login e registo — ecrãs do Figma",
+   "w": 1114,
+   "x": -34,
+   "y": -283
+  },
+  "acesso_t1": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "acesso",
+   "text": "PIN, consentimento e dados — ecrãs do Figma",
+   "w": 1551,
+   "x": 0,
+   "y": 1096
+  },
+  "acesso_t2": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "acesso",
+   "text": "Primeiro acesso",
+   "w": 526,
+   "x": 0,
+   "y": 2452
+  },
+  "acesso_n0": {
+   "fill": "teal",
+   "page": "acesso",
+   "size": 24,
+   "text": "Cenários 1 e 2 começam aqui.\nA01 Splash → A02 Login → B01 Dashboard (percurso normal) ou B02 (ação necessária).\nPrimeiro acesso: A04 Registo → A06–A08 → A09–A12 PIN → A13–A15 → A16 → A17 → A18 → A19 → B06/B02.",
+   "w": 340,
+   "x": 4200,
+   "y": 0
+  },
+  "dashboard_t0": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "dashboard",
+   "text": "Dashboard — estados",
+   "w": 739,
+   "x": 0,
+   "y": -260
+  },
+  "dashboard_t1": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "dashboard",
+   "text": "Navegação e sistema",
+   "w": 703,
+   "x": 0,
+   "y": 1900
+  },
+  "dashboard_n0": {
+   "fill": "teal",
+   "page": "dashboard",
+   "size": 24,
+   "text": "Prioridade do Dashboard:\n1. Ação necessária (B02–B04)\n2. Próxima sessão\n3. Artigo prescrito\nO Calendário e os Exercícios do Dashboard são resumos: levam ao Calendário (G03) e ao Plano (G01).\nConsistência: badges de marcos reais (sequência de dias, total de sessões) e o próximo marco.\nCalendário: ring exterior = feito face ao previsto (segmentado com várias sessões); ring interior = qualidade média. Dias sem atividade e futuros sem progresso.\nO card \"Progresso da semana\" saiu do Dashboard (a informação está nos rings).",
+   "w": 340,
+   "x": 3680,
+   "y": 0
+  },
+  "preparacao_t0": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "preparacao",
+   "text": "Preparação da sessão",
+   "w": 725,
+   "x": 0,
+   "y": -260
+  },
+  "preparacao_t1": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "preparacao",
+   "text": "Calibração — preparação e posicionamento",
+   "w": 1444,
+   "x": 0,
+   "y": 1460
+  },
+  "preparacao_t2": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "preparacao",
+   "text": "Calibração — processo e resultado",
+   "w": 1157,
+   "x": 0,
+   "y": 2816
+  },
+  "preparacao_n0": {
+   "fill": "teal",
+   "page": "preparacao",
+   "size": 24,
+   "text": "Ordem dos exercícios: por defeito a app ordena por posição em cada sessão (C04). Se o médico ativar o override na prescrição, mantém-se a ordem dele (C04B).\nAvaliação inicial: B02 → C10 → C12 → C13 → C23 leitura do corpo → C19 movimentos → C20 → C22 (ou C21).\nSessão: C01 → C02 → C04 (ou C04B) → C15–C18 → E01.",
+   "w": 340,
+   "x": 3640,
+   "y": 0
+  },
+  "exercicio_t0": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "exercicio",
+   "text": "Exercício — ecrãs do Figma",
+   "w": 913,
+   "x": 0,
+   "y": -260
+  },
+  "exercicio_t1": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "exercicio",
+   "text": "Orientação, pausa, interrupção e erros",
+   "w": 1271,
+   "x": 0,
+   "y": 1096
+  },
+  "exercicio_t2": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "exercicio",
+   "text": "Fim da execução",
+   "w": 554,
+   "x": 0,
+   "y": 2452
+  },
+  "exercicio_n0": {
+   "fill": "teal",
+   "page": "exercicio",
+   "size": 24,
+   "text": "Orientar antes de corrigir: E04 → E16 (correção localizada: só a zona a corrigir fica laranja, com sinal sonoro e voz) → E05 (objetivo atingido: zonas a verde).\nMinimizar mudanças: E09 (mesma posição) → E18H (única mudança de posição, guiada na horizontal) → E19H → E04H.\nCenário 4 — interrupção: E08 → PAUSA → E10 → E11 → E15 → F01…F05 (“Interrompi”) → F09 → G05.",
+   "w": 340,
+   "x": 3160,
+   "y": 1356
+  },
+  "exercicio_t3": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "exercicio",
+   "text": "Mudança de posição e preparação — telemóvel na horizontal",
+   "w": 2000,
+   "x": 0,
+   "y": 3808
+  },
+  "exercicio_n1": {
+   "fill": "teal",
+   "page": "exercicio",
+   "size": 24,
+   "text": "Mudança de posição sem confirmação: E18H guia até ao retângulo (âmbar); bem posicionado, E19H (verde) segue sozinho.\nDepois, a mesma sequência de cada exercício: demonstração E01H → séries E02H → contagem E03H → execução E04H → E16H → E05H → série concluída E06H → E07H → E08H → E14.",
+   "w": 340,
+   "x": 5220,
+   "y": 4068
+  },
+  "exercicio_t4": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "exercicio",
+   "text": "Execução — telemóvel na horizontal",
+   "w": 1211,
+   "x": 0,
+   "y": 4648
+  },
+  "exercicio_n2": {
+   "fill": "teal",
+   "page": "exercicio",
+   "size": 24,
+   "text": "Comportamento (v9, assets SVG fornecidos):\nCírculo: tudo em branco + opacidade (verde/laranja do SVG são só referência). Circunferência exterior = tempo (branca, a parte decorrida a 90%); segmentos = séries: ativa/próxima a 90% e só ela pisca, inativas a 20% estáveis.\nE03/E07: número desce 5→1 enquanto a circunferência progride.\nE04/E08: o círculo sobe para o cabeçalho, com a referência do exercício dentro.\nSkeleton = asset frontal; feedback por zona: verde = objetivo atingido, laranja = corrigir (sinal sonoro + voz).\nE06→E07: repetições em espiral → barra da série com a cor média; a barra anterior fica visível.",
+   "w": 340,
+   "x": 4680,
+   "y": 0
+  },
+  "exercicio_n3": {
+   "fill": "teal",
+   "page": "exercicio",
+   "size": 24,
+   "text": "Distância de 2,5 m: as indicações de voz são só áudio, nunca escritas no ecrã (sem legendas). O que for escrito tem de ser grande e ocupar o ecrã. O guião da voz por ecrã está no documento de auditoria.",
+   "w": 340,
+   "x": 4680,
+   "y": 900
+  },
+  "avaliacao_t0": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "avaliacao",
+   "text": "Avaliação pós-exercício",
+   "w": 786,
+   "x": 0,
+   "y": -260
+  },
+  "avaliacao_t1": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "avaliacao",
+   "text": "Resultado da sessão",
+   "w": 686,
+   "x": 0,
+   "y": 1096
+  },
+  "avaliacao_n0": {
+   "fill": "teal",
+   "page": "avaliacao",
+   "size": 24,
+   "text": "Cenário 3 — dor:\nE14 → F01 Sim → F02 local + intensidade → F03 → F04 → F05 → F06 → F07.\nSe responder “Não”, F01 salta para F03 (divulgação progressiva). Em F05 o botão leva a F07, F08 ou F09 conforme a resposta.",
+   "w": 340,
+   "x": 3160,
+   "y": 0
+  },
+  "plano_t0": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "plano",
+   "text": "Plano e calendário",
+   "w": 619,
+   "x": 0,
+   "y": -260
+  },
+  "plano_t1": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "plano",
+   "text": "Progresso e sessões",
+   "w": 712,
+   "x": 0,
+   "y": 1980
+  },
+  "plano_t2": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "plano",
+   "text": "Aprender · artigos e biblioteca",
+   "w": 1015,
+   "x": 0,
+   "y": 4650
+  },
+  "conteudo_t0": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "conteudo",
+   "text": "Artigos: prescritos e biblioteca",
+   "w": 1023,
+   "x": 0,
+   "y": -260
+  },
+  "conteudo_t1": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "conteudo",
+   "text": "Mensagens",
+   "w": 378,
+   "x": 0,
+   "y": 2699
+  },
+  "conteudo_t2": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "conteudo",
+   "text": "Ajuda",
+   "w": 240,
+   "x": 0,
+   "y": 4055
+  },
+  "conteudo_n0": {
+   "fill": "teal",
+   "page": "conteudo",
+   "size": 24,
+   "text": "Cenário 6 — comunicação:\nB01 → B08 Menu → H05 → H06 → H07 (enviada).\nCenário 5 — artigo: B01 → H02 → H03 → B01.\nBiblioteca: H01/H04 → separador Biblioteca H12 → pesquisa H13 (ou H14 sem resultados) → H02.",
+   "w": 340,
+   "x": 2640,
+   "y": 2959
+  },
+  "exercicio_t5": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "exercicio",
+   "text": "Exercício com banda elástica",
+   "w": 1000,
+   "x": 0,
+   "y": 5608
+  },
+  "exercicio_n4": {
+   "fill": "teal",
+   "page": "exercicio",
+   "size": 24,
+   "w": 340,
+   "x": 1556,
+   "y": 5868,
+   "text": "Banda elástica: nos exercícios com banda, E01 → E20 (ou E20H na horizontal) → E02.\n“Não tenho a banda” → E12.\nA banda tem os números 1–10 | 10–1: pontas = 1, centro = dois 10. O número a agarrar vem da prescrição; mais perto do centro = mais resistência. O centro é a zona dos pés (ou onde se prende a banda)."
+  },
+  "plano_n0": {
+   "fill": "teal",
+   "page": "plano",
+   "size": 24,
+   "w": 340,
+   "x": 3120,
+   "y": 0,
+   "text": "O meu kit: G10 → G08 (kit) → G09 (banda elástica). Os outros equipamentos ainda não têm detalhe.\nO kit depende do protocolo — conteúdos A CONFIRMAR:\n• AVC: banda, suporte do telemóvel, [a confirmar]\n• ePICS / cardíaco: [a confirmar]\n• Joelho e lombar: [a confirmar]\n“Enviar mensagem” → H05."
+  },
+  "plano_n1": {
+   "fill": "teal",
+   "page": "plano",
+   "size": 24,
+   "w": 340,
+   "x": 3640,
+   "y": 0,
+   "text": "Planos: G01 (lista de planos) → G10 (detalhe: sessões de fisioterapia e de terapia ocupacional; tempo e nº de exercícios variam por sessão) → G02.\nCalendário G03: tocar num dia mostra as sessões, consultas e artigos desse dia. Qualquer sessão abre o G05.\nProgresso semanal (Dashboard e G06): tocar num dia com sessão abre o G05. O G04 Histórico foi eliminado.\nTendências: no G06, 4 resumos coloridos (um por métrica); \"Ver mais\" ou tocar num resumo abre o G11 com os gráficos."
+  },
+  "exercicio_t6": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "exercicio",
+   "text": "Caminhada — reabilitação cardíaca (sem supervisão)",
+   "w": 1800,
+   "x": 0,
+   "y": 7084
+  },
+  "exercicio_n5": {
+   "fill": "teal",
+   "page": "exercicio",
+   "size": 24,
+   "w": 340,
+   "x": 2080,
+   "y": 7344,
+   "text": "Caminhada (sessão autónoma, sem câmara). A preparação está na página 3 (C24–C26).\nE23 caminhada com a roda autónoma: tempo, frequência cardíaca e zona alvo → E24 se sair da zona (aviso visual, som e voz).\nNo fim do tempo: E25. Se terminar antes: E31. Depois, avaliação da sessão (F01)."
+  },
+  "exercicio_t7": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "exercicio",
+   "text": "Exercício à mesa — terapia ocupacional",
+   "w": 1400,
+   "x": 0,
+   "y": 8560
+  },
+  "exercicio_n6": {
+   "fill": "teal",
+   "page": "exercicio",
+   "size": 24,
+   "w": 340,
+   "x": 1560,
+   "y": 8820,
+   "text": "Exercício à mesa. A preparação e o posicionamento das mãos estão na página 3 (C27–C32).\nAqui: E28 demonstração → E02/E03 séries → E29 execução (deteção de objetos e das mãos) → E30 correção fina → E06."
+  },
+  "preparacao_t3": {
+   "kind": "title1",
+   "maxW": 4080,
+   "page": "preparacao",
+   "text": "Preparação sessão autónoma",
+   "w": 900,
+   "x": 0,
+   "y": 4292
+  },
+  "preparacao_n1": {
+   "fill": "teal",
+   "page": "preparacao",
+   "size": 24,
+   "w": 340,
+   "x": 1560,
+   "y": 4552,
+   "text": "Caminhada (sessão autónoma, sem câmara): C24 condições → C25 preparação → E23 caminhada.\nSem sinal do relógio: C25 → C26 → tentar de novo / B11 ligar outro dispositivo.\nDepois da caminhada: E25 (ou E31 se terminar antes) → avaliação da sessão (F01)."
+  },
+  "preparacao_n2": {
+   "fill": "teal",
+   "page": "preparacao",
+   "size": 24,
+   "w": 340,
+   "x": 3120,
+   "y": 5768,
+   "text": "Exercício à mesa: C27 condições → C28 material (falta material → C03) → C29–C32 posicionar as mãos, como no exercício de pé → E28 demonstração → E02/E03 séries → E29 execução → E30 correção → E06."
+  }
+ },
+ "order": [
+  "A02-Login.dc.html",
+  "A03-LoginErro.dc.html",
+  "A04-Registo.dc.html",
+  "A04T-Termos.dc.html",
+  "A04P-Privacidade.dc.html",
+  "A05-RegistoErro.dc.html",
+  "A06-VerifiqueMail.dc.html",
+  "A07-AVerificar.dc.html",
+  "A08-CodigoValidado.dc.html",
+  "A09-Pin.dc.html",
+  "A10-PinPreenchido.dc.html",
+  "A11-PinRepetir.dc.html",
+  "A12-PinDefinido.dc.html",
+  "A13-Consentimento.dc.html",
+  "A14-ConsentimentoConfirmar.dc.html",
+  "A15-Dados.dc.html",
+  "A16-Ola.dc.html",
+  "A17-PrimeiroAcesso.dc.html",
+  "A18-ComoSeSente.dc.html",
+  "A19-BemEstar.dc.html",
+  "B01-Dashboard.dc.html",
+  "B02-DashCalibracao.dc.html",
+  "B03-DashSessaoPerdida.dc.html",
+  "B04-DashRepetirCalibracao.dc.html",
+  "B05-DashSemSessao.dc.html",
+  "B06-DashSemPlano.dc.html",
+  "B07-DashCarregar.dc.html",
+  "B08-Menu.dc.html",
+  "B09-Perfil.dc.html",
+  "B10-ErroLigacao.dc.html",
+  "C01-Preparacao.dc.html",
+  "C02-PreparacaoLista.dc.html",
+  "C03-MaterialEmFalta.dc.html",
+  "C04-PreparacaoExercicios.dc.html",
+  "C04B-PreparacaoOrdemClinica.dc.html",
+  "C05-PreviewExercicio.dc.html",
+  "C06-NaoConsigoProsseguir.dc.html",
+  "C10-CalibrarIntro.dc.html",
+  "C11-CalibrarMaisTarde.dc.html",
+  "C12-Condicoes.dc.html",
+  "C13-CalibracaoExercicios.dc.html",
+  "C14-PreviewExercicio.dc.html",
+  "C15-Posicione.dc.html",
+  "C16-ForaRetangulo.dc.html",
+  "C17-DentroRetangulo.dc.html",
+  "C18-PosicaoCorreta.dc.html",
+  "C19-CalibracaoEmCurso.dc.html",
+  "C20-CalibracaoConcluida.dc.html",
+  "C21-CalibracaoFalhada.dc.html",
+  "C22-AvaliacaoInicial.dc.html",
+  "C23-LeituraCorpo.dc.html",
+  "C24-CaminhadaCondicoes.dc.html",
+  "C25-CaminhadaPreparacao.dc.html",
+  "C26-RelogioSemSinal.dc.html",
+  "C27-MesaCondicoes.dc.html",
+  "C28-MesaPreparacao.dc.html",
+  "C29-MesaPosicione.dc.html",
+  "C30-MesaForaRetangulo.dc.html",
+  "C31-MesaDentroRetangulo.dc.html",
+  "C32-MesaPosicaoCorreta.dc.html",
+  "CmpArtigoCard.dc.html",
+  "CmpBadge.dc.html",
+  "CmpBandaElastica.dc.html",
+  "CmpBottomBar.dc.html",
+  "CmpCalendarioSemana.dc.html",
+  "CmpConsistencia.dc.html",
+  "CmpExerciseHud.dc.html",
+  "CmpExerciseHudH.dc.html",
+  "CmpPageHeader.dc.html",
+  "CmpRepDots.dc.html",
+  "CmpRepDotsV.dc.html",
+  "CmpSeriesWheel.dc.html",
+  "CmpSkeleton.dc.html",
+  "CmpSkeletonH.dc.html",
+  "CmpStatusBar.dc.html",
+  "CmpStepper.dc.html",
+  "CmpToast.dc.html",
+  "E01-Exercicio.dc.html",
+  "E01H-Exercicio.dc.html",
+  "E02-Series.dc.html",
+  "E02H-Series.dc.html",
+  "E03-Contagem.dc.html",
+  "E03H-Contagem.dc.html",
+  "E04-Execucao.dc.html",
+  "E04H-Execucao.dc.html",
+  "E05-ExecucaoFeedback.dc.html",
+  "E05H-ExecucaoFeedback.dc.html",
+  "E06-SerieConcluida.dc.html",
+  "E06H-SerieConcluida.dc.html",
+  "E07-Serie2.dc.html",
+  "E07H-Serie2.dc.html",
+  "E08-ExecucaoSerie2.dc.html",
+  "E08H-ExecucaoSerie2.dc.html",
+  "E09-ProximoExercicio.dc.html",
+  "E10-Pausa.dc.html",
+  "E11-TerminarConfirmar.dc.html",
+  "E12-NaoConsigo.dc.html",
+  "E13-ErroDetecao.dc.html",
+  "E14-SessaoConcluida.dc.html",
+  "E15-SessaoInterrompida.dc.html",
+  "E16-AjusteGuiado.dc.html",
+  "E16H-AjusteGuiado.dc.html",
+  "E18H-Posicionamento.dc.html",
+  "E19H-Posicionado.dc.html",
+  "E20A-BandaPes.dc.html",
+  "E20A-BandaPesH.dc.html",
+  "E20B-BandaAgarrar.dc.html",
+  "E20B-BandaAgarrarH.dc.html",
+  "E20C-BandaConfirmar.dc.html",
+  "E20C-BandaConfirmarH.dc.html",
+  "F01-Dor.dc.html",
+  "F02-DorDetalhe.dc.html",
+  "F03-Desconforto.dc.html",
+  "F04-Dificuldade.dc.html",
+  "F05-Completude.dc.html",
+  "F06-Comentario.dc.html",
+  "F07-ResultadoConcluida.dc.html",
+  "F08-ResultadoParcial.dc.html",
+  "F09-ResultadoInterrompida.dc.html",
+  "F10-ResultadoFalhou.dc.html",
+  "G01-Plano.dc.html",
+  "G02-ExercicioDetalhe.dc.html",
+  "G03-Calendario.dc.html",
+  "G05-SessaoDetalhe.dc.html",
+  "G06-Progresso.dc.html",
+  "G07-ProgressoVazio.dc.html",
+  "G08-OMeuKit.dc.html",
+  "G09-BandaElastica.dc.html",
+  "H01-Artigos.dc.html",
+  "H02-Artigo.dc.html",
+  "H03-ArtigoLido.dc.html",
+  "H04-ArtigosVazio.dc.html",
+  "H05-Mensagens.dc.html",
+  "H06-Conversa.dc.html",
+  "H07-ConversaEnviada.dc.html",
+  "H08-ConversaErro.dc.html",
+  "H09-MensagensVazio.dc.html",
+  "H10-Ajuda.dc.html",
+  "H11-AjudaTopico.dc.html",
+  "H12-Biblioteca.dc.html",
+  "H13-BibliotecaPesquisa.dc.html",
+  "H14-BibliotecaSemResultados.dc.html",
+  "H15-SobreArtigo.dc.html",
+  "Main.dc.html",
+  "G10-PlanoDetalhe.dc.html",
+  "CmpTendencia.dc.html",
+  "G11-Tendencias.dc.html",
+  "CmpTendenciaResumo.dc.html",
+  "B11-Dispositivos.dc.html",
+  "B12-LigarDispositivo.dc.html",
+  "B13-DispositivoLigado.dc.html",
+  "B14-SairConta.dc.html",
+  "E23-CaminhadaEmCurso.dc.html",
+  "E24-CaminhadaAcimaZona.dc.html",
+  "E25-CaminhadaConcluida.dc.html",
+  "E31-CaminhadaInterrompida.dc.html",
+  "E28-DemonstracaoMesa.dc.html",
+  "E29-ExecucaoMesa.dc.html",
+  "E30-CorrecaoMesa.dc.html",
+  "CmpZonaFC.dc.html",
+  "CmpMesaCena.dc.html",
+  "CmpAutonomousWheel.dc.html"
+ ],
+ "pages": [
+  {
+   "id": "acesso",
+   "name": "A · Acesso e primeiro acesso"
+  },
+  {
+   "id": "dashboard",
+   "name": "B · Dashboard e navegação"
+  },
+  {
+   "id": "preparacao",
+   "name": "C · Preparação e calibração"
+  },
+  {
+   "id": "exercicio",
+   "name": "E · Execução do exercício"
+  },
+  {
+   "id": "avaliacao",
+   "name": "F · Avaliação e resultado"
+  },
+  {
+   "id": "plano",
+   "name": "G · Plano, calendário e histórico"
+  },
+  {
+   "id": "conteudo",
+   "name": "H · Artigos, mensagens e ajuda"
+  },
+  {
+   "id": "componentes",
+   "name": "Componentes"
+  }
+ ],
+ "title": "TherapEase — App Paciente (completa)"
+}

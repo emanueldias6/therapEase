@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>2.ª série horizontal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif}a{color:#ffffff;text-decoration:none}@keyframes repGather{from{transform:rotate(var(--a0)) translateY(-128px);opacity:1}75%{opacity:1}to{transform:rotate(var(--a1)) translateY(-128px);opacity:0}}@media (prefers-reduced-motion: reduce){.rep-anim{animation:none !important}}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 956px; height: 440px; overflow: hidden; background: #11363c; font-family: 'Nunito', sans-serif; color: #ffffff">
+<img src="/_blob/ea9a09c2b00f711868d2fff9d3ca1c4c" alt="" data-fullbleed style="position: absolute; left: 0; top: 0; width: 100%; height: 440px; object-fit: cover">
+<div data-fullbleed style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(17,54,60,0.8)"></div>
+<h1 style="position: absolute; left: 121px; top: 145px; width: 318px; margin: 0; font-size: 56px; line-height: 72px; font-weight: 400">Segunda série a iniciar em</h1>
+<div style="position: absolute; left: 440px; top: 53px"><dc-import name="CmpSeriesWheel" states="Ycpp" countdown="10" hint-size="334px,334px"></dc-import></div>
+<div aria-hidden="true" style="position: absolute; left: 440px; top: 53px; width: 334px; height: 334px; pointer-events: none">
+<sc-for list="{{dots}}" as="d" hint-placeholder-count="15"><span class="rep-anim" style="position: absolute; left: 155px; top: 155px; width: 24px; height: 24px; border-radius: 12px; background: {{d.c}}; --a0: {{d.a0}}deg; --a1: {{d.a1}}deg; opacity: 0; transform: rotate({{d.a1}}deg) translateY(-128px); animation: repGather 1.3s ease-in {{d.delay}}s both"></span></sc-for>
+</div>
+<a href="E08H-ExecucaoSerie2.dc.html" aria-label="Continuar (avança no fim da contagem)" style="position: absolute; left: 0; top: 0; width: 956px; height: 340px"></a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":956,"height":440}}'>
+class Component extends DCLogic {
+renderVals() {
+// As repetições de E06H continuam a rodar até à 1.ª série e formam a barra (média amarela); a 2.ª série fica intermitente.
+const states = 'gggggyryyyyyyyy'.split('');
+const col = { g: '#00e156', r: '#ff3b30', y: 'rgba(255,226,4,0.9)' };
+return { dots: states.map((s, i) => ({ c: col[s], a0: (-5 + i * 24).toFixed(1), a1: (369 + i * 72 / 14).toFixed(1), delay: (i * 0.02).toFixed(2) })) };
+}
+}
+</script>
+</body>
+</html>

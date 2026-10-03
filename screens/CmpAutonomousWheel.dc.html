@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Roda da sessão autónoma</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=REM:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div role="img" aria-label="{{aria}}" style="position: relative; width: 334px; height: 334px; font-family: 'Nunito', sans-serif; color: #ffffff">
+<svg width="334" height="334" viewBox="0 0 334 334" fill="none" aria-hidden="true" style="position: absolute; left: 0; top: 0">
+<path d="M329 167C329 256.47 256.47 329 167 329C77.52 329 5 256.47 5 167C5 77.52 77.52 5 167 5C256.47 5 329 77.52 329 167ZM27.98 167C27.98 243.77 90.22 306.01 167 306.01C243.77 306.01 306.01 243.77 306.01 167C306.01 90.22 243.77 27.98 167 27.98C90.22 27.98 27.98 90.22 27.98 167Z" fill="white" fill-opacity="0.2"></path>
+<mask id="tempo" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="167" y="5" width="162" height="294"><path d="M167 5C201.211 5 234.544 15.8305 262.221 35.9392C289.899 56.048 310.499 84.4026 321.071 116.939C331.643 149.476 331.643 184.524 321.071 217.061C310.499 249.597 289.899 277.952 262.221 298.061L167 167L167 5Z" fill="white"></path></mask>
+<g mask="url(#tempo)"><path d="M329 167C329 256.47 256.47 329 167 329C77.52 329 5 256.47 5 167C5 77.52 77.52 5 167 5C256.47 5 329 77.52 329 167ZM27.98 167C27.98 243.77 90.22 306.01 167 306.01C243.77 306.01 306.01 243.77 306.01 167C306.01 90.22 243.77 27.98 167 27.98C90.22 27.98 27.98 90.22 27.98 167Z" fill="white" fill-opacity="0.9"></path></g>
+<path d="M77.7488 270.939C56.3603 252.572 41.1586 228.055 34.2174 200.731C27.2762 173.407 28.9336 144.607 38.9635 118.259C48.9934 91.912 66.9073 69.3003 90.2615 53.509C113.616 37.7178 141.273 29.5158 169.46 30.0221C197.648 30.5284 224.993 39.7183 247.765 56.338C270.537 72.9578 287.627 96.1982 296.704 122.889C305.782 149.579 306.404 178.42 298.486 205.478C290.568 232.535 274.495 256.49 252.461 274.077C245.105 264.86 246.8 251.531 254.51 242.608C265.281 230.141 273.319 215.451 277.993 199.481C284.677 176.641 284.152 152.294 276.489 129.764C268.827 107.233 254.4 87.6148 235.177 73.5853C215.954 59.5558 192.871 51.7983 169.077 51.3709C145.283 50.9435 121.936 57.8671 102.222 71.1973C82.5073 84.5274 67.3854 103.615 58.9187 125.856C50.4521 148.097 49.053 172.408 54.9123 195.474C59.0092 211.601 66.5152 226.57 76.8318 239.416C84.2159 248.611 85.4313 261.992 77.7488 270.939Z" fill="white" fill-opacity="0.2"></path>
+<path d="M175.125 81.6197L167 89.6667L158.875 81.6197C158.339 81.0982 157.917 80.4713 157.636 79.7787C157.354 79.086 157.219 78.3425 157.238 77.595C157.258 76.8475 157.432 76.1121 157.75 75.4353C158.068 74.7584 158.522 74.1547 159.085 73.6621C159.648 73.1696 160.306 72.7988 161.019 72.5733C161.732 72.3477 162.484 72.2722 163.228 72.3515C163.971 72.4309 164.69 72.6633 165.34 73.0341C165.989 73.405 166.554 73.9063 167 74.5065C167.448 73.9107 168.015 73.4138 168.663 73.0468C169.312 72.6799 170.03 72.4508 170.771 72.374C171.513 72.2971 172.262 72.3742 172.973 72.6003C173.683 72.8263 174.339 73.1966 174.9 73.6879C175.46 74.1792 175.913 74.7809 176.231 75.4554C176.548 76.1299 176.723 76.8626 176.744 77.6078C176.765 78.3529 176.633 79.0944 176.354 79.7859C176.076 80.4773 175.657 81.1038 175.125 81.6262" stroke="{{cor}}" stroke-width="2.17" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M85 71C105.949 51.8025 134.365 41.0114 164 41" stroke="#4FD1E0" stroke-opacity="{{zonaOp}}" stroke-width="22"></path>
+<rect x="{{mx}}" y="{{my}}" width="24.65" height="15.84" rx="7.92" transform="rotate({{mr}} {{mx}} {{my}})" fill="white" stroke="{{cor}}" stroke-width="3"></rect>
+<path d="M68 167H265.5" stroke="white"></path>
+</svg>
+<span style="position: absolute; left: 0; top: 90px; width: 220px; text-align: right; font-family: 'REM', 'Nunito', sans-serif; font-size: 64px; line-height: 64px; color: {{cor}}">{{fc}}</span>
+<span style="position: absolute; left: 221px; top: 127px; font-size: 18px; line-height: 24px; font-weight: 700; opacity: 0.85; color: {{cor}}">bpm</span>
+<span style="position: absolute; left: 0; top: 174px; width: 224px; text-align: right; font-family: 'REM', 'Nunito', sans-serif; font-size: 40px; line-height: 64px">{{tempo}}</span>
+<span style="position: absolute; left: 227px; top: 202px; font-size: 18px; line-height: 24px; font-weight: 700; opacity: 0.85">min</span>
+<span style="position: absolute; left: 90px; top: 258px; font-size: 12px; line-height: 16px; opacity: 0.7">60</span>
+<span style="position: absolute; left: 221px; top: 258px; font-size: 12px; line-height: 16px; opacity: 0.7">180</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"estado":{"editor":"enum","options":["zona","acima"],"default":"zona"},"fc":{"editor":"number","default":108},"tempo":{"editor":"text","default":"08:30"},"$preview":{"width":334,"height":334}}'>
+// Roda da sessão autónoma (Figma CmpAutonomousWheel): o anel exterior mostra o tempo decorrido (como no HUD dos exercícios),
+// o arco interior é o medidor de 60 a 180 bpm com a faixa da zona alvo e o marcador da frequência cardíaca.
+// estado "zona" = dentro da zona (#4fd1e0); "acima" = acima da zona (#ff8a1f).
+class Component extends DCLogic {
+renderVals() {
+const acima = (this.props.estado ?? 'zona') === 'acima';
+const fc = String(this.props.fc ?? (acima ? 128 : 108)), tempo = this.props.tempo ?? '08:30';
+return acima
+? { cor: '#ff8a1f', zonaOp: 0.5, mx: 222.19, my: 40.24, mr: 113.48, fc, tempo, aria: `Frequência cardíaca ${fc} bpm, acima da zona alvo. Tempo ${tempo}.` }
+: { cor: '#4fd1e0', zonaOp: 1, mx: 121.09, my: 35.33, mr: 67.31, fc, tempo, aria: `Frequência cardíaca ${fc} bpm, na zona alvo. Tempo ${tempo}.` };
+}
+}
+</script>
+</body>
+</html>

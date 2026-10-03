@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Zona de frequência cardíaca</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=REM:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<div role="img" aria-label="{{aria}}" style="position: relative; width: 280px; height: 280px; font-family: 'Nunito', sans-serif; color: #ffffff">
+<svg width="280" height="280" viewBox="0 0 280 280" fill="none" aria-hidden="true" style="position: absolute; left: 0; top: 0">
+<path d="{{track}}" stroke="rgba(255,255,255,0.14)" stroke-width="18" stroke-linecap="round"></path>
+<path d="{{zone}}" stroke="{{zoneColor}}" stroke-width="18" stroke-linecap="butt"></path>
+<circle cx="{{mx}}" cy="{{my}}" r="13" fill="#ffffff" stroke="{{color}}" stroke-width="6"></circle>
+</svg>
+<span style="position: absolute; left: 0; top: 70px; width: 280px; text-align: center; display: flex; justify-content: center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="{{color}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"></path></svg></span>
+<span style="position: absolute; left: 0; top: 100px; width: 280px; text-align: center; font-family: 'REM', 'Nunito', sans-serif; font-size: 64px; line-height: 64px">{{fc}}</span>
+<span style="position: absolute; left: 0; top: 166px; width: 280px; text-align: center; font-size: 18px; line-height: 24px; font-weight: 700; opacity: 0.85">bpm</span>
+<span style="position: absolute; left: 0; top: 196px; width: 280px; text-align: center; font-size: 15px; line-height: 20px; font-weight: 700; color: {{color}}">{{label}}</span>
+<span style="position: absolute; left: 0; top: 220px; width: 280px; text-align: center; font-size: 13px; line-height: 18px; opacity: 0.8">{{zoneTxt}}</span>
+<span style="position: absolute; left: 44px; top: 250px; font-size: 12px; line-height: 16px; opacity: 0.7">{{minL}}</span>
+<span style="position: absolute; right: 40px; top: 250px; font-size: 12px; line-height: 16px; opacity: 0.7">{{maxL}}</span>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"fc":{"editor":"number","default":108},"min":{"editor":"number","default":100},"max":{"editor":"number","default":120},"$preview":{"width":280,"height":280}}'>
+// Mostrador da frequência cardíaca (do relógio ligado) face à zona alvo prescrita.
+// Escala 60–180 bpm em 270°. A zona alvo é a faixa colorida; o marcador branco é a FC atual.
+// Na zona: ciano; acima ou abaixo: laranja (cor de correção), com o texto a dizer o que fazer.
+class Component extends DCLogic {
+renderVals() {
+const fc = Number(this.props.fc ?? 108), lo = Number(this.props.min ?? 100), hi = Number(this.props.max ?? 120);
+const C = 140, R = 116, A0 = 135, SW = 270, B0 = 60, B1 = 180;
+const ang = b => (A0 + (Math.min(B1, Math.max(B0, b)) - B0) / (B1 - B0) * SW) * Math.PI / 180;
+const pt = b => [C + R * Math.cos(ang(b)), C + R * Math.sin(ang(b))];
+const arc = (b0, b1) => { const [x0, y0] = pt(b0), [x1, y1] = pt(b1); const large = (b1 - b0) / (B1 - B0) * SW > 180 ? 1 : 0; return `M${x0.toFixed(1)} ${y0.toFixed(1)}A${R} ${R} 0 ${large} 1 ${x1.toFixed(1)} ${y1.toFixed(1)}`; };
+const inZone = fc >= lo && fc <= hi;
+const color = inZone ? '#4fd1e0' : '#ff8a1f';
+const [mx, my] = pt(fc);
+const label = inZone ? 'Na zona alvo' : fc > hi ? 'Acima da zona · abrande' : 'Abaixo da zona · acelere';
+return { track: arc(B0, B1), zone: arc(lo, hi), zoneColor: inZone ? '#4fd1e0' : 'rgba(79,209,224,0.55)', color, mx: mx.toFixed(1), my: my.toFixed(1), fc, label, minL: '60', maxL: '180', zoneTxt: 'Zona alvo ' + lo + '–' + hi,
+aria: `Frequência cardíaca ${fc} batimentos por minuto. ${label}. Zona alvo de ${lo} a ${hi}.` };
+}
+}
+</script>
+</body>
+</html>

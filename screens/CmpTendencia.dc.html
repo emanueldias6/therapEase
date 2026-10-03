@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Tendência</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<section aria-label="{{aria}}" style="width: 376px; box-sizing: border-box; border-radius: 16px; background: #f5fcfb; padding: 16px 20px 14px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 6px; font-family: 'Nunito', sans-serif; color: #1f5953">
+<div style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 16px; background: {{tint}}; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{color}}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{icon}}"></path></svg></span>
+<h3 style="margin: 0; max-width: 153px; font-size: 15px; line-height: 20px; font-weight: 700; color: #1e5c66">{{title}}</h3><a href="#" data-help="tendencias" aria-label="Ajuda: como ler as tendências" style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 14px; background: #dfedf0; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path><path d="M12 19l0 .01"></path></svg></a><span style="flex-grow: 1"></span>
+<span style="flex: none; border-radius: 12px; background: {{tint}}; padding: 2px 10px; font-size: 12px; line-height: 18px; font-weight: 700; color: #1e5c66">{{verdict}}</span>
+</div>
+<p style="margin: 4px 0 0; display: flex; align-items: baseline; gap: 6px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{color}}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="align-self: center"><path d="{{arrow}}"></path></svg><span style="font-size: 28px; line-height: 34px; font-weight: 800; color: {{color}}">{{value}}</span><span style="font-size: 14px; line-height: 20px; font-weight: 600">{{unit}}</span></p>
+<p style="margin: 0; font-size: 14px; line-height: 19px">{{sentence}}</p>
+<div role="img" aria-label="{{chartAria}}" style="position: relative; width: 336px; height: 96px">
+<sc-for list="{{bars}}" as="b" hint-placeholder-count="12"><span style="position: absolute; left: {{b.x}}px; bottom: 18px; width: 20px; height: {{b.h}}px; border-radius: 4px 4px 0 0; background: {{b.c}}"></span></sc-for>
+<span aria-hidden="true" style="position: absolute; left: 0; width: 220px; bottom: {{baseY}}px; border-top: 2px dashed #7f9a9d"></span>
+<span aria-hidden="true" style="position: absolute; left: 224px; width: 112px; bottom: {{recY}}px; border-top: 2px solid {{ink}}"></span>
+<span aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 17px; border-top: 1px solid #c8dfdc"></span>
+<span style="position: absolute; left: 0; bottom: 0; font-size: 11px; line-height: 14px; color: #587274">há 12 semanas</span>
+<span style="position: absolute; right: 0; bottom: 0; font-size: 11px; line-height: 14px; color: #587274">esta semana</span>
+</div>
+<div aria-hidden="true" style="display: flex; gap: 16px; font-size: 12px; line-height: 16px; font-weight: 500">
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 14px; border-top: 2px dashed #7f9a9d"></span>Média das 8 semanas anteriores</span>
+<span style="display: flex; align-items: center; gap: 6px"><span style="width: 14px; border-top: 2px solid {{ink}}"></span>Últimas 4</span>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"metrica":{"editor":"enum","options":["sessoes","dor","qualidade","amplitude"],"default":"sessoes"},"$preview":{"width":376,"height":260}}'>
+// Tendência ao estilo das Tendências da app Saúde: média das últimas 4 semanas face às 8 anteriores.
+// Uma série por cartão (o título nomeia-a); barras antigas a cinza, recentes a teal; linha tracejada = média anterior, linha cheia = média recente.
+// Cada métrica tem a sua cor (validada para daltonismo): sessões #008a9e, dor #9a6ad8, qualidade #24519e, amplitude #8f2f7a (sem vermelho, laranja, amarelo nem verde).
+// Dados de exemplo.
+class Component extends DCLogic {
+renderVals() {
+const M = {
+sessoes: { color: '#008a9e', ink: '#005f6d', tintC: '#d3ecee', title: 'Sessões por semana', icon: 'M11.5 21h-5.5a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v6M16 3v4M8 3v4M4 11h16M15 19l2 2l4 -4', data: [2,3,2,3,2,3,3,2,4,3,4,3], max: 5, unit: 'sessões por semana', fmt: v => v.toFixed(1).replace('.', ','), better: 'up', sent: (a, b, f) => `Nas últimas 4 semanas fez mais sessões do que nas 8 anteriores (${f(a)}).` },
+dor: { color: '#9a6ad8', ink: '#6b42b0', tintC: '#e8e8f6', title: 'Dor depois da sessão', icon: 'M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0M9 10h.01M15 10h.01M9.5 15.25a3.5 3.5 0 0 1 5 0', data: [5,5,4,5,4,4,4,4,3,3,2,2], max: 10, unit: 'em 10, em média', fmt: v => v.toFixed(1).replace('.', ','), better: 'down', sent: (a, b, f) => `A dor média depois das sessões desceu de ${f(a)} para ${f(b)}.` },
+qualidade: { color: '#24519e', ink: '#24519e', tintC: '#d8e4ee', title: 'Qualidade da execução', icon: 'M5 12l5 5l10 -10', data: [55,58,60,57,62,60,63,64,70,74,78,80], max: 100, unit: '% das repetições no objetivo', fmt: v => String(Math.round(v)), better: 'up', sent: (a, b, f) => `Mais repetições no objetivo do que nas 8 semanas anteriores (${f(a)} %).` },
+amplitude: { color: '#8f2f7a', ink: '#8f2f7a', tintC: '#e7dfe9', title: 'Amplitude de movimento', icon: 'M4 20h16M4 20l12 -12M8 20a4 4 0 0 0 -1.2 -2.8', data: [100,102,104,103,106,108,107,110,114,117,119,122], max: 140, unit: 'graus · elevação dos braços', fmt: v => String(Math.round(v)) + '°', better: 'up', sent: (a, b, f) => `Levanta os braços mais ${Math.round(b - a)}° do que nas 8 semanas anteriores.` }
+};
+const m = M[this.props.metrica ?? 'sessoes'] || M.sessoes;
+const avg = a => a.reduce((x, y) => x + y, 0) / a.length;
+const a = avg(m.data.slice(0, 8)), b = avg(m.data.slice(8));
+const H = 72, y = v => Math.round(v / m.max * H);
+const up = b > a, good = m.better === 'up' ? up : !up;
+const val = m === M.qualidade ? m.fmt(b) : m.fmt(b);
+return {
+color: m.color, ink: m.ink, tint: m.tintC, title: m.title, icon: m.icon, unit: m.unit, value: m === M.amplitude ? m.fmt(b) : val,
+verdict: good ? 'A melhorar' : 'A piorar',
+arrow: up ? 'M12 19V5M6 11l6 -6l6 6' : 'M12 5v14M6 13l6 6l6 -6',
+sentence: m.sent(a, b, m.fmt),
+bars: m.data.map((v, i) => ({ x: i * 28 + (i >= 8 ? 4 : 0), h: y(v), c: i >= 8 ? m.color : '#c8dfdc' })),
+baseY: 18 + y(a), recY: 18 + y(b),
+aria: m.title + ': ' + (up ? 'a subir' : 'a descer') + ', ' + (good ? 'a melhorar' : 'a piorar'),
+chartAria: m.title + ', últimas 12 semanas: ' + m.data.join(', ') + '. Média das 8 semanas anteriores ' + m.fmt(a) + ', das últimas 4 ' + m.fmt(b) + '.'
+};
+}
+}
+</script>
+</body>
+</html>

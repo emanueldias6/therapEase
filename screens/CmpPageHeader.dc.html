@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Cabeçalho de página</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#1e5c66}a:hover{color:#11363c}</style>
+</helmet>
+<header style="position: relative; width: 440px; height: 72px; font-family: 'Nunito', sans-serif; color: #1e5c66">
+<a href="{{back}}" aria-label="Voltar" style="position: absolute; left: 28px; top: 14px; height: 44px; padding: 0 12px 0 4px; display: flex; align-items: center; gap: 8px; font-family: 'Nunito', sans-serif; font-size: 14px; line-height: 19px; font-weight: 600; color: #11363c; text-decoration: none"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M15 6l-6 6l6 6"></path></svg><span>Voltar</span></a>
+<h1 style="position: absolute; left: {{left}}px; right: {{right}}px; top: 20px; margin: 0; text-align: {{align}}; font-size: {{size}}px; line-height: 32px; font-weight: 500; white-space: nowrap">{{title}}</h1>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"title":{"editor":"text","default":"Título"},"back":{"editor":"text","default":"B01-Dashboard.dc.html"},"size":{"editor":"int","default":32},"$preview":{"width":440,"height":72}}'>
+class Component extends DCLogic {
+renderVals() {
+const size = this.props.size ?? 32; const long = size < 32;
+return { title: this.props.title ?? 'Título', back: this.props.back ?? 'B01-Dashboard.dc.html', size, left: long ? 119 : 108, right: long ? 20 : 108, align: long ? 'left' : 'center' };
+}
+}
+</script>
+</body>
+</html>

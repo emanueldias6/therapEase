@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TherapEase">
+<meta name="theme-color" content="#11363c">
+<title>TherapEase</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<style>
+@font-face{font-family:'REM';font-style:normal;font-weight:400;font-display:block;src:url(fonts/rem-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:400;font-display:block;src:url(fonts/nunito-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:500;font-display:block;src:url(fonts/nunito-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:600;font-display:block;src:url(fonts/nunito-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:700;font-display:block;src:url(fonts/nunito-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Nunito';font-style:normal;font-weight:800;font-display:block;src:url(fonts/nunito-latin-800-normal.woff2) format('woff2')}
+html, body { margin: 0; height: 100%; min-height: 100dvh; background: #11363c; overscroll-behavior: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+html.vp-fix { min-height: calc(100% + env(safe-area-inset-top)); }
+html.vp-fix body { min-height: calc(100% + env(safe-area-inset-top)); }
+#stage { overscroll-behavior: contain; position: fixed; left: 0; top: 0; width: 100%; height: 100vh; height: 100dvh; overflow-x: hidden; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+.screen-wrap { position: relative; overflow: hidden; }
+.screen-inner { transform-origin: 0 0; width: max-content; }
+#fixed-bar { position: fixed; left: 0; right: 0; bottom: max(8px, calc(env(safe-area-inset-bottom) - 14px)); z-index: 5; overflow: visible; display: flex; flex-direction: column; }
+#fixed-bar:empty { display: none; }
+#status-scrim { position: fixed; top: 0; left: 0; right: 0; height: 50px; z-index: 6; pointer-events: none; opacity: 0; transition: opacity .2s; background: linear-gradient(180deg, rgba(213,229,226,0.96) 0%, rgba(213,229,226,0.85) 70%, rgba(213,229,226,0) 100%); }
+#status-scrim.on { opacity: 1; }
+#fixed-top { position: fixed; top: 0; left: 0; right: 0; z-index: 5; overflow: visible; }
+#fixed-top:empty { display: none; }
+video.live-camera { object-fit: cover; }
+#dev-toast { position: fixed; left: 50%; top: calc(env(safe-area-inset-top) + 12px); transform: translateX(-50%) translateY(-20px); max-width: 86vw; padding: 10px 14px; border-radius: 12px; background: rgba(17,54,60,0.92); color: #fff; font: 600 14px/1.3 Nunito, system-ui, sans-serif; opacity: 0; transition: opacity .25s, transform .25s; pointer-events: none; z-index: 10; text-align: center; }
+#dev-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+/* Estado premido (Regras 11–12): desce 2 px, 97 %, sombra quase a zero; mola ao largar */
+a[href],button,[role="button"],[role="radio"]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}
+a[href]:not([aria-label*="(avança"]):active,button:active,[role="button"]:active,[role="radio"]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<div id="fixed-top"></div>
+<div id="fixed-bar"></div>
+<div id="status-scrim"></div>
+<script type="module" src="js/haptics.js?v=30"></script>
+<script type="module" src="js/app.js?v=30"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Dispositivos e aplicações</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 956px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Dispositivos" back="B09-Perfil.dc.html" hint-size="440px,72px"></dc-import></div>
+<main style="position: absolute; left: 32px; top: 157px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0 4px 4px; font-size: 15px; line-height: 22px; font-weight: 600">Ligue o seu relógio ou a app de saúde. A equipa clínica passa a ver a frequência cardíaca das caminhadas.</p>
+<section aria-labelledby="lig" style="border-radius: 16px; background: #f5fcfb; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); padding-bottom: 8px">
+<h2 id="lig" style="margin: 0 0 6px; font-size: 18px; line-height: 27px; font-weight: 700">Ligados</h2>
+<ul style="margin: 0; padding: 0; list-style: none"><li style="border-top: 1px solid #dfedf0"><a href="B13-DispositivoLigado.dc.html" style="min-height: 72px; display: flex; align-items: center; gap: 14px; color: #1f5953">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #e8f8f5; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#11363c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14zM11 4h2M12 17v.01"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 17px; line-height: 23px; font-weight: 700">Apple Saúde</span><span style="font-size: 13px; line-height: 18px">iPhone · sincronizado há 5 min</span></span>
+<span style="flex: none; border-radius: 12px; background: #e3f5e6; padding: 3px 10px; font-size: 12px; line-height: 18px; font-weight: 700; color: #0e5841">Ligado</span>
+</a></li></ul>
+</section>
+<section aria-labelledby="disp" style="border-radius: 16px; background: #f5fcfb; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); padding-bottom: 8px">
+<h2 id="disp" style="margin: 0 0 6px; font-size: 18px; line-height: 27px; font-weight: 700">Disponíveis</h2>
+<ul style="margin: 0; padding: 0; list-style: none">
+<li style="border-top: 1px solid #dfedf0"><a href="B12-LigarDispositivo.dc.html" style="min-height: 72px; display: flex; align-items: center; gap: 14px; color: #1f5953">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #e8f8f5; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#11363c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6l1 4M9 3l-1 4M8 17l1 4h6l1 -4M6 9a3 3 0 0 1 3 -2h6a3 3 0 0 1 3 2v6a3 3 0 0 1 -3 2h-6a3 3 0 0 1 -3 -2zM12 10v2l1 1"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 17px; line-height: 23px; font-weight: 700">Garmin Connect</span><span style="font-size: 13px; line-height: 18px">Relógios Garmin</span></span>
+<span style="flex: none; height: 36px; border-radius: 18px; background: #1e5c66; padding: 0 16px; display: flex; align-items: center; font-size: 15px; font-weight: 700; color: #ffffff">Ligar</span>
+</a></li>
+<li style="border-top: 1px solid #dfedf0"><a href="B12-LigarDispositivo.dc.html" style="min-height: 72px; display: flex; align-items: center; gap: 14px; color: #1f5953">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #e8f8f5; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#11363c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6l1 4M9 3l-1 4M8 17l1 4h6l1 -4M6 9a3 3 0 0 1 3 -2h6a3 3 0 0 1 3 2v6a3 3 0 0 1 -3 2h-6a3 3 0 0 1 -3 -2zM12 10v2l1 1"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 17px; line-height: 23px; font-weight: 700">Fitbit</span><span style="font-size: 13px; line-height: 18px">Relógios e pulseiras Fitbit</span></span>
+<span style="flex: none; height: 36px; border-radius: 18px; background: #1e5c66; padding: 0 16px; display: flex; align-items: center; font-size: 15px; font-weight: 700; color: #ffffff">Ligar</span>
+</a></li>
+<li style="border-top: 1px solid #dfedf0"><a href="B12-LigarDispositivo.dc.html" style="min-height: 72px; display: flex; align-items: center; gap: 14px; color: #1f5953">
+<span aria-hidden="true" style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #e8f8f5; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#11363c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6l1 4M9 3l-1 4M8 17l1 4h6l1 -4M6 9a3 3 0 0 1 3 -2h6a3 3 0 0 1 3 2v6a3 3 0 0 1 -3 2h-6a3 3 0 0 1 -3 -2zM12 10v2l1 1"></path></svg></span>
+<span style="flex-grow: 1; display: flex; flex-direction: column"><span style="font-size: 17px; line-height: 23px; font-weight: 700">Health Connect</span><span style="font-size: 13px; line-height: 18px">Android · dados de saúde do telemóvel</span></span>
+<span style="flex: none; height: 36px; border-radius: 18px; background: #1e5c66; padding: 0 16px; display: flex; align-items: center; font-size: 15px; font-weight: 700; color: #ffffff">Ligar</span>
+</a></li>
+</ul>
+</section>
+<p style="margin: -8px 4px 0; display: flex; gap: 10px; font-size: 14px; line-height: 20px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2zM8 11v-4a4 4 0 1 1 8 0v4"></path></svg><span>Só é partilhado o que autorizar. Pode desligar a qualquer momento.</span></p>
+</main>
+<div style="position: absolute; left: 0; top: 847px"><dc-import name="CmpBottomBar" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":956}}'>
+// B11 · Dispositivos e aplicações ligadas (Figma B11).
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Biblioteca: sem resultados</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Nunito',sans-serif;color:#1e5c66}a{color:#1e5c66;text-decoration:none}a:hover{color:#11363c}input::placeholder{color:#587274}button{font-family:'Nunito',sans-serif;cursor:pointer}a[href],button,[role=button],[role=radio]{transition:transform .16s cubic-bezier(.34,1.56,.64,1),box-shadow .16s,filter .16s}a[href]:not([aria-label*="(avança"]):active,button:active,[role=button]:active,[role=radio]:active{transform:translateY(2px) scale(.97);filter:brightness(.94);box-shadow:inset 0 2px 4px rgba(17,54,60,.2)!important;transition-duration:.08s;transition-timing-function:ease-out}</style>
+</helmet>
+<div style="position: relative; width: 440px; height: 1100px; overflow: hidden; background: linear-gradient(160deg, #fafefd 0%, #d5e5e2 52%, #8eaeb2 100%); font-family: 'Nunito', sans-serif; color: #1f5953">
+<dc-import name="CmpStatusBar" tone="light" hint-size="440px,53px"></dc-import>
+<div style="position: absolute; left: 0; top: 73px"><dc-import name="CmpPageHeader" title="Artigos" back="B08-Menu.dc.html" hint-size="440px,72px"></dc-import></div>
+<nav aria-label="Secções" style="position: absolute; left: 32px; top: 155px; width: 376px; height: 48px; box-sizing: border-box; border-radius: 12px; background: #f5fcfb; padding: 4px; display: flex">
+<a href="H01-Artigos.dc.html" style="flex: 1 1 0; border-radius: 9px; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 17px; font-weight: 700">Prescritos<span style="height: 20px; min-width: 20px; padding: 0 6px; box-sizing: border-box; border-radius: 10px; background: #d92d20; color: #ffffff; font-size: 12px; display: flex; align-items: center; justify-content: center">1</span></a>
+<a href="H12-Biblioteca.dc.html" aria-current="page" style="flex: 1 1 0; border-radius: 9px; background: #1e5c66; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 700">Biblioteca</a>
+</nav>
+<main style="position: absolute; left: 32px; top: 215px; width: 376px; display: flex; flex-direction: column; gap: 12px">
+<div role="search" style="display: flex; gap: 8px">
+<label style="flex-grow: 1; display: flex; align-items: center; gap: 10px; height: 50px; box-sizing: border-box; border-radius: 12px; background: #ffffff; box-shadow: 0 1px 4px rgba(17,54,60,0.14); padding: 0 8px 0 14px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Pesquisar artigos</span>
+<input type="search" placeholder="Pesquisar artigos" value="joelho operado" style="flex-grow: 1; min-width: 0; border: 0; background: transparent; font-family: 'Nunito', sans-serif; font-size: 17px; color: #1f5953; outline-offset: 4px">
+<a href="H12-Biblioteca.dc.html" aria-label="Limpar pesquisa" style="flex-shrink: 0; width: 36px; height: 36px; border-radius: 18px; background: #e8f8f5; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1f5953" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></a>
+</label>
+<a href="H13-BibliotecaPesquisa.dc.html" aria-label="Pesquisar" style="flex-shrink: 0; width: 50px; height: 50px; border-radius: 12px; background: #1e5c66; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg></a>
+</div>
+<div role="radiogroup" aria-label="Temas" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="5">
+<button type="button" role="radio" aria-checked="{{c.checked}}" onClick="{{c.pick}}" style="height: 40px; padding: 0 14px; border: 0; border-radius: 20px; background: {{c.bg}}; color: {{c.fg}}; box-shadow: {{c.ring}}; font-size: 15px; font-weight: 600">{{c.label}}</button>
+</sc-for>
+</div>
+<section role="status" style="margin-top: 12px; border-radius: 16px; background: #f5fcfb; padding: 24px 22px; box-shadow: 0 4px 8px rgba(0,0,0,0.06); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+<h2 style="margin: 0; font-size: 20px; line-height: 26px; font-weight: 700; color: #1e5c66">Não encontrámos artigos sobre “joelho operado”</h2>
+<span style="width: 72px; height: 72px; border-radius: 36px; background: #f5fcfb; display: flex; align-items: center; justify-content: center"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1e5c66" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"></path><path d="M21 21l-6 -6"></path><path d="M8 10h4"></path></svg></span>
+<p style="margin: 0; font-size: 15px; line-height: 22px">Tente outra palavra ou escolha um dos temas acima.</p>
+<a href="H06-Conversa.dc.html" style="margin-top: 8px; align-self: stretch; display: flex; align-items: center; justify-content: center; height: 50px; border-radius: 12px; background: #f5fcfb; color: #1e5c66; font-size: 24px; font-weight: 500; box-shadow: 0 0 12px rgba(0,0,0,0.1)">Perguntar à equipa clínica</a>
+</section>
+<p style="margin: 4px 4px 0; font-size: 13px; line-height: 19px">Os artigos da biblioteca são informativos. Para dúvidas sobre o seu caso, fale com a sua equipa clínica.</p>
+</main>
+<div style="position: absolute; left: 0; top: 991px"><dc-import name="CmpBottomBar" hint-size="440px,75px"></dc-import></div>
+<div style="position: absolute; left: 144px; bottom: 8px; width: 152px; height: 5px; border-radius: 100px; background: #000000"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":440,"height":1100}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { cat: 0 }; }
+renderVals() {
+const cats = ['Todos', 'Exercício em casa', 'Dor e desconforto', 'Dia a dia', 'Usar a app'];
+const all = [
+{ t: 'Preparar o espaço em casa', c: 1, min: 4, prescribed: true, tint: '#f3f0f8' },
+{ t: 'Como respirar durante os exercícios', c: 1, min: 3, tint: '#dfedf0' },
+{ t: 'O que fazer se sentir dor durante um exercício', c: 2, min: 4, tint: '#f6e2d4' },
+{ t: 'Levantar-se de uma cadeira com mais segurança', c: 3, min: 5, tint: '#e8f8f5' },
+{ t: 'Onde pousar o telemóvel para a câmara o ver bem', c: 4, min: 2, tint: '#dfedf0' }
+];
+const cat = this.state.cat;
+const items = all.filter(a => cat === 0 || a.c === cat).map(a => ({ ...a, prescribed: !!a.prescribed, meta: cats[a.c] + ' · ' + a.min + ' min de leitura' }));
+return {
+cats: cats.map((label, i) => ({ label, checked: i === cat ? 'true' : 'false', bg: i === cat ? '#1e5c66' : '#f5fcfb', fg: i === cat ? '#ffffff' : '#1e5c66', ring: i === cat ? 'none' : 'inset 0 0 0 1px #c8dfdc', pick: () => this.setState({ cat: i }) })),
+items,
+countLabel: items.length + (items.length === 1 ? ' artigo' : ' artigos')
+};
+}
+}
+</script>
+</body>
+</html>

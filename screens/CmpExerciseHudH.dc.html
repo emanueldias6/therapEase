@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Painel de execução horizontal</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0}a{color:#ffffff;text-decoration:none}@keyframes hudEnter{from{transform:translate(466px, 0px) scale(2.037)}to{transform:none}}@media (prefers-reduced-motion: reduce){.hud-enter{animation:none !important}}</style>
+</helmet>
+<div style="position: relative; width: 250px; height: 440px; font-family: 'Nunito', sans-serif; color: #ffffff">
+<svg width="250" height="440" viewBox="0 0 250 440" style="position: absolute; left: 0; top: 0" aria-hidden="true"><path d="M0 0H190C250 147 250 293 190 440H0Z" fill="#11363c"></path></svg>
+<a href="E10-Pausa.dc.html" style="position: absolute; left: 86px; top: 14px; width: 110px; height: 110px; border-radius: 55px; background: #1f4248; box-shadow: 0 2px 8px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 400; color: #ffffff">PAUSA</a>
+<div class="hud-enter" role="img" aria-label="{{aria}}" style="animation: {{enterAnim}}; transform-origin: center; position: absolute; left: 59px; top: 138px; width: 164px; height: 164px; border-radius: 82px">
+<svg width="164" height="164" viewBox="0 0 334 334" fill="none" style="position: absolute; left: 0; top: 0" aria-hidden="true">
+<rect width="334" height="334" rx="167" fill="white" fill-opacity="0.1"></rect>
+<path d="M329 167C329 256.47 256.47 329 167 329C77.5299 329 5 256.47 5 167C5 77.5299 77.5299 5 167 5C256.47 5 329 77.5299 329 167ZM27.9814 167C27.9814 243.778 90.2221 306.019 167 306.019C243.778 306.019 306.019 243.778 306.019 167C306.019 90.2221 243.778 27.9814 167 27.9814C90.2221 27.9814 27.9814 90.2221 27.9814 167Z" fill="#ffffff" fill-opacity="0.2"></path>
+<sc-for list="{{segs}}" as="s" hint-placeholder-count="4"><path d="{{s.d}}" fill="{{s.fill}}" fill-opacity="{{s.op}}" style="animation: {{s.blink}}"></path></sc-for>
+</svg>
+<img src="/_blob/9c09ecf2ecc1abff8b6651354e836fd7" alt="" style="position: absolute; left: 50px; top: 26px; width: 64px; height: 112px; object-fit: contain">
+</div>
+<div style="position: absolute; left: 85px; top: 316px; width: 110px; height: 110px; border-radius: 55px; background: #1f4248; box-shadow: 0 2px 8px rgba(0,0,0,0.25); display: flex; flex-direction: column; align-items: center; justify-content: center">
+<span style="font-size: 13px; line-height: 18px; font-weight: 500">EXERCÍCIO</span>
+<span style="font-size: 42px; line-height: 48px">{{ex}}</span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"states":{"editor":"text","default":"wppp"},"ex":{"editor":"text","default":"1/3"},"enter":{"editor":"boolean","default":false},"$preview":{"width":250,"height":440}}'>
+class Component extends DCLogic {
+renderVals() {
+const states = (this.props.states ?? 'wppp').split('');
+const n = states.length || 1;
+const SEGS = ["M191.397 31C220.074 36.0427 246.414 50.0096 266.642 70.8991C286.87 91.7885 299.947 118.528 304 147.285C293.299 148.785 283.563 141.249 280.307 130.946C274.823 113.598 265.363 97.661 252.571 84.4502C239.755 71.2155 224.081 61.2189 206.851 55.1515C196.691 51.5737 189.521 41.6071 191.397 31Z", "M303 191.397C297.957 220.074 283.99 246.414 263.101 266.642C242.211 286.87 215.472 299.947 186.715 304C185.215 293.3 192.751 283.563 203.054 280.307C220.402 274.823 236.339 265.363 249.55 252.571C262.784 239.755 272.781 224.081 278.848 206.851C282.426 196.691 292.393 189.521 303 191.397Z", "M142.603 303C113.926 297.957 87.5862 283.99 67.3581 263.101C47.1301 242.211 34.0526 215.472 30 186.715C40.7005 185.215 50.4366 192.751 53.6932 203.054C59.1766 220.402 68.6366 236.339 81.4292 249.55C94.2448 262.784 109.919 272.781 127.149 278.848C137.309 282.426 144.479 292.393 142.603 303Z", "M31 142.603C36.0427 113.926 50.0096 87.5862 70.8991 67.3581C91.7885 47.1301 118.528 34.0526 147.285 30C148.785 40.7005 141.249 50.4366 130.946 53.6932C113.598 59.1766 97.661 68.6366 84.4502 81.4292C71.2155 94.2448 61.2189 109.919 55.1515 127.149C51.5737 137.309 41.6071 144.479 31 142.603Z"];
+const col = { p: '#ffffff', c: '#ffffff', w: '#ffffff', x: '#ffffff', g: '#00E156', y: '#FFE204', r: '#FF3B30' };
+const opa = { p: 0.2, x: 0.2, c: 0.9, w: 0.9, g: 1, y: 1, r: 1 };
+// Mesmo asset do círculo de séries (assets/circulo-series-countdown.svg), reduzido: segmentos = séries; aqui a circunferência exterior não conta tempo.
+const segs = states.slice(0, 4).map((s, i) => ({ d: SEGS[i], fill: col[s.toLowerCase()] || col.p, op: opa[s.toLowerCase()] ?? 0.2, blink: s === 'c' ? 'wheelBlink 1s ease-in-out infinite' : 'none' }));
+const cur = states.findIndex(s => s === 'w');
+return { segs, enterAnim: (this.props.enter === true || this.props.enter === 'true') ? 'hudEnter 0.9s cubic-bezier(0.3, 0, 0.2, 1) both' : 'none', ex: this.props.ex ?? '1/3', aria: 'Série ' + (cur + 1) + ' de ' + n };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Passos do registo</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0}</style>
+</helmet>
+<ol aria-label="Progresso do registo" style="width: 376px; height: 40px; margin: 0; padding: 0; list-style: none; display: flex; justify-content: space-between; font-family: 'Nunito', sans-serif; color: #1e5c66">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+<li aria-current="{{s.current}}" style="width: 82px; display: flex; flex-direction: column; align-items: center; gap: 6px">
+<span style="height: 16px; display: flex; align-items: center; justify-content: center"><span style="flex-shrink: 0; {{s.dot}}"></span></span>
+<span style="font-size: 12px; line-height: 16px; font-weight: {{s.weight}}">{{s.label}}</span>
+</li>
+</sc-for>
+</ol>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"step":{"editor":"int","min":1,"max":4,"default":2},"$preview":{"width":376,"height":40}}'>
+class Component extends DCLogic {
+renderVals() {
+const step = this.props.step ?? 2;
+const labels = ['Passo 1', 'Passo 2', 'Passo 3', 'Fim'];
+return {
+steps: labels.map((label, i) => {
+const n = i + 1;
+const active = n === step;
+return {
+label,
+current: active ? 'step' : 'false',
+weight: active ? 700 : 400,
+dot: active
+? 'display:block;width:16px;height:16px;border-radius:8px;background:#e38b4a'
+: 'display:block;width:10px;height:10px;box-sizing:border-box;border-radius:5px;border:1.5px solid #1e5c66;background:' + (n < step ? '#1e5c66' : '#ffffff')
+};
+})
+};
+}
+}
+</script>
+</body>
+</html>

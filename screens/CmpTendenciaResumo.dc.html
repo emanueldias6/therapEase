@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Tendência (resumo)</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{margin:0}a{text-decoration:none}</style>
+</helmet>
+<a href="G11-Tendencias.dc.html" aria-label="{{aria}}" style="width: 162px; height: 76px; box-sizing: border-box; border-radius: 16px; background: #e8f8f5; padding: 12px 12px 12px 12px; display: flex; align-items: center; gap: 10px; font-family: 'Nunito', sans-serif; color: #1f5953">
+<span aria-hidden="true" style="flex: none; width: 36px; height: 36px; border-radius: 18px; background: {{tint}}; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="{{color}}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="{{arrow}}"></path></svg></span>
+<span style="min-width: 0; display: flex; flex-direction: column">
+<span style="font-size: 14px; line-height: 18px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{title}}</span>
+<span style="display: flex; align-items: baseline; gap: 3px; white-space: nowrap"><span style="font-size: 22px; line-height: 28px; font-weight: 800; color: {{color}}">{{value}}</span><span style="font-size: 12px; line-height: 16px; font-weight: 700; color: {{ink}}">{{unit}}</span></span>
+</span>
+</a>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"metrica":{"editor":"enum","options":["sessoes","dor","qualidade","amplitude"],"default":"sessoes"},"$preview":{"width":162,"height":76}}'>
+// Resumo de uma tendência (estilo Tendências da app Saúde): seta a subir/descer, métrica, valor médio das últimas 4 semanas.
+// A cor identifica a métrica (a mesma no detalhe G11). Tocar abre as Tendências (G11).
+class Component extends DCLogic {
+renderVals() {
+const up = 'M6 15l6 -6l6 6', down = 'M6 9l6 6l6 -6';
+const M = {
+sessoes: { title: 'Sessões', value: '3,5', unit: '/SEMANA', color: '#008a9e', ink: '#005f6d', tintC: '#d3ecee', arrow: up, aria: 'Sessões por semana: 3,5, a subir' },
+dor: { title: 'Dor', value: '2,5', unit: '/10', color: '#9a6ad8', ink: '#6b42b0', tintC: '#e8e8f6', arrow: down, aria: 'Dor depois da sessão: 2,5 em 10, a descer' },
+qualidade: { title: 'Qualidade', value: '76', unit: '%', color: '#24519e', ink: '#24519e', tintC: '#d8e4ee', arrow: up, aria: 'Qualidade da execução: 76 %, a subir' },
+amplitude: { title: 'Amplitude', value: '118°', unit: 'BRAÇOS', color: '#8f2f7a', ink: '#8f2f7a', tintC: '#e7dfe9', arrow: up, aria: 'Amplitude de movimento: 118 graus, a subir' }
+};
+const m = M[this.props.metrica ?? 'sessoes'] || M.sessoes;
+return { ...m, tint: m.tintC, aria: m.aria + '. Ver tendências' };
+}
+}
+</script>
+</body>
+</html>
